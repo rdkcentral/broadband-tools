@@ -1,0 +1,1315 @@
+{
+  "component": "platform",
+  "repo_dir": "rdkb-halif-platform",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/platform_hal.h",
+      "api_count": 71,
+      "apis": [
+        {
+          "name": "platform_hal_GetDeviceConfigStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetDeviceConfigStatus(CHAR *pValue);",
+          "brief": "Get the device configuration status. \\n Possible string values are 'WaitForImplement', 'In Progress', 'Complete'. \\n The buffer pointed by pValue should be allocated with a size of at least 128 bytes, which is the recommended maximum length for the returned status string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the operation is successful. RETURN_ERR if any error is detected during the operation.",
+          "deprecated": false,
+          "line": 246
+        },
+        {
+          "name": "platform_hal_GetTelnetEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pFlag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetTelnetEnable(BOOLEAN *pFlag);",
+          "brief": "Get telnet enable status. \\n Set to TRUE if Telnet is enabled. \\n Set to FALSE if Telnet is disabled.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 260
+        },
+        {
+          "name": "platform_hal_SetTelnetEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Flag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetTelnetEnable(BOOLEAN Flag);",
+          "brief": "Enable/Disable telnet. \\n Set to TRUE if Telnet is enabled. \\n Set to FALSE if Telnet is disabled.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 274
+        },
+        {
+          "name": "platform_hal_GetSSHEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pFlag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetSSHEnable(BOOLEAN *pFlag);",
+          "brief": "Get SSH enable status. \\n Set to TRUE if SSH is enabled. \\n Set to FALSE if SSH is disabled.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 288
+        },
+        {
+          "name": "platform_hal_SetSSHEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Flag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetSSHEnable(BOOLEAN Flag);",
+          "brief": "Enable/disable SSH. \\n Set to TRUE if SSH is enabled. \\n Set to FALSE if SSH is disabled.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 302
+        },
+        {
+          "name": "platform_hal_GetSNMPEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetSNMPEnable(CHAR *pValue);",
+          "brief": "Get SNMP Enable value from the device. \\n The buffer pointed by pValue should be allocated with a size of at least 32 bytes, which is the recommended maximum length for the returned status string. \\n Possible values stored in the buffer are: \\n 'rgWan': SNMP enabled for WAN interface. \\n 'rgDualIp': SNMP enabled for dual IP configuration. \\n 'rgLanIp': SNMP enabled for LAN IP configuration.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the operation is successful. RETURN_ERR if any error is detected during the operation.",
+          "deprecated": false,
+          "line": 320
+        },
+        {
+          "name": "platform_hal_SetSNMPEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetSNMPEnable(CHAR *pValue);",
+          "brief": "Set SNMP Enable value for the device. \\n The buffer pointed by pValue should have a size of at least 32 bytes, which is the recommended maximum length for the input value. \\n Possible values that can be set are: \\n 'rgWan': Set SNMP to be enabled for WAN interface. \\n 'rgDualIp': Set SNMP to be enabled for dual IP configuration. \\n 'rgLanIp': Set SNMP to be enabled for LAN IP configuration.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the operation is successful. RETURN_ERR if any error is detected during the operation.",
+          "deprecated": false,
+          "line": 338
+        },
+        {
+          "name": "platform_hal_GetWebUITimeout",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetWebUITimeout(ULONG *pValue);",
+          "brief": "Get WebUI timeout value. \\n Valid range of values is from 30 to 86400 seconds. \\n Default value is 840 seconds.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 352
+        },
+        {
+          "name": "platform_hal_SetWebUITimeout",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "value"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetWebUITimeout(ULONG value);",
+          "brief": "Set WebUI timeout value. \\n Valid range of values are 0 and from 30 to 86400 seconds. \\n A value of 0 may represent a specific mode or behavior (e.g., no timeout).",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 366
+        },
+        {
+          "name": "platform_hal_GetWebAccessLevel",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "userIndex"
+            },
+            {
+              "type": "INT",
+              "name": "ifIndex"
+            },
+            {
+              "type": "ULONG *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT platform_hal_GetWebAccessLevel(INT userIndex, INT ifIndex, ULONG *pValue);",
+          "brief": "Get Web Access Level. \\n The valid range of values is -2^31 to (2^31)-1. \\n The valid range of values is -2^31 to (2^31)-1. \\n The valid range of values is 0 to (2^31)-1.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected. @note Soon to be deprecated",
+          "deprecated": false,
+          "line": 384
+        },
+        {
+          "name": "platform_hal_SetWebAccessLevel",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "userIndex"
+            },
+            {
+              "type": "INT",
+              "name": "ifIndex"
+            },
+            {
+              "type": "ULONG",
+              "name": "value"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT platform_hal_SetWebAccessLevel(INT userIndex, INT ifIndex, ULONG value);",
+          "brief": "Set Web Access Level. \\n The valid range of values is -2^31 to (2^31)-1. \\n The valid range of values is -2^31 to (2^31)-1. \\n The valid range of values is 0 to (2^31)-1. <table> <caption id=\"multi_row\">Lan Level Vs Index table</caption> <tr><th>Lan Level\t<th>User Index\t<th>Interface Index <tr><td>HomeUser_Lan_Level <td>1 <td>1 <tr><td>HomeUser_RfCM_Level <td>1 <td>2 <tr><td>HomeUser_Mta_Level <td>1 <td>16 <tr><td>HomeUser_WanRG_Level <td>1 <td>40 <tr><td>CusAdmin_Lan_Level <td>5 <td>1 <tr><td>CusAdmin_RfCM_Level <td>5 <td>2 <tr><td>CusAdmin_Mta_Level <td>5 <td>16 <tr><td>CusAdmin_WanRG_Level <td>5 <td>40 <tr><td>AdvUser_Lan_Level <td>10 <td>1 <tr><td>AdvUser_RfCM_Level <td>10 <td>2 <tr><td>AdvUser_Mta_Level <td>10 <td>16 <tr><td>AdvUser_WanRG_Level <td>10 <td>40 </table>",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected. @note Soon to be deprecated",
+          "deprecated": false,
+          "line": 419
+        },
+        {
+          "name": "platform_hal_PandMDBInit",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT platform_hal_PandMDBInit(void);",
+          "brief": "Initialize the PandM (Platform and Management) Database. Initializes the PandM Database for storing and managing platform-specific configurations. Ensures the database is set up and ready for operations. If already initialized, behavior may vary based on the implementation.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the initialization is successful. RETURN_ERR if any error occurs during initialization.",
+          "deprecated": false,
+          "line": 433
+        },
+        {
+          "name": "platform_hal_DocsisParamsDBInit",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT platform_hal_DocsisParamsDBInit(void);",
+          "brief": "Initialize the Platform HAL DOCSIS Parameters Database. Sets up the database for DOCSIS (Data Over Cable Service Interface Specification) parameters within the Platform HAL. This database is crucial for handling cable modem configurations and data. Depending on the implementation, if the database is already initialized, this function's behavior might vary.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the initialization is successful. RETURN_ERR if any error occurs during initialization.",
+          "deprecated": false,
+          "line": 447
+        },
+        {
+          "name": "platform_hal_GetModelName",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetModelName(CHAR *pValue);",
+          "brief": "Get device model name. \\n It represents a vendor-specific value. \\n The buffer size should be at least 256 bytes long and is considered as the maximum limit for the model name length.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 461
+        },
+        {
+          "name": "platform_hal_GetRouterRegion",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetRouterRegion(CHAR *pValue);",
+          "brief": "Get router region. \\n Possible values of pValue are `REGION_UK`, `REGION_IT`, `REGION_ROI`, and `REGION_UNKNOWN`. \\n The buffer size should be at least 256 bytes long, which is considered the maximum limit for the region name.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 475
+        },
+        {
+          "name": "platform_hal_GetSerialNumber",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetSerialNumber(CHAR *pValue);",
+          "brief": "Get device serial number. \\n It represents a vendor-specific value. \\n The buffer size should be at least 256 bytes long, which is considered as the maximum limit for the serial number length.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 489
+        },
+        {
+          "name": "platform_hal_GetHardwareVersion",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetHardwareVersion(CHAR *pValue);",
+          "brief": "Get hardware version of the device. \\n It represents a vendor-specific value. \\n The buffer size should be at least 256 bytes long, which stands as the maximum allowable limit for the hardware version string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 503
+        },
+        {
+          "name": "platform_hal_GetSoftwareVersion",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR*",
+              "name": "pValue"
+            },
+            {
+              "type": "ULONG",
+              "name": "maxSize"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetSoftwareVersion(CHAR* pValue, ULONG maxSize);",
+          "brief": "Get software version flashed in the device. \\n It represents a vendor-specific value.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 517
+        },
+        {
+          "name": "platform_hal_GetBootloaderVersion",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            },
+            {
+              "type": "ULONG",
+              "name": "maxSize"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetBootloaderVersion(CHAR *pValue, ULONG maxSize);",
+          "brief": "Get the bootloader version flashed in the device. \\n It is a vendor specific value.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK  if successful. RETURN_ERR If any error is detected.",
+          "deprecated": false,
+          "line": 531
+        },
+        {
+          "name": "platform_hal_GetFirmwareName",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            },
+            {
+              "type": "ULONG",
+              "name": "maxSize"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetFirmwareName(CHAR *pValue, ULONG maxSize);",
+          "brief": "Get firmware image name flashed in the device. \\n It is a vendor specific value.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 545
+        },
+        {
+          "name": "platform_hal_GetBaseMacAddress",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetBaseMacAddress(CHAR *pValue);",
+          "brief": "Get base MAC Address of the device. \\n The MAC Address should be in the format AA:BB:CC:DD:EE:FF (colon-separated) and zero-terminated (zt). \\n The buffer size should be at least 256 bytes long, which is considered as the maximum limit for the MAC address storage, including any null terminators or additional information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 559
+        },
+        {
+          "name": "platform_hal_GetHardware",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetHardware(CHAR *pValue);",
+          "brief": "Get the Hardware for the total flash size of the device in megabytes (MB). This function retrieves the total flash memory size of the hardware device, expressed in MB. \\n The returned value represents the flash size in MB. \\n The pValue output returned should be in the range [1, 4096], representing the minimum and maximum supported flash sizes in MB. \\n The buffer size allocated for pValue should be at least 256 bytes. A buffer of this size ensures space for the returned value and any null terminators or additional information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 576
+        },
+        {
+          "name": "platform_hal_GetHardware_MemUsed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetHardware_MemUsed(CHAR *pValue);",
+          "brief": "Get the total used memory of the flash in megabytes (MB). This function retrieves the total used flash memory size of the device, expressed in MB. \\n The returned value represents the used flash size in MB. \\n The pValue output will be in the range [1, n] inclusive, where n is the total flash size in MB available in the device. \\n The buffer size allocated for pValue should be at least 1024 bytes and not exceed 2048 bytes. This range ensures space for the returned value, any null terminators, and additional information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 593
+        },
+        {
+          "name": "platform_hal_GetHardware_MemFree",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetHardware_MemFree(CHAR *pValue);",
+          "brief": "Get the total available memory of the flash in megabytes (MB). This function retrieves the total available flash memory size of the device, expressed in MB. \\n The returned value represents the available flash size in MB. \\n The pValue output will be in the range [1, n] inclusive, where n is the total flash size in MB minus used space on the device. \\n The returned string will be Zero Terminated (ZT). \\n The buffer size allocated for pValue should be at least 1024 bytes long to ensure space for the returned value, the zero terminator, and additional information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 611
+        },
+        {
+          "name": "platform_hal_GetTotalMemorySize",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pulSize"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetTotalMemorySize(ULONG *pulSize);",
+          "brief": "Get total memory size of the DRAM (Dynamic Random Access Memory) in megabytes (MB). This function retrieves the total memory size of the DRAM available on the device, expressed in MB. \\n The returned value represents the DRAM size in MB. \\n The pulSize output will be in the range [1, n] inclusive, where \"n\" is the maximum DRAM size available in MB on the device.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 627
+        },
+        {
+          "name": "platform_hal_GetUsedMemorySize",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pulSize"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetUsedMemorySize(ULONG *pulSize);",
+          "brief": "Get the total used memory of the DRAM (Dynamic Random Access Memory) in megabytes (MB). This function retrieves the amount of DRAM memory currently in use by the system, expressed in MB. \\n The returned value represents the used DRAM size in MB. \\n The value will be in the range [1, n] inclusive, where \"n\" is the total DRAM size available in MB on the device.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 643
+        },
+        {
+          "name": "platform_hal_GetFreeMemorySize",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pulSize"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetFreeMemorySize(ULONG *pulSize);",
+          "brief": "Get the total available memory of the DRAM (Dynamic Random Access Memory) in megabytes (MB). This function retrieves the amount of DRAM memory that is currently free or available in the system, expressed in MB. \\n The returned value represents the available DRAM size in MB. \\n The value will be in the range [1, n] inclusive, where \"n\" is the total DRAM size available in MB on the device.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 659
+        },
+        {
+          "name": "platform_hal_GetFactoryResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pulSize"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetFactoryResetCount(ULONG *pulSize);",
+          "brief": "Get the total number of times factory reset has been done on the device. \\n Device.DeviceInfo.FactoryResetCount. \\n Possible values for pulSize is 0 to n.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 673
+        },
+        {
+          "name": "platform_hal_ClearResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "bFlag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_ClearResetCount(BOOLEAN bFlag);",
+          "brief": "Reset the factory reset count on the device command \"Device.DeviceInfo.ClearResetCount\". \\n Factory Reset count will be unchanged,if set to FALSE.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 686
+        },
+        {
+          "name": "platform_hal_getTimeOffSet",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "timeOffSet"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getTimeOffSet(CHAR *timeOffSet);",
+          "brief": "Get the time offset from the device. \\n Device.DeviceInfo.TimeOffset. This function retrieves the time offset in seconds from UTC (Coordinated Universal Time). \\n The valid values for timeOffSet are as follows : \\n '-25200': Eastern Standard Time (EST) = UTC-5. \\n '-18000': Mountain Standard Time (MST) = UTC-7 (default). \\n '+25200': Indonesia Western Time = UTC+7. \\n The returned value is expressed in seconds relative to UTC. \\n The buffer size allocated for timeOffSet should be at least 256 bytes to accommodate the offset value and any null terminators or additional information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 707
+        },
+        {
+          "name": "platform_hal_SetDeviceCodeImageTimeout",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "seconds"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetDeviceCodeImageTimeout(INT seconds);",
+          "brief": "Set HW watchdog timeout value. \\n The default value is 60 minutes. \\n The possible range for seconds is 0 to 60 mins[inclusively].",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 721
+        },
+        {
+          "name": "platform_hal_SetDeviceCodeImageValid",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "flag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetDeviceCodeImageValid(BOOLEAN flag);",
+          "brief": "Set Valid flag for firmware image flashed in the device.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 734
+        },
+        {
+          "name": "platform_hal_getFactoryPartnerId",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getFactoryPartnerId(CHAR *pValue);",
+          "brief": "Get FactoryPartnerID from the the device. \\n Possible values for pValue are \"unknown\", \"eUnprogrammed\", \"eComcast\", \"eCharter\", \"eCox\", \"eRogers\", \"eVodafone\", \"eShaw\", \"eVideotron\". \\n The buffer size size should be at least 512 bytes long.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 748
+        },
+        {
+          "name": "platform_hal_getFactoryCmVariant",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getFactoryCmVariant(CHAR *pValue);",
+          "brief": "Get FactoryCmVariant from the the device. \\n Possible values for pValue are \"unknown\", \"pc20\", \"pc20genband\", \"pc15sip\", \"pc15mgcp\". \\n The buffer size should be at least 512 bytes long.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 763
+        },
+        {
+          "name": "platform_hal_setFactoryCmVariant",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_setFactoryCmVariant(CHAR *pValue);",
+          "brief": "Set FactoryCmVariant from the the device. \\n Possible values are  \"unknown\", \"pc20\", \"pc20genband\", \"pc15sip\" and \"pc15mgcp\" . \\n The string size shouldn't exceed 512 bytes.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 778
+        },
+        {
+          "name": "platform_hal_initLed",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "config_file_name"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int platform_hal_initLed(char *config_file_name);",
+          "brief": "Initialises HAL layer and return file pointer to config file. \\n Buffer to hold the config file name including the full path. eg: /usr/rdk/rdkledmanager/led_config_gb.json. \\n The buffer size should be at least 128 bytes long.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 844
+        },
+        {
+          "name": "platform_hal_setLed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PLEDMGMT_PARAMS",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_setLed(PLEDMGMT_PARAMS pValue);",
+          "brief": "Sets the LED behavior on the device as per the provided configuration. This function allows the configuration of the LED's color, state (Solid/Blink), and blink interval.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the LED behavior was successfully set. RETURN_ERR if any error occurred during the operation.",
+          "deprecated": false,
+          "line": 858
+        },
+        {
+          "name": "platform_hal_getLed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PLEDMGMT_PARAMS",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getLed(PLEDMGMT_PARAMS pValue);",
+          "brief": "Get the LED behavior of the device at the time of call.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 869
+        },
+        {
+          "name": "platform_hal_getFanSpeed",
+          "return_type": "UINT",
+          "params": [
+            {
+              "type": "UINT",
+              "name": "fanIndex"
+            }
+          ],
+          "param_count": 1,
+          "signature": "UINT platform_hal_getFanSpeed(UINT fanIndex);",
+          "brief": "Retrieve the PWM (pulse width modulation) setting for the specified fan. This function is used to get the current fan speed based on its PWM setting. The speed result reflects the actual RPM or percentage of maximum RPM, not just the PWM value. \\n Valid range for fanIndex is [0, 1], meaning only two fans (indexed 0 and 1) are supported.",
+          "params_doc": {},
+          "return_doc": "FanSpeed in unsigned int. The range for FanSpeed is [0, n]. Here, \"n\" is dependent on the OEM's fan speed specification, where \"n\" could represent the maximum RPM or 100% speed.",
+          "deprecated": false,
+          "line": 882
+        },
+        {
+          "name": "platform_hal_getRPM",
+          "return_type": "UINT",
+          "params": [
+            {
+              "type": "UINT",
+              "name": "fanIndex"
+            }
+          ],
+          "param_count": 1,
+          "signature": "UINT platform_hal_getRPM(UINT fanIndex);",
+          "brief": "Get RPM(rotations per minute) of the fan. \\n The valid range of fanIndex is from 0 to 1 (fanIndex value should be less than 2).",
+          "params_doc": {},
+          "return_doc": "FanRPM in unsigned int. Range of FanRPM is from 0 to n and \u201cn\u201d is OEM dependent.",
+          "deprecated": false,
+          "line": 893
+        },
+        {
+          "name": "platform_hal_getRotorLock",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT",
+              "name": "fanIndex"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getRotorLock(UINT fanIndex);",
+          "brief": "Get the status of rotor lock. \\n The valid range of fanIndex is from 0 to 1 (fanIndex value should be less than 2).",
+          "params_doc": {},
+          "return_doc": "The status of the rotor lock. 1 if locked. 0 if not locked. -1 if value not applicable.",
+          "deprecated": false,
+          "line": 906
+        },
+        {
+          "name": "platform_hal_getFanStatus",
+          "return_type": "BOOLEAN",
+          "params": [
+            {
+              "type": "UINT",
+              "name": "fanIndex"
+            }
+          ],
+          "param_count": 1,
+          "signature": "BOOLEAN platform_hal_getFanStatus(UINT fanIndex);",
+          "brief": "Get the fan status. \\n The valid range of fanIndex is from 0 to 1 (fanIndex value should be less than 2).",
+          "params_doc": {},
+          "return_doc": "The fan status. 1 if fan is enabled. 0 if fan disabled.",
+          "deprecated": false,
+          "line": 918
+        },
+        {
+          "name": "platform_hal_setFanMaxOverride",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "bOverrideFlag"
+            },
+            {
+              "type": "UINT",
+              "name": "fanIndex"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_setFanMaxOverride(BOOLEAN bOverrideFlag, UINT fanIndex);",
+          "brief": "Override the fan's speed setting, setting it to either run at maximum speed or restoring its default behavior. This function allows the user to override the fan's default behavior and set it to run at its maximum speed or, if already set to max speed, to revert back to its normal speed. \\n Valid range for fanIndex is [0, 1], meaning only two fans (indexed 0 and 1) are supported.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successfully set/unset the fan to/from high-speed mode. RETURN_ERR if an error occurs.",
+          "deprecated": false,
+          "line": 933
+        },
+        {
+          "name": "platform_hal_initThermal",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "THERMAL_PLATFORM_CONFIG *",
+              "name": "pThermalPlatformConfig"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_initThermal(THERMAL_PLATFORM_CONFIG *pThermalPlatformConfig);",
+          "brief": "Initialise Thermal Hal.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK on successful initialisation. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 977
+        },
+        {
+          "name": "platform_hal_LoadThermalConfig",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "THERMAL_PLATFORM_CONFIG *",
+              "name": "pThermalPlatformConfig"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_LoadThermalConfig(THERMAL_PLATFORM_CONFIG *pThermalPlatformConfig);",
+          "brief": "Loads default Thermal Hal thresholds. Refer to the THERMAL_PLATFORM_CONFIG structure for details on the configuration parameters.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK on successful loading of the thermal configuration. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 989
+        },
+        {
+          "name": "platform_hal_setFanSpeed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT",
+              "name": "fanIndex"
+            },
+            {
+              "type": "FAN_SPEED",
+              "name": "fanSpeed"
+            },
+            {
+              "type": "FAN_ERR *",
+              "name": "pErrReason"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT platform_hal_setFanSpeed(UINT fanIndex, FAN_SPEED fanSpeed, FAN_ERR *pErrReason);",
+          "brief": "Set the fan speed. Valid range is from 0 to 1 (fanIndex value should be less than 2). Values can be taken from the FAN_SPEED enumeration. Values returned can be from the FAN_ERR enumeration.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful in setting the fan speed. RETURN_ERR if any error is detected. RETURN_UNSUPPORTED if a platform does not support this API.",
+          "deprecated": false,
+          "line": 1016
+        },
+        {
+          "name": "platform_hal_getFanTemperature",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pTemp"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getFanTemperature(INT *pTemp);",
+          "brief": "Get current device temperature reading. The valid range for the temperature reading is from 0 to 100 degrees Celsius as defined by the platform's requirements.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK on successfully retrieving the temperature reading. RETURN_ERR if any error is detected. RETURN_UNSUPPORTED if a platform does not support this API.",
+          "deprecated": false,
+          "line": 1030
+        },
+        {
+          "name": "platform_hal_getInputCurrent",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getInputCurrent(INT *pValue);",
+          "brief": "To get input current. \\n Valid values for pValue are in the range of 0 to 20000 milli-Amperes (mA).",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected. RETURN_UNSUPPORTED if a platform does not support this API.",
+          "deprecated": false,
+          "line": 1044
+        },
+        {
+          "name": "platform_hal_getInputPower",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getInputPower(INT *pValue);",
+          "brief": "Get the input power in milli-Watts. This function retrieves the power consumed by the platform and stores it in the provided pointer. Valid values for pValue are in the range of 0 to 20000 milli-Watts (mW).",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the input power is successfully retrieved. RETURN_ERR if an error is encountered during the operation. RETURN_UNSUPPORTED if a platform does not support this API.",
+          "deprecated": false,
+          "line": 1060
+        },
+        {
+          "name": "platform_hal_getRadioTemperature",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "radioIndex"
+            },
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_getRadioTemperature(INT radioIndex, INT *pValue);",
+          "brief": "Get the temperature of a specific radio module. This function retrieves the temperature of a radio module identified by `radioIndex` and stores it in the provided pointer `pValue`. \\n Possible values are 0, 1 and 2. \\n value 0 means 2.4GHz WiFi radio, value 1 means 5GHz WiFi (Low Band) radio and value 2 means 5GHz WiFi (High Band) radio. \\n Valid values for `pValue` are in the range of 0 to 100 degrees Celsius.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the radio temperature is successfully retrieved. RETURN_ERR if an error is encountered during the operation. RETURN_UNSUPPORTED if a platform does not support this API.",
+          "deprecated": false,
+          "line": 1080
+        },
+        {
+          "name": "platform_hal_getEcoModeStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "radioIndex"
+            },
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_getEcoModeStatus(INT radioIndex, INT *pValue);",
+          "brief": "Get the ECO mode status for a specific radio module. This function retrieves the ECO mode status of radio module identified by `radioIndex` \\n Possible values are 0, 1. \\n value 0 means 2.4GHz WiFi radio, value 1 means 5GHz WiFi radio. \\n Possible values are 0, 1. \\n value 0 means ECO mode is disabled, value 1 means ECO mode is enabled.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the ECO mode is successfully retrieved. RETURN_ERR if an error is encountered during the operation. RETURN_UNSUPPORTED if a platform does not support this API.",
+          "deprecated": false,
+          "line": 1101
+        },
+        {
+          "name": "platform_hal_SetSNMPOnboardRebootEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetSNMPOnboardRebootEnable(CHAR *pValue);",
+          "brief": "Set SNMP Onboard Reboot Enable value to allow or ignore SNMP reboot. \\n Possible values are \"disable\" and \"enable\" (case-insensitive). \\n The string size shouldn't exceed 8 bytes. It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1116
+        },
+        {
+          "name": "platform_hal_GetMACsecEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "ethPort"
+            },
+            {
+              "type": "BOOLEAN *",
+              "name": "pFlag"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetMACsecEnable(INT ethPort, BOOLEAN *pFlag);",
+          "brief": "Get MACsec enable status. \\n Here ethPort means combination of all interfaces such as moca,ethernet and wifi. \\n The valid range of ethPort is from 0 to MaxEthPort-1, where MaxEthPort is platform specific.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1131
+        },
+        {
+          "name": "platform_hal_SetMACsecEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "ethPort"
+            },
+            {
+              "type": "BOOLEAN",
+              "name": "Flag"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_SetMACsecEnable(INT ethPort, BOOLEAN Flag);",
+          "brief": "Enable/Disable MACsec. \\n Here ethPort means combination of all interfaces such as moca,ethernet and wifi. \\n The valid range of ethPort is from 0 to MaxEthPort-1, where MaxEthPort is platform specific.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1145
+        },
+        {
+          "name": "platform_hal_GetMACsecOperationalStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "ethPort"
+            },
+            {
+              "type": "BOOLEAN *",
+              "name": "pFlag"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetMACsecOperationalStatus(INT ethPort, BOOLEAN *pFlag);",
+          "brief": "Checks whether MACSEC is configured at interface / driver level. \\n Here ethPort means combination of all interfaces such as moca,ethernet and wifi. \\n The valid range of ethPort is from 0 to MaxEthPort-1, where MaxEthPort is platform specific.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1159
+        },
+        {
+          "name": "platform_hal_StartMACsec",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "ethPort"
+            },
+            {
+              "type": "INT",
+              "name": "timeoutSec"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_StartMACsec(INT ethPort, INT timeoutSec);",
+          "brief": "Start MACsec - Call should be Blocking. \\n Here ethPort means combination of all interfaces such as moca,ethernet and wifi. \\n The valid range of ethPort is from 0 to MaxEthPort-1, where MaxEthPort is platform specific. \\n timeoutSec is unused and possible value is 0.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1174
+        },
+        {
+          "name": "platform_hal_StopMACsec",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT",
+              "name": "ethPort"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_StopMACsec(INT ethPort);",
+          "brief": "Stop MACsec - Call should be Blocking. \\n Here ethPort means combination of all interfaces such as moca,ethernet and wifi. \\n The valid range of ethPort is from 0 to MaxEthPort-1, where MaxEthPort is platform specific.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1187
+        },
+        {
+          "name": "platform_hal_GetMemoryPaths",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "RDK_CPUS",
+              "name": "index"
+            },
+            {
+              "type": "PPLAT_PROC_MEM_INFO *",
+              "name": "ppinfo"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetMemoryPaths(RDK_CPUS index, PPLAT_PROC_MEM_INFO *ppinfo);",
+          "brief": "Get the device specific processors DRAM and eMMC paths. \\n Host is the primary RDK CPU . \\n index can hold any values from enum RDK_CPUS. \\n List of client structure to be filled by hal.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected. @execution Synchronous. @note HAL function need to allocate the array of PLAT_PROC_MEM_INFO and return with ppinfo.",
+          "deprecated": false,
+          "line": 1207
+        },
+        {
+          "name": "platform_hal_GetDhcpv4_Options",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "dhcp_opt_list **",
+              "name": "req_opt_list"
+            },
+            {
+              "type": "dhcp_opt_list **",
+              "name": "send_opt_list"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetDhcpv4_Options(dhcp_opt_list **req_opt_list, dhcp_opt_list **send_opt_list);",
+          "brief": "This function fills in 2 list, 1 for request option and 1 for send option.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1232
+        },
+        {
+          "name": "platform_hal_GetDhcpv6_Options",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "dhcp_opt_list **",
+              "name": "req_opt_list"
+            },
+            {
+              "type": "dhcp_opt_list **",
+              "name": "send_opt_list"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetDhcpv6_Options(dhcp_opt_list **req_opt_list, dhcp_opt_list **send_opt_list);",
+          "brief": "This function fills in 2 list, 1 for request option and 1 for send option.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1245
+        },
+        {
+          "name": "platform_hal_SetLowPowerModeState",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PPSM_STATE",
+              "name": "pState"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_SetLowPowerModeState(PPSM_STATE pState);",
+          "brief": "Set Low Power Mode State value. Hysteresis currently not accounted for before call. \\n pState can hold any values from enum PPSM_STATE.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1267
+        },
+        {
+          "name": "platform_hal_getCMTSMac",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_getCMTSMac(CHAR *pValue);",
+          "brief": "Get CMTS MAC Address. This function is used to obtain the CMTS (Cable Modem Termination System) MAC address. The MAC address is populated in the provided buffer. \\n The buffer size should be at least 100 bytes in size.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1283
+        },
+        {
+          "name": "platform_hal_setDscp",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "WAN_INTERFACE",
+              "name": "interfaceType"
+            },
+            {
+              "type": "TRAFFIC_CNT_COMMAND",
+              "name": "cmd"
+            },
+            {
+              "type": "char *",
+              "name": "pDscpVals"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT platform_hal_setDscp(WAN_INTERFACE interfaceType , TRAFFIC_CNT_COMMAND cmd , char *pDscpVals);",
+          "brief": "Control/Set traffic counting based on Dscp value. \\n interfaceType variable can hold any values from the enum WAN_INTERFACE. \\n cmd can hold any values from enum TRAFFIC_CNT_COMMAND. \\n Range of DSCP values is [0-65,534]. \\n The string\u2019s size shouldn\u2019t exceed 195 bytes. \\n e.g. \"10,0\" , NULL. NULL is for all DSCP values.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1329
+        },
+        {
+          "name": "platform_hal_resetDscpCounts",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "WAN_INTERFACE",
+              "name": "interfaceType"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_resetDscpCounts(WAN_INTERFACE interfaceType);",
+          "brief": "To reset Dscp Counter values. \\n interfaceType variable can hold any values from the enum WAN_INTERFACE.",
+          "params_doc": {},
+          "return_doc": "RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1340
+        },
+        {
+          "name": "platform_hal_getDscpClientList",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "WAN_INTERFACE",
+              "name": "interfaceType"
+            },
+            {
+              "type": "pDSCP_list_t",
+              "name": "pDSCP_List"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_getDscpClientList(WAN_INTERFACE interfaceType , pDSCP_list_t pDSCP_List);",
+          "brief": "To get counter data. \\n interfaceType variable can hold any values from the enum WAN_INTERFACE.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1354
+        },
+        {
+          "name": "platform_hal_GetCPUSpeed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char *",
+              "name": "cpuSpeed"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_GetCPUSpeed(char *cpuSpeed);",
+          "brief": "Get cpu speed. \\n It is a vendor specific. \\n The range of acceptable values is 0 to (2^64)-1 (inclusive). \\n The buffer size should be at least 64 bytes long.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1370
+        },
+        {
+          "name": "platform_hal_GetFirmwareBankInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "FW_BANK",
+              "name": "bankIndex"
+            },
+            {
+              "type": "PFW_BANK_INFO",
+              "name": "pFW_Bankinfo"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetFirmwareBankInfo(FW_BANK bankIndex,PFW_BANK_INFO pFW_Bankinfo);",
+          "brief": "Get firmware image name flashed in the given Bank.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1395
+        },
+        {
+          "name": "platform_hal_GetInterfaceStats",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "ifname"
+            },
+            {
+              "type": "PINTF_STATS",
+              "name": "pIntfStats"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetInterfaceStats(const char *ifname,PINTF_STATS pIntfStats);",
+          "brief": "Get Interface Stats for the given interface, considering only LAN to WAN/WAN to LAN traffic. \\n To acquire a list of available network interfaces that are platform specific, use the 'ifconfig -a' command to know the list all interfaces on each platform.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 1418
+        },
+        {
+          "name": "platform_hal_GetPppUserName",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR*",
+              "name": "pUserName"
+            },
+            {
+              "type": "ULONG",
+              "name": "maxSize"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetPppUserName(CHAR* pUserName, ULONG maxSize);",
+          "brief": "Get the PPP username. This function retrieves the PPP username and stores it in the buffer pointed to by `pUserName`.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. - RETURN_OK if the username is successfully retrieved. - RETURN_ERR if an error is encountered during the operation.",
+          "deprecated": false,
+          "line": 1433
+        },
+        {
+          "name": "platform_hal_GetPppPassword",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR*",
+              "name": "pPassword"
+            },
+            {
+              "type": "ULONG",
+              "name": "maxSize"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT platform_hal_GetPppPassword(CHAR* pPassword, ULONG maxSize);",
+          "brief": "Get the PPP password. This function retrieves the PPP password and stores it in the buffer pointed to by `pPassword`.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. - RETURN_OK if the password is successfully retrieved. - RETURN_ERR if an error is encountered during the operation.",
+          "deprecated": false,
+          "line": 1448
+        },
+        {
+          "name": "platform_hal_qos_apply",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "const hal_network_params_t *",
+              "name": "params"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT platform_hal_qos_apply(const hal_network_params_t *params);",
+          "brief": "Applies QoS and traffic management settings using the provided network parameters. This function configures Quality of Service (QoS) and traffic management rules in the Platform HAL based on the given network parameters. network parameters, including IP addresses, ports, protocol, and DSCP value. The structure must be correctly initialized.",
+          "params_doc": {},
+          "return_doc": "0 on success. Negative value on error.",
+          "deprecated": false,
+          "line": 1573
+        }
+      ]
+    }
+  ],
+  "total_api_count": 71
+}

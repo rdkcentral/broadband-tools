@@ -1,0 +1,278 @@
+{
+  "component": "wan",
+  "repo_dir": "rdkb-halif-wan",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/wan_hal.h",
+      "api_count": 15,
+      "apis": [
+        {
+          "name": "wan_hal_Init",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int wan_hal_Init();",
+          "brief": "Initializes the WAN features. This function is responsible for setting up the WAN Hardware Abstraction Layer (HAL) and preparing it for operation. This may involve initializing internal data structures, establishing communication with the WAN hardware, and starting any necessary background processes.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the initialization is successful. RETURN_ERR if an error occurs during initialization.",
+          "deprecated": false,
+          "line": 173
+        },
+        {
+          "name": "wan_hal_SetWanmode",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "t_eWanMode",
+              "name": "mode"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_SetWanmode(t_eWanMode mode);",
+          "brief": "Sets the WAN mode of the device. This function configures the operational mode of the WAN interface, determining how the device connects to the wider network (e.g., DSL, Ethernet, or automatic selection).",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the WAN mode is set successfully. RETURN_ERR if an error occurs during the configuration process.",
+          "deprecated": false,
+          "line": 187
+        },
+        {
+          "name": "wan_hal_SetWanConnectionEnable",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int",
+              "name": "enable"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_SetWanConnectionEnable(unsigned int enable);",
+          "brief": "Enables or disables the WAN connection. This function controls the activation or deactivation of the WAN interface, allowing the device to connect to or disconnect from the wider network.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the operation is successful. RETURN_ERR if an error occurs during the operation.",
+          "deprecated": false,
+          "line": 201
+        },
+        {
+          "name": "wan_hal_SetSelfHealConfig",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PSELFHEAL_CONFIG",
+              "name": "pSelfHealConfig"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_SetSelfHealConfig(PSELFHEAL_CONFIG pSelfHealConfig);",
+          "brief": "Sets the SelfHeal configuration for the WAN manager. This function applies the desired SelfHeal configuration settings, which determine how the system should respond to WAN-related errors or failures. SelfHeal configuration parameters.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the configuration is set successfully. RETURN_ERR if an error occurs during configuration.",
+          "deprecated": false,
+          "line": 216
+        },
+        {
+          "name": "wan_hal_GetWanOEUpstreamCurrRate",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_GetWanOEUpstreamCurrRate(unsigned int *pValue);",
+          "brief": "Retrieves the current payload bandwidth of the upstream WANoE (WAN over Ethernet) connection. This function fetches the real-time rate at which payload data is being transmitted on the upstream WANoE connection. The rate is measured in bits per second. bandwidth value will be stored.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the upstream bandwidth is successfully retrieved. RETURN_ERR if an error occurs during the retrieval process.",
+          "deprecated": false,
+          "line": 231
+        },
+        {
+          "name": "wan_hal_GetWanOEDownstreamCurrRate",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_GetWanOEDownstreamCurrRate(unsigned int *pValue);",
+          "brief": "Retrieves the current payload bandwidth of the downstream WANoE (WAN over Ethernet) connection. This function fetches the real-time rate at which payload data is being received on the downstream WANoE connection. The rate is measured in bits per second. bandwidth value will be stored.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the downstream bandwidth is successfully retrieved. RETURN_ERR if an error occurs during the retrieval process.",
+          "deprecated": false,
+          "line": 246
+        },
+        {
+          "name": "wan_hal_SetQoSConfiguration",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PWAN_QOS_QUEUE",
+              "name": "pQueue"
+            },
+            {
+              "type": "unsigned int",
+              "name": "QueueNumberOfEntries"
+            },
+            {
+              "type": "const char*",
+              "name": "baseifname"
+            },
+            {
+              "type": "const char*",
+              "name": "wanifname"
+            }
+          ],
+          "param_count": 4,
+          "signature": "int wan_hal_SetQoSConfiguration(PWAN_QOS_QUEUE pQueue, unsigned int QueueNumberOfEntries, const char* baseifname, const char* wanifname);",
+          "brief": "Configures the Quality of Service (QoS) settings for the WAN interface. This function applies the provided QoS queue configurations to the specified base and WAN interfaces. It allows for fine-grained control over how network traffic is prioritized and managed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the QoS configuration is applied successfully. RETURN_ERR if an error occurs during the configuration process.",
+          "deprecated": false,
+          "line": 264
+        },
+        {
+          "name": "wan_hal_ConfigureIpv4",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PWAN_IPV4_CFG",
+              "name": "pWanIpv4Cfg"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_ConfigureIpv4(PWAN_IPV4_CFG pWanIpv4Cfg);",
+          "brief": "Configures IPv4 settings for the specified WAN interface. This function applies the provided IPv4 configuration parameters to the designated WAN interface. The configuration includes the IP address, subnet mask, default gateway, and DNS servers.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the configuration is applied successfully. RETURN_ERR if an error occurs during the configuration process.",
+          "deprecated": false,
+          "line": 279
+        },
+        {
+          "name": "wan_hal_UnConfigureIpv4",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PWAN_IPV4_CFG",
+              "name": "pWanIpv4Cfg"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_UnConfigureIpv4(PWAN_IPV4_CFG pWanIpv4Cfg);",
+          "brief": "Removes the IPv4 configuration from the specified WAN interface. This function clears the IPv4 settings, including the IP address, subnet mask, default gateway, and DNS servers, from the designated WAN interface. and optionally the IPv4 configuration details to be removed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the IPv4 configuration is removed successfully. RETURN_ERR if an error occurs during the unconfiguration process.",
+          "deprecated": false,
+          "line": 294
+        },
+        {
+          "name": "wan_hal_ConfigureIpv6",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PWAN_IPV6_CFG",
+              "name": "pWanIpv6Cfg"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_ConfigureIpv6(PWAN_IPV6_CFG pWanIpv6Cfg);",
+          "brief": "Adds an IPv6 address to the specified WAN interface. This function assigns the provided IPv6 address, along with its preferred and valid lifetimes, and DNS servers to the designated WAN interface.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the IPv6 address is added successfully. RETURN_ERR if an error occurs during the configuration process.",
+          "deprecated": false,
+          "line": 308
+        },
+        {
+          "name": "wan_hal_UnConfigureIpv6",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PWAN_IPV6_CFG",
+              "name": "pWanIpv6Cfg"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_UnConfigureIpv6(PWAN_IPV6_CFG pWanIpv6Cfg);",
+          "brief": "Removes an IPv6 address from the specified WAN interface. This function deletes the IPv6 address specified in the `pWanIpv6Cfg` structure from the designated WAN interface. address and interface name to be removed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the IPv6 address is successfully removed. RETURN_ERR if an error occurs during the process.",
+          "deprecated": false,
+          "line": 323
+        },
+        {
+          "name": "wan_hal_EnableMapt",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "PWAN_MAPT_CFG",
+              "name": "pMAPTCfg"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_EnableMapt(PWAN_MAPT_CFG pMAPTCfg);",
+          "brief": "Enables MAP-T (Mapping of Address and Port Translation) on the specified WAN interface. This function activates the MAP-T protocol on the designated interface, using the configuration parameters provided in the `pMAPTCfg` structure. MAP-T is used to translate IPv6 addresses and ports to IPv4 equivalents, allowing IPv6-only clients to communicate with IPv4-only servers. details for MAP-T.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if MAP-T is enabled successfully. RETURN_ERR if an error occurs during the enablement process.",
+          "deprecated": false,
+          "line": 340
+        },
+        {
+          "name": "wan_hal_DisableMapt",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char*",
+              "name": "ifName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_DisableMapt(const char* ifName);",
+          "brief": "Disables MAP-T (Mapping of Address and Port Translation) on the specified WAN interface. This function deactivates the MAP-T protocol on the given interface, preventing further translation of IPv6 addresses and ports to IPv4 equivalents.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if MAP-T is disabled successfully. RETURN_ERR if an error occurs during the disablement process.",
+          "deprecated": false,
+          "line": 354
+        },
+        {
+          "name": "wan_hal_enableWanOEMode",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const unsigned char",
+              "name": "enable"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_enableWanOEMode(const unsigned char enable);",
+          "brief": "Enables or disables WANoE (WAN over Ethernet) mode. This function allows you to control whether the WAN interface operates in WANoE mode. When enabled, the device's WAN connection is established over an Ethernet link.",
+          "params_doc": {
+            "enable": "Set to 1 to enable WANoE mode, or 0 to disable it."
+          },
+          "return_doc": "The status of the operation. RETURN_OK if the operation is successful. RETURN_ERR if an error occurs.",
+          "deprecated": false,
+          "line": 368
+        },
+        {
+          "name": "wan_hal_getAuthInfo",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "authInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int wan_hal_getAuthInfo(char *authInfo);",
+          "brief": "Retrieves authentication information for the WAN connection. This function fetches authentication credentials, such as the ADSL username and password, required to establish or maintain the WAN connection. The retrieved information is stored in a buffer provided by the caller. will be stored. Ensure the buffer is sufficiently large to hold the data (minimum 256 bytes, maximum 16384 bytes). The returned string will be null-terminated.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if the authentication information is retrieved successfully. RETURN_ERR if an error occurs during the retrieval process.",
+          "deprecated": false,
+          "line": 385
+        }
+      ]
+    }
+  ],
+  "total_api_count": 15
+}

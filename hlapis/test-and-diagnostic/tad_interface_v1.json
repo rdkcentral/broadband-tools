@@ -1,0 +1,4302 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "TestAndDiagnostic",
+    "moduleName": "CcspTandDSsp",
+    "version": "0.1.0-draft",
+    "description": "Device diagnostics, self-heal, thermal control, WAN connectivity checking, device prioritization, and latency measurement for RDK-B.",
+    "sourceBranch": "develop",
+    "sourceCommit": "98446bd34077a6b1f44c0bd0e0f3fee7b6f90550",
+    "generated": "2026-08-20",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --name TestAndDiagnostic --module-name CcspTandDSsp --description Device diagnostics, self-heal, thermal control, WAN connectivity checking, device prioritization, and latency measurement for RDK-B. --output tad_interface.json"
+  },
+  "elements": {
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.DNSServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.HostName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.NumberOfRepetitions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DNS.Diagnostics.NSLookupDiagnostics.ResultNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.AnswerType": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.DNSServerIP": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.HostNameReturned": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.IPAddresses": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.ResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.ResultNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.SuccessCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.DNS.Diagnostics.NSLookupDiagnostics.Timeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.Active": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetHandler",
+        "subscribeHandler": "WANCNCTVTYCHK_SubHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.Enable": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_RbusDataElements"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.TestURL.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Diagnostics.X_RDK_DNSInternet.TestURLNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.TestURL.{i}.URL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetURLHandler",
+        "setHandler": "WANCNCTVTYCHK_SetURLHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.TestURLNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetURLHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Diagnostics.X_RDK_DNSInternet.WANInterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.ActiveMonitor": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.ActiveMonitorInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.InterfaceName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.MonitorResult": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "subscribeHandler": "WANCNCTVTYCHK_SubHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.PassiveMonitor": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.PassiveMonitorTimeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.QueryNow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.QueryNowResult": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "subscribeHandler": "WANCNCTVTYCHK_SubHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.QueryRetry": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.QueryTimeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.RecordType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterface.{i}.ServerType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler",
+        "setHandler": "WANCNCTVTYCHK_SetIntfHandler"
+      }
+    },
+    "Device.Diagnostics.X_RDK_DNSInternet.WANInterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "getHandler": "WANCNCTVTYCHK_GetIntfHandler"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.BOMTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.DSCP": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.DownloadTransports": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.DownloadURL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.EOMTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.EthernetPriority": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.ROMTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.TCPOpenRequestTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.TCPOpenResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.TestBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.DownloadDiagnostics.TotalBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.AverageResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.DSCP": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.DataBlockSize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.FailureCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.Host": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.MaximumResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.MinimumResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.NumberOfRepetitions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.SuccessCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.IPPing.Timeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.DSCP": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.DataBlockSize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.Host": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.MaxHopCount": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.NumberOfTries": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.ResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.IP.Diagnostics.TraceRoute.RouteHopsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.ErrorCode": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.Host": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.HostAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.RTTimes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.RouteHopsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.TraceRoute.Timeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.BytesResponded": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.EchoPlusEnabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.EchoPlusSupported": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.PacketsResponded": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.SourceIPAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.TimeFirstPacketReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.TimeLastPacketReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UDPEchoConfig.UDPPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.BOMTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.DSCP": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.EOMTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.EthernetPriority": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.ROMTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.TCPOpenRequestTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.TCPOpenResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.TestFileLength": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.TotalBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.UploadTransports": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.UploadDiagnostics.UploadURL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_CISCO_COM_ARP.ARPTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.IP.Diagnostics.X_CISCO_COM_ARP.ARPTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.IP.Diagnostics.X_CISCO_COM_ARP.ARPTable.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_CISCO_COM_ARP.ARPTable.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_CISCO_COM_ARP.ARPTable.{i}.Static": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_CISCO_COM_ARP.ARPTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_PingTest.DeviceID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_PingTest.DeviceModel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_PingTest.PartnerID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_PingTest.Run": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_PingTest.ecmMAC": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_RxTxStats.InterfaceList": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_RxTxStats.PortList": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Argument": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Authentication": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.ClientType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.ClientVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Enable_Speedtest": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Run": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Server.Capability": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Server.Key": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Server.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Server.Username": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_SpeedTest.Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.Capacity": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.DeviceID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.DeviceTemperature": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.FirmwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.Healthy": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.HwVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.LifeElapsedA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.LifeElapsedB": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.Manufacturer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.Model": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.Operational": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.PreEOLStateEUDA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.PreEOLStateMLC": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.PreEOLStateSystem": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.SerialNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDKCENTRAL-COM_eMMCFlash.UncorrectableECC": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef EMMC_DIAG_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.IP.Diagnostics.X_RDK_SpeedTest.SubscriberUnPauseTimeOut": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.LogBackup.X_RDKCENTRAL-COM_Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.LogBackup.X_RDKCENTRAL-COM_Interval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.LogBackup.X_RDKCENTRAL-COM_SyncandUploadLogs": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.PowerManagement.PciEPowerManagement": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.QOS.X_RDK_DscpControlPerClient.ActiveRules": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "device_prio_rbus_handler_apis.c",
+        "table": "DevicePrioRbusDataElements",
+        "getHandler": "TestDiagnostic_DscpControl_GetStringHandler",
+        "subscribeHandler": "TestDiagnostic_DevicePrio_EventStringHandler"
+      }
+    },
+    "Device.QOS.X_RDK_DscpControlPerClient.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RDK_SCHEDULER_ENABLED"
+      ],
+      "source": {
+        "file": "device_prio_rbus_handler_apis.c",
+        "table": "DevicePrioRbusDataElements",
+        "getHandler": "TestDiagnostic_DscpControl_GetStringHandler",
+        "setHandler": "TestDiagnostic_DscpControl_SetStringHandler"
+      }
+    },
+    "Device.QOS.X_RDK_LatencyMeasure_IPv4Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "lowlatency_rbus_handler_apis.c",
+        "table": "LatencyMeasurementRbusDataElements",
+        "getHandler": "TestDiagnostic_LatencyMeasure_GetBoolHandler",
+        "setHandler": "TestDiagnostic_LatencyMeasure_SetBoolHandler"
+      }
+    },
+    "Device.QOS.X_RDK_LatencyMeasure_IPv6Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "lowlatency_rbus_handler_apis.c",
+        "table": "LatencyMeasurementRbusDataElements",
+        "getHandler": "TestDiagnostic_LatencyMeasure_GetBoolHandler",
+        "setHandler": "TestDiagnostic_LatencyMeasure_SetBoolHandler"
+      }
+    },
+    "Device.QOS.X_RDK_LatencyMeasure_PercentileCalc_Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "lowlatency_rbus_handler_apis.c",
+        "table": "LatencyMeasurementRbusDataElements",
+        "getHandler": "TestDiagnostic_LatencyMeasure_GetBoolHandler",
+        "setHandler": "TestDiagnostic_LatencyMeasure_SetBoolHandler"
+      }
+    },
+    "Device.QOS.X_RDK_LatencyMeasure_TCP_ReportInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "lowlatency_rbus_handler_apis.c",
+        "table": "LatencyMeasurementRbusDataElements",
+        "getHandler": "TestDiagnostic_LatencyMeasure_GetUintHandler",
+        "setHandler": "TestDiagnostic_LatencyMeasure_SetUintHandler"
+      }
+    },
+    "Device.QOS.X_RDK_LatencyMeasure_TCP_Stats_Report": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "lowlatency_rbus_handler_apis.c",
+        "table": "LatencyMeasurementRbusDataElements",
+        "getHandler": "TestDiagnostic_LatencyMeasure_GetStringHandler",
+        "setHandler": "TestDiagnostic_LatencyMeasure_SetStringHandler",
+        "subscribeHandler": "TestDiagnostic_LatencyMeasure_EventStringHandler"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.DynamicProcess": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.MemoryLimit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.MonitorAllProcess": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.ProcessList": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.ProcessStatsToMonitor": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.SleepInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.SystemStatsToMonitor": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.TelemetryOnly": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CPUProcAnalyzer.TimeToRun": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.PingServerList.IPv4PingServerTable.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.SelfHeal.ConnectivityTest.PingServerList.IPv4PingServerTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": "IPv4PingServerTable_AddEntry",
+        "delFunction": "IPv4PingServerTable_DelEntry"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.PingServerList.IPv4PingServerTable.{i}.X_RDKCENTRAL-COM_Ipv4PingServerURI": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.PingServerList.IPv4PingServerTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.PingServerList.IPv6PingServerTable.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.SelfHeal.ConnectivityTest.PingServerList.IPv6PingServerTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": "IPv6PingServerTable_AddEntry",
+        "delFunction": "IPv6PingServerTable_DelEntry"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.PingServerList.IPv6PingServerTable.{i}.X_RDKCENTRAL-COM_Ipv6PingServerURI": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.PingServerList.IPv6PingServerTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_CorrectiveAction": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_CurrentCount": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_LastReboot": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_MinNumPingServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_NumPingsPerServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_PingInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_PingRespWaitTime": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ConnectivityTest.X_RDKCENTRAL-COM_RebootInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CpuMemFrag.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "3",
+      "numberOfEntriesElement": "Device.SelfHeal.CpuMemFragNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.SelfHeal.CpuMemFrag.{i}.DMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CpuMemFrag.{i}.DMA32": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CpuMemFrag.{i}.FragPercentage": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CpuMemFrag.{i}.Highmem": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CpuMemFrag.{i}.Normal": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.CpuMemFragNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ResourceMonitor.X_RDKCENTRAL-COM_AvgCPUThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ResourceMonitor.X_RDKCENTRAL-COM_AvgMemoryThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.ResourceMonitor.X_RDKCENTRAL-COM_UsageComputeWindow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_CpuMemFragInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_DNS_PINGTEST_Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_DNS_URL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_DiagMode_LogUploadFrequency": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_DiagnosticMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_FreeMemThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_LogBackupThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_MaxRebootCount": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_MaxResetCount": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_MemFragThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.SelfHeal.X_RDKCENTRAL-COM_NoWaitLogSync": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.Thermal.Fan.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "3",
+      "numberOfEntriesElement": "Device.Thermal.FanNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifndef NO_FAN_FEATURE_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Thermal.Fan.{i}.MaxOverride": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef NO_FAN_FEATURE_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.Thermal.Fan.{i}.RotorLock": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef NO_FAN_FEATURE_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.Thermal.Fan.{i}.Speed": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef NO_FAN_FEATURE_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.Thermal.Fan.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef NO_FAN_FEATURE_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.Thermal.FanNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef NO_FAN_FEATURE_SUPPORT"
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Bluetooth.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Bluetooth.Mode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Bluetooth.TransmitChannel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Bluetooth.TransmitLength": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Bluetooth.TransmitPattern": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Fan.Speed": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.Fan.State": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LED.Color": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LED.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LED.Interval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LED.State": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LTE.FirmwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LTE.Iccid": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LTE.Imei": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.LTE.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.Bandwidth": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.Channel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.SSID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.Sideband": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.2_4g.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.Bandwidth": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.Channel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.SSID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gh.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.Bandwidth": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WHDIAG_EXTENDED_DML_SUPPORT"
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.Channel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.SSID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler",
+        "setHandler": "WAREHOUSEDIAG_SetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_WarehouseDiagnostics.WiFi.5gl.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_warehousediag_rbus_apis.c",
+        "table": "WarehouseDiag_Feature_RbusDataElements",
+        "getHandler": "WAREHOUSEDIAG_GetHandler"
+      }
+    },
+    "Device.X_RDK_AutomationTest.Result": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.X_RDK_AutomationTest.Run": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.X_RDK_AutomationTest.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.X_RDK_DNSInternet.StartConnectivityCheck()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "handler": "WANCNCTVTYCHK_StartConnectivityCheck"
+      }
+    },
+    "Device.X_RDK_DNSInternet.StopConnectivityCheck()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "cosa_wanconnectivity_rbus_apis.c",
+        "table": "WANCHK_Feature_Enabled_RbusElements",
+        "handler": "WANCNCTVTYCHK_StopConnectivityCheck"
+      }
+    },
+    "Device.X_RDK_hwHealthTest.Results": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    },
+    "Device.X_RDK_hwHealthTest.executeTest": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TestAndDiagnostic_arm.XML"
+      }
+    }
+  }
+}

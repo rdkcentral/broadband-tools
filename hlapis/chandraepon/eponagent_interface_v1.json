@@ -1,0 +1,1235 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspEPONAgent",
+    "moduleName": "CCSP EPON Agent",
+    "version": "0.1.0-draft",
+    "description": "EPON (Ethernet Passive Optical Network) TR-181 data model agent for RDK-B, providing CCSP-based fiber optic line configuration and status monitoring.",
+    "sourceBranch": "main",
+    "sourceCommit": "724d3bc6bc7f6f84e0c35a35b9cf3ef8f694aaf1",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name CcspEPONAgent --module-name CCSP EPON Agent --description EPON (Ethernet Passive Optical Network) TR-181 data model agent for RDK-B, providing CCSP-based fiber optic line configuration and status monitoring. --output eponagent_interface.json"
+  },
+  "elements": {
+    "Device.DPoE.ClearOnuLinkStatistics": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_ChipInfo.chipModel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_ChipInfo.chipVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_ChipInfo.jedecId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_DeviceSysDescrInfo.hardwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_DeviceSysDescrInfo.modelNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_DeviceSysDescrInfo.vendorName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_DynamicMacTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "32",
+      "numberOfEntriesElement": "Device.DPoE.DPoE_DynamicMacTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DPoE.DPoE_DynamicMacTable.{i}.link": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_DynamicMacTable.{i}.macAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_DynamicMacTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_FirmwareInfo.appCrc32": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_FirmwareInfo.appVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_FirmwareInfo.bootCrc32": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_FirmwareInfo.bootVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_LlidForwardingState.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "32",
+      "numberOfEntriesElement": "Device.DPoE.DPoE_LlidForwardingStateNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DPoE.DPoE_LlidForwardingState.{i}.forwardingState": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_LlidForwardingState.{i}.link": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_LlidForwardingStateNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_ManufacturerInfo.info": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_ManufacturerInfo.manufacturerDate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_ManufacturerInfo.organizationName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OamFrameRate.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "32",
+      "numberOfEntriesElement": "Device.DPoE.DPoE_OamFrameRateNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DPoE.DPoE_OamFrameRate.{i}.link": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OamFrameRate.{i}.maxRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OamFrameRate.{i}.minRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OamFrameRateNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "32",
+      "numberOfEntriesElement": "Device.DPoE.DPoE_OnuLinkStatisticsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.bytesDropped": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.framesDropped": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.opticalMonRxPower": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.opticalMonTxBiasCurrent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.opticalMonTxPower": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.opticalMonVcc": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame1024_1518": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame128_255": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame1519_Plus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame256_511": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame512_1023": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame64": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrame65_127": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxFrameTooShort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.rxUnicastFrames": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame128_255": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame256_511": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame512_1023": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame64": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame65_127": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame_1024_1518": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txFrame_1519_Plus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatistics.{i}.txUnicastFrames": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuLinkStatisticsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.dnPacketBuffer": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.dnQueueIncrement": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.dnQueuesMaxPerPort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.downstreamQueues": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.totalPacketBuffer": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.upQueueIncrement": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.upQueuesMaxPerLink": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_OnuPacketBufferCapabilities.upstreamQueues": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_StaticMacTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "32",
+      "numberOfEntriesElement": "Device.DPoE.DPoE_StaticMacTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DPoE.DPoE_StaticMacTable.{i}.link": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_StaticMacTable.{i}.macAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DPoE_StaticMacTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DynamicMacAddressAgeLimit": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.DynamicMacLearningTableSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.MacLearningAggregateLimit": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.Mac_address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.NumberOfNetworkPorts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.NumberOfS1Interfaces": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DPoE.ResetOnu": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadNow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadProtocol": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadURL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareToDownload": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EPON.XML"
+      }
+    }
+  }
+}

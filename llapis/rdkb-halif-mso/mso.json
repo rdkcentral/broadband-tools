@@ -1,0 +1,65 @@
+{
+  "component": "mso",
+  "repo_dir": "rdkb-halif-mso",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/mso_mgmt_hal.h",
+      "api_count": 3,
+      "apis": [
+        {
+          "name": "mso_validatepwd",
+          "return_type": "mso_pwd_ret_status",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pwd"
+            }
+          ],
+          "param_count": 1,
+          "signature": "mso_pwd_ret_status mso_validatepwd(char *pwd);",
+          "brief": "Validates a password against the current MSO \"password of the day.\" This function checks if the provided password matches the valid password set for the MSO user for the current day.",
+          "params_doc": {},
+          "return_doc": "Password validation status (`mso_pwd_ret_status`): Invalid_PWD - Password is invalid (does not match the current password of the day). Good_PWD - Password is valid and matches the current password of the day. Expired_PWD - Password has expired. TimeError - A time-related error occurred during validation (e.g., clock synchronization issue). TODO: - Consider removing `Unique_PWD` as it may be unrelated to the \"password of the day\" concept. - Add a `MSO_PWD_UNKNOWN` or `MSO_PWD_NOT_VALIDATED` value to the enum for cases where validation cannot be performed or hasn't occurred yet. - Introduce more specific error codes for invalid passwords (e.g., `MSO_PWD_WRONG`, `MSO_PWD_FORMAT_ERROR`).",
+          "deprecated": false,
+          "line": 187
+        },
+        {
+          "name": "mso_set_pod_seed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pSeed"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mso_set_pod_seed(char *pSeed);",
+          "brief": "Sets the \"Password of the Day\" (PoD) seed for MSO password validation. This function configures the seed value used to generate the daily password for MSO users.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid seed, decryption error). @note Newer Broadband Devices MUST decrypt the seed on demand when this function is called.",
+          "deprecated": false,
+          "line": 202
+        },
+        {
+          "name": "mso_get_pod_seed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char*",
+              "name": "pSeed"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mso_get_pod_seed(char* pSeed);",
+          "brief": "Retrieves the Password of the Day (PoD) seed for MSO password validation. This function retrieves the decrypted PoD seed from the configuration file or the `rdkbEncryptedClientSeed` SNMP OID.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., retrieval error, decryption error). @note  For security reasons, the `pSeed` buffer MUST be manually overwritten after use.",
+          "deprecated": false,
+          "line": 217
+        }
+      ]
+    }
+  ],
+  "total_api_count": 3
+}

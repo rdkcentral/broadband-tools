@@ -1,0 +1,3264 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "DHCPMgr",
+    "moduleName": "DHCPMgr",
+    "version": "0.1.0-draft",
+    "description": "DHCPv4 and DHCPv6 client and server management for RDK-B, including LAN-side DHCP server and lease event publishing.",
+    "sourceBranch": "develop",
+    "sourceCommit": "6e6db2c337e2ffb571ca51e11ef5be12c4fafdd6",
+    "generated": "2026-08-21",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --xml-file TR181-DHCPMgr.XML --name DHCPMgr --module-name DHCPMgr --description DHCPv4 and DHCPv6 client and server management for RDK-B, including LAN-side DHCP server and lease event publishing. --output dhcpmgr_interface.json"
+  },
+  "elements": {
+    "Device.DHCPv4.Client.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.DHCPv4.ClientNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dhcpmgr_rbus_apis.c",
+        "table": "DhcpMgrRbusDataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv4.Client.{i}.Alias": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.DHCPServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.DHCPStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.DNSServers": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.Events": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dhcpmgr_rbus_apis.c",
+        "table": "DhcpMgrRbusDataElements",
+        "getHandler": "getDataHandler",
+        "subscribeHandler": "DhcpMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.IPRouters": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.Renew": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOption.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Client.{i}.ReqOptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "ReqOption_AddEntry",
+        "delFunction": "ReqOption_DelEntry"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOption.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOption.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOption.{i}.Order": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOption.{i}.Tag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOption.{i}.Value": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(255)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.ReqOptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SentOption.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Client.{i}.SentOptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "SentOption_AddEntry",
+        "delFunction": "SentOption_DelEntry"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SentOption.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SentOption.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SentOption.{i}.Tag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SentOption.{i}.Value": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(255)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SentOptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.SubnetMask": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.X_CISCO_COM_BootFileName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.X_RDK_LinuxInterface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.X_RDK_Release": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Client.{i}.X_RDK_Restart": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.ClientNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Lan": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT",
+        "ifndef BCI"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Server.PoolNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "Pool_AddEntry",
+        "delFunction": "Pool_DelEntry"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Chaddr": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.ChaddrExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.ChaddrMask": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Server.Pool.{i}.ClientNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Active": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Chaddr": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.ClassId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4Address.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4AddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4Address.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4Address.{i}.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4Address.{i}.X_CISCO_COM_LeaseTimeCreation": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4AddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Option.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Server.Pool.{i}.Client.{i}.OptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Option.{i}.Tag": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Option.{i}.Value": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(255)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.OptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.X_CISCO_COM_Comment": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.X_CISCO_COM_HostName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Client.{i}.X_CISCO_COM_Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.ClientID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(255)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.ClientIDExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.ClientNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.DNSServers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.DNSServersEnabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.DomainName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.IPRouters": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.LeaseTime": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.MaxAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.MinAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Option.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Server.Pool.{i}.OptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "Option1_AddEntry",
+        "delFunction": "Option1_DelEntry"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Option.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Option.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Option.{i}.Tag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Option.{i}.Value": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(255)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.OptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Order": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.ReservedAddresses": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv4.Server.Pool.{i}.StaticAddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "StaticAddress_AddEntry",
+        "delFunction": "StaticAddress_DelEntry"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.Chaddr": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.X_CISCO_COM_Comment": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.X_CISCO_COM_DeviceName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.Yiaddr": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.StaticAddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.SubnetMask": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.UserClassID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(255)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.UserClassIDExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.VendorClassID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.VendorClassIDExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.VendorClassIDMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.Pool.{i}.X_CISCO_COM_TimeOffset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.PoolNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv4.Server.StaticClientsData": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV4_SERVER_SUPPORT",
+        "ifndef BCI"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.DHCPv6.ClientNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dhcpmgr_rbus_apis.c",
+        "table": "DhcpMgrRbusDataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.DUID": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(130)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Events": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dhcpmgr_rbus_apis.c",
+        "table": "DhcpMgrRbusDataElements",
+        "getHandler": "getDataHandler",
+        "subscribeHandler": "DhcpMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.RapidCommit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.ReceivedOption.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Client.{i}.ReceivedOptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Client.{i}.ReceivedOption.{i}.Server": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.ReceivedOption.{i}.Tag": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.ReceivedOption.{i}.Value": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(65535)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.ReceivedOptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Renew": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.RequestAddresses": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.RequestPrefixes": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.RequestedOptions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SentOption.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Client.{i}.SentOptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "SentOption1_AddEntry",
+        "delFunction": "SentOption1_DelEntry"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SentOption.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SentOption.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SentOption.{i}.Tag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SentOption.{i}.Value": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(65535)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SentOptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Server.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Client.{i}.ServerNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Server.{i}.DUID": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(130)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Server.{i}.InformationRefreshTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Server.{i}.SourceAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.ServerNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SuggestedT1": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SuggestedT2": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.SupportedOptions": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapBRPrefix": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapEALen": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapIpv4Address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapIsFMR": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapPSID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapPSIDLen": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapPSIDOffset": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapRatio": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapRuleIPv4Prefix": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapRuleIPv6Prefix": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDKCENTRAL-COM_RcvOption.MapTransportMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_SUPPORT_MAPT_NAT46"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDK_LinuxInterface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDK_Release": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Client.{i}.X_RDK_Restart": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.ClientNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Server.PoolNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "Pool1_AddEntry",
+        "delFunction": "Pool1_DelEntry"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Server.Pool.{i}.ClientNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.Active": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6AddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.PreferredLifetime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.ValidLifetime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6AddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Prefix.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6PrefixNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Prefix.{i}.PreferredLifetime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Prefix.{i}.Prefix": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Prefix.{i}.ValidLifetime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6PrefixNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.Option.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Server.Pool.{i}.Client.{i}.OptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.Option.{i}.Tag": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.Option.{i}.Value": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(65535)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.OptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Client.{i}.SourceAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.ClientNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.DUID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(130)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.DUIDExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IANAEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IANAManualPrefixes": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IANAPrefixes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IAPDAddLength": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IAPDEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IAPDManualPrefixes": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.IAPDPrefixes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Option.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DHCPv6.Server.Pool.{i}.OptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML",
+        "addFunction": "Option4_AddEntry",
+        "delFunction": "Option4_DelEntry"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Option.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Option.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Option.{i}.PassthroughClient": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Option.{i}.Tag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Option.{i}.Value": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(65535)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.OptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Order": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.PrefixRangeBegin": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.PrefixRangeEnd": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.SourceAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.SourceAddressExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.SourceAddressMask": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.UserClassID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(65535)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.UserClassIDExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.VendorClassID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(65535)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.VendorClassIDExclude": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.X_RDKCENTRAL-COM_DNSServers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.Pool.{i}.X_RDKCENTRAL-COM_DNSServersEnabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.PoolNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    },
+    "Device.DHCPv6.Server.X_CISCO_COM_Type": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef DHCPV6_SERVER_SUPPORT"
+      ],
+      "source": {
+        "file": "TR181-DHCPMgr.XML"
+      }
+    }
+  }
+}

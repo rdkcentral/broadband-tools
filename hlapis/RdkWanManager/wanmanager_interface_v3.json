@@ -1,0 +1,2454 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkWanManager",
+    "moduleName": "TR181_RdkWanManager",
+    "version": "0.1.0-draft",
+    "description": "WAN interface selection, failover, and IP/DHCP/MAP-T/DS-Lite configuration for RDK-B broadband.",
+    "sourceBranch": "main",
+    "sourceCommit": "7ac3287d7652e5a4c50086b130a637cb1040f20e",
+    "generated": "2026-08-19",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --name RdkWanManager --module-name TR181_RdkWanManager --description WAN interface selection, failover, and IP/DHCP/MAP-T/DS-Lite configuration for RDK-B broadband. --prefix Device.X_RDK_WanManager --output wanmanager_interface.json"
+  },
+  "elements": {
+    "Device.X_RDK_WanManager.AllowRemoteInterfaces": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.CPEInterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "if defined(WAN_MANAGER_UNIFICATION_ENABLED)"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.AliasName": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "setHandler": "WanMgr_Interface_SetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.ConfigureWanEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.CustomConfigPath": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.DSLite.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.DSLite.Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.DisplayName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.EnableCustomConfig": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.EnableOperStatusMonitor": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.IP.IPv4Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.IP.IPv6Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.IP.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.MAP.MAPTStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.MAP.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Marking.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.CPEInterface.{i}.MarkingNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml",
+        "addFunction": "Marking_AddEntry",
+        "delFunction": "Marking_DelEntry"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Marking.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Marking.{i}.EthernetPriorityMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Marking.{i}.SKBMark": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Marking.{i}.SKBPort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.MarkingNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.IPCPEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.IPCPStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.IPv6CPEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.IPv6CPStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.LCPStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.LinkStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.LinkType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.PPP.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Phy.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Phy.Status": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "if defined(WAN_MANAGER_UNIFICATION_ENABLED)"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.ActiveLink": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Enable": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "setHandler": "WanMgr_Interface_SetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.EnableDHCP": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.EnableDSLite": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.EnableIPoEHealthCheck": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.EnableMAPT": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Group": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.LinkStatus": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "setHandler": "WanMgr_Interface_SetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.OperationalStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Priority": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.RebootOnConfiguration": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Refresh": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.SelectionTimeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Status": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "setHandler": "WanMgr_Interface_SetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Wan.Type": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.CurrentActiveDNS": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Rbus_getHandler",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CurrentActiveInterface": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Rbus_getHandler",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CurrentStandbyInterface": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Rbus_getHandler",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CurrentStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Rbus_getHandler",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.DisableAutoRouting()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_DisableAutoRouting"
+      }
+    },
+    "Device.X_RDK_WanManager.DnsConnectivityCheck.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.EnableAutoRouting()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_EnableAutoRouting"
+      }
+    },
+    "Device.X_RDK_WanManager.Group.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.GroupNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.Group.{i}.Policy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Group.{i}.ResetSelectedInterface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.GroupNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.InitialScanComplete": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Activate()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_Iface_ActivateWan"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.BaseInterface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.BaseInterfaceStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.ConfigureWanEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.CustomConfigPath": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Deactivate()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_Iface_DeactivateWan"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.DisplayName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.EnableCustomConfig": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.EnableOperStatusMonitor": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.Interface.{i}.MarkingNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml",
+        "addFunction": "Marking_AddEntry",
+        "delFunction": "Marking_DelEntry"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.DSCPMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.EthernetPriorityMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.SKBMark": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.SKBPort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.MarkingNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.OperationalStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.Group": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.Priority": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.RequiresReboot": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.Timeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.Interface.{i}.VirtualInterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "if defined(WAN_MANAGER_UNIFICATION_ENABLED)"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.DSLite.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.DSLite.Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.EnableDSLite": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.EnableIPoEHealthCheck": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.EnableMAPT": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.DHCPv4Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.DHCPv6Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv4Address": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "if defined(WAN_MANAGER_UNIFICATION_ENABLED)"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv4Source": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv4Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv6Address": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "if defined(WAN_MANAGER_UNIFICATION_ENABLED)"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv6Prefix": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "if defined(WAN_MANAGER_UNIFICATION_ENABLED)"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv6Source": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.IPv6Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.Mode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.IP.PreferredMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.MAP.MAPTStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.MAP.Path": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Marking.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.MarkingNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Marking.{i}.Entry": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.MarkingNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.PPP.IPCPStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.PPP.IPv6CPStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.PPP.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.PPP.Status": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.Timeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.VLAN.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.VLANNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.VLAN.{i}.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.VLANNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterface.{i}.VlanStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.VirtualInterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.WanStart()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_Iface_StartWan"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.WanStop()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_Iface_StopWan"
+      }
+    },
+    "Device.X_RDK_WanManager.InterfaceActiveStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Rbus_getHandler",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.InterfaceAvailableStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Rbus_getHandler",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.InterfaceIpStatus": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Policy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.ResetActiveInterface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.ResetDefaultConfig": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.RestorationDelay": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.Version": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    },
+    "Device.X_RDK_WanManager.WanFailoverData": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml"
+      }
+    }
+  }
+}

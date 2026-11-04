@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdkcentral.org/schemas/component-interface-definition.schema.json",
+  "title": "RDKB Component Interface Definition",
+  "description": "Machine-readable Component Interface Definition per RDKB High Level API Spec (Charles Moreman, RDKM), Section 6, and subsequent review feedback. One file per component, format independent of how the data was collected (XML, rbus C source, or hand-authored). Element kind (leaf property/event, multi-instance table, or method) is inferred from the data-model path pattern itself -- {i}. suffix for a multi-instance table, () suffix for a method, everything else a leaf -- rather than a separate elementType field, since the access[] list already conveys everything elementType would.",
+  "type": "object",
+  "required": ["componentInterfaceDefinition", "elements"],
+  "additionalProperties": false,
+  "properties": {
+
+    "componentInterfaceDefinition": {
+      "type": "object",
+      "description": "Document-level metadata, always the first key in the file.",
+      "required": ["name", "version", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Component name, e.g. 'RdkWanManager'."
+        },
+        "moduleName": {
+          "type": "string",
+          "description": "CCSP moduleName as declared in the component's XML dataModelInfo, if applicable."
+        },
+        "version": {
+          "type": "string",
+          "description": "Component Interface Definition document version, major.minor.revision. A component under active development will accumulate multiple versions over time; each should be stored in the component's own repository and tagged to the code branch(es) it describes.",
+          "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?(-[A-Za-z0-9.]+)?$"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable summary of what this component does. Required even for a component with no data model elements -- see the schema-level note on empty documents."
+        },
+        "sourceBranch": {
+          "type": "string",
+          "description": "The git branch or tag this document was generated against, for traceability between a document version and the code it describes."
+        },
+        "sourceCommit": {
+          "type": "string",
+          "description": "The git commit SHA this document was generated from."
+        },
+        "generated": {
+          "type": "string",
+          "format": "date",
+          "description": "Date this document was generated or last reviewed."
+        },
+        "generatedBy": {
+          "type": "string",
+          "description": "Tool invocation used to produce this document, for reproducibility."
+        },
+        "buildFlagsEvaluated": {
+          "type": "array",
+          "description": "Build flags treated as enabled when this document's element inclusion was evaluated, if the generation process filtered by flag rather than recording all conditions as literal text in each element's 'flags' field.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "elements": {
+      "type": "object",
+      "description": "Map of complete data-model path to its definition. Every RDKB Core Component must have this key present, even as an empty object {} if the component provides no data model elements -- see Section 7's Interface Inventory requirement that every core component have a Component Interface Definition on file.",
+      "propertyNames": {
+        "pattern": "^Device\\.",
+        "description": "Every key must be a full data-model path starting with 'Device.'."
+      },
+      "patternProperties": {
+        "\\{i\\}\\.$": { "$ref": "#/$defs/multiInstanceObjectElement" },
+        "\\(\\)$": { "$ref": "#/$defs/methodElement" }
+      },
+      "additionalProperties": { "$ref": "#/$defs/leafElement" }
+    }
+  },
+
+  "$defs": {
+
+    "flagsArray": {
+      "type": "array",
+      "description": "Build-time feature-flag conditions gating this element, as literal preprocessor/PI conditions (e.g. 'ifdef RBUS_BUILD_FLAG_ENABLE', 'ifndef FEATURE_RDKB_DHCP_MANAGER'). Preserve the exact condition text rather than pre-evaluating it. Use [\"\"] or [] if unconditional.",
+      "items": { "type": "string" }
+    },
+
+    "sourceRef": {
+      "type": "object",
+      "description": "Provenance back to the repository. Fields vary by element kind; omit unused fields rather than setting them to null (except addFunction/delFunction on a table, which use null specifically to mean 'checked, not present').",
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string" },
+        "table": { "type": "string", "description": "For rbus-registered elements: the rbusDataElement_t[] array variable name." },
+        "getHandler": { "type": "string" },
+        "setHandler": { "type": "string" },
+        "subscribeHandler": { "type": "string" },
+        "addFunction": { "type": ["string", "null"] },
+        "delFunction": { "type": ["string", "null"] },
+        "handler": { "type": "string" }
+      }
+    },
+
+    "param": {
+      "type": "object",
+      "required": ["name", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+
+    "leafElement": {
+      "type": "object",
+      "description": "A data-model name that is neither a multi-instance object ({i}.-suffixed) nor a method (()-suffixed). Covers both value-holding properties (access includes read and/or write) and pure notification elements with no value (access is subscribeOnChange/subscribeOnInterval only, no read/write -- TR-181's optional '!' suffix convention).",
+      "required": ["access", "description", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["read", "write", "subscribeOnChange", "subscribeOnInterval"]
+          },
+          "description": "addInstance/removeInstance/invokeSync/invokeAsync are not valid here -- those belong on a multi-instance object name or a method name respectively."
+        },
+        "type": {
+          "type": "string",
+          "description": "Data type. Present when this element holds a value (access includes read or write). Omit for a pure notification-only element with no value.",
+          "examples": ["boolean", "string", "unsignedInt", "int", "string(mapped)"]
+        },
+        "description": {
+          "type": "string",
+          "description": "What this element means and how it's used. Required -- always human-authored, not derivable from source."
+        },
+        "persistence": {
+          "type": "string",
+          "enum": ["yes", "no", ""],
+          "description": "Does this value survive a normal (non-factory) reboot? Only meaningful for a value-holding element."
+        },
+        "defaultValue": {
+          "type": "string",
+          "description": "Factory-default value. Empty string if not applicable or not yet documented."
+        },
+        "enumeration": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Valid values for an enumerated string/type, matching TR-181 terminology. Empty array if free-form or not yet documented."
+        },
+        "output": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/param" },
+          "description": "Payload delivered with a subscribeOnChange/subscribeOnInterval notification, where applicable -- e.g. TR-181's MemoryCriticalState! event carrying a MemUtilization property. Omit if the notification carries no additional payload beyond the new value itself, or not yet documented."
+        },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    },
+
+    "multiInstanceObjectElement": {
+      "type": "object",
+      "description": "A multi-instance object name, ending in '{i}.' (Section 5: 'Device.WiFi.Radio.{i}.'-style). Documented once per table rather than folded into its leaf children, so addInstance/removeInstance support is explicit and not assumed uniform across a component's tables.",
+      "required": ["access", "numberOfEntriesElement", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["read", "addInstance", "removeInstance"]
+          },
+          "description": "Always includes 'read'. Include addInstance/removeInstance only if the underlying add/remove-row capability actually exists for THIS table -- verify per table, do not assume uniformity (e.g. one component's Marking table may support it while its Interface table does not)."
+        },
+        "maxInstance": {
+          "type": "string",
+          "description": "Maximum instance count, if declared. Empty string if unbounded or undeclared."
+        },
+        "numberOfEntriesElement": {
+          "type": "string",
+          "description": "Full path of the *NumberOfEntries element documenting the live instance count for this table. That element is itself a plain leafElement of type unsignedInt -- NOT a sub-field of this table entry, and not itself a table.",
+          "pattern": "^Device\\..*NumberOfEntries$"
+        },
+        "description": { "type": "string" },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    },
+
+    "methodElement": {
+      "type": "object",
+      "description": "A command/RPC name, ending in '()'.",
+      "required": ["access", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "enum": ["invokeSync", "invokeAsync"]
+          },
+          "description": "['invokeSync'], ['invokeAsync'], or both if the handler supports either calling convention."
+        },
+        "description": { "type": "string" },
+        "input": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/param" },
+          "description": "Input parameters. Empty array if none or not yet documented -- do not omit the field."
+        },
+        "output": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/param" },
+          "description": "Output/return parameters. Empty array if none or not yet documented."
+        },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    }
+  }
+}

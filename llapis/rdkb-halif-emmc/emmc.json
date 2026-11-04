@@ -1,0 +1,48 @@
+{
+  "component": "emmc",
+  "repo_dir": "rdkb-halif-emmc",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/ccsp_hal_emmc.h",
+      "api_count": 2,
+      "apis": [
+        {
+          "name": "CcspHalEmmcGetHealthInfo",
+          "return_type": "eSTMGRReturns",
+          "params": [
+            {
+              "type": "eSTMGRHealthInfo*",
+              "name": "pHealthInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "eSTMGRReturns CcspHalEmmcGetHealthInfo(eSTMGRHealthInfo* pHealthInfo);",
+          "brief": "Provides EMMC health information",
+          "params_doc": {},
+          "return_doc": "eSTMGRReturns RDK_STMGR_RETURN_SUCCESS - on Success, RDK_STMGR_RETURN_GENERIC_FAILURE - Generic Failure. RDK_STMGR_RETURN_INIT_FAILURE - Initialization Failure. RDK_STMGR_RETURN_INVALID_INPUT - Invalid Input. RDK_STMGR_RETURN_UNKNOWN_FAILURE - Unknown Failure.",
+          "deprecated": false,
+          "line": 217
+        },
+        {
+          "name": "CcspHalEmmcGetDeviceInfo",
+          "return_type": "eSTMGRReturns",
+          "params": [
+            {
+              "type": "eSTMGRDeviceInfo*",
+              "name": "pDeviceInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "eSTMGRReturns CcspHalEmmcGetDeviceInfo(eSTMGRDeviceInfo* pDeviceInfo);",
+          "brief": "Provides EMMC Device information",
+          "params_doc": {},
+          "return_doc": "eSTMGRReturns RDK_STMGR_RETURN_SUCCESS - on Success, RDK_STMGR_RETURN_GENERIC_FAILURE - Generic Failure. RDK_STMGR_RETURN_INIT_FAILURE - Initialization Failure. RDK_STMGR_RETURN_INVALID_INPUT - Invalid Input. RDK_STMGR_RETURN_UNKNOWN_FAILURE - Unknown Failure.",
+          "deprecated": false,
+          "line": 231
+        }
+      ]
+    }
+  ],
+  "total_api_count": 2
+}

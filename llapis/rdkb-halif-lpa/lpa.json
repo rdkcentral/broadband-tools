@@ -1,0 +1,201 @@
+{
+  "component": "lpa",
+  "repo_dir": "rdkb-halif-lpa",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/lpa_hal.h",
+      "api_count": 11,
+      "apis": [
+        {
+          "name": "cellular_esim_download_profile_with_activationcode",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char*",
+              "name": "ActivationCodeStr"
+            },
+            {
+              "type": "cellular_sim_download_progress_callback",
+              "name": "download_progress"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_esim_download_profile_with_activationcode(char* ActivationCodeStr, cellular_sim_download_progress_callback download_progress);",
+          "brief": "Downloads the eSIM profile using a provided activation code. Initiates the download and installation of an eSIM profile. Uses a callback to communicate download progress and status back to the caller. \\n (The string values are:- \"download successful\", \"Activation Code decoded\", \"Initiate authentication done\", \"SM-DP+ address checking done\", \"Authenticate server done\", \"Authenticate client done\", \"PPR conditions check done\", \"Get Bound Profile Package done\",\"Send PIR notification to server done\", \"Clear PIR notification done\", \"Read pending notifications...\", \"<1> pending notification(s) detected\", \"Processing notification #1 <33>\", \"Notification <33> successfully sent\", \"Load Bound Profile Package done - Profile download successful\".)",
+          "params_doc": {},
+          "return_doc": "Status of the download operation: TRUE - Download initiated successfully, modem present. FALSE - Download initiation error or modem not present. @note For detailed errors on FALSE, use lpaGetErrorCodeDescription(lpaGetErrorCode()).",
+          "deprecated": false,
+          "line": 144
+        },
+        {
+          "name": "cellular_esim_download_profile_from_smds",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char*",
+              "name": "smds"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_esim_download_profile_from_smds(char* smds);",
+          "brief": "Downloads an eSIM profile from an SMDS address. Initiates profile download by connecting to the specified SMDS server. @code \"oem-smds-json.demo.gemalto.com\" @endcode",
+          "params_doc": {},
+          "return_doc": "Status of the download operation. RETURN_OK - Profile downloaded, ready for installation. RETURN_ERR - Download error (check specific error codes for details).",
+          "deprecated": false,
+          "line": 157
+        },
+        {
+          "name": "cellular_esim_download_profile_from_defaultsmdp",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char*",
+              "name": "smdp"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_esim_download_profile_from_defaultsmdp(char* smdp);",
+          "brief": "Downloads an eSIM profile from a default SMDP+ address. Initiates profile download from a predefined SMDP+ address. SMDP+ is used for secure eSIM profile delivery. @code \"smdp-plus.test.gsma.com\" @endcode",
+          "params_doc": {},
+          "return_doc": "Status of the download operation. RETURN_OK - Profile downloaded successfully. RETURN_ERR - Download error (e.g., invalid address, network issues, SMDP configuration errors).",
+          "deprecated": false,
+          "line": 170
+        },
+        {
+          "name": "cellular_esim_get_profile_info",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "eSIMProfileStruct **",
+              "name": "profile_list"
+            },
+            {
+              "type": "int *",
+              "name": "nb_profiles"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_esim_get_profile_info(eSIMProfileStruct **profile_list, int *nb_profiles);",
+          "brief": "Retrieves a list of MNO profiles from the eSIM. Fetches information about available MNO profiles, providing a list and profile count. The function allocates memory for profile data.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - Profiles retrieved successfully. RETURN_ERR - Error during retrieval (e.g., eSIM access issues, memory allocation failure, no profiles found). @note The caller must free the dynamically allocated memory for profile data.",
+          "deprecated": false,
+          "line": 184
+        },
+        {
+          "name": "cellular_esim_enable_profile",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char*",
+              "name": "iccid"
+            },
+            {
+              "type": "int",
+              "name": "iccid_size"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_esim_enable_profile(char* iccid, int iccid_size);",
+          "brief": "Enables a Mobile Network Operator (MNO) profile matching the provided ICCID. Activates the eSIM profile corresponding to the given ICCID.  Verifies the ICCID against stored profiles.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - Profile enabled successfully. RETURN_ERR - Error during enabling (e.g., no matching ICCID, invalid format, internal error).",
+          "deprecated": false,
+          "line": 197
+        },
+        {
+          "name": "cellular_esim_disable_profile",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char*",
+              "name": "iccid"
+            },
+            {
+              "type": "int",
+              "name": "iccid_size"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_esim_disable_profile(char* iccid, int iccid_size);",
+          "brief": "Disables an eSIM profile matching the provided ICCID. Deactivates the eSIM profile with the specified Integrated Circuit Card Identification (ICCID). The ICCID must match exactly for successful disabling.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - Profile disabled successfully. RETURN_ERR - Error during disabling (e.g., no matching ICCID, invalid format, internal error).",
+          "deprecated": false,
+          "line": 210
+        },
+        {
+          "name": "cellular_esim_delete_profile",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char*",
+              "name": "iccid"
+            },
+            {
+              "type": "int",
+              "name": "iccid_size"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_esim_delete_profile(char* iccid, int iccid_size);",
+          "brief": "Deletes an eSIM profile matching the specified ICCID. Permanently removes the eSIM profile with the provided Integrated Circuit Card Identification (ICCID). The ICCID must match exactly for successful deletion.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - Profile deleted successfully. RETURN_ERR - Error during deletion (e.g., no matching ICCID, invalid format, internal error).",
+          "deprecated": false,
+          "line": 223
+        },
+        {
+          "name": "cellular_esim_lpa_init",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_esim_lpa_init(void);",
+          "brief": "Initializes the Local Profile Assistant (LPA) for eSIM management. Configures the LPA module, establishes modem readiness, and sets up dependencies and parameters for eSIM operations.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - LPA initialized successfully. RETURN_ERR - Initialization error (e.g., modem issues, configuration problems, LPA SDK errors).",
+          "deprecated": false,
+          "line": 234
+        },
+        {
+          "name": "cellular_esim_lpa_exit",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_esim_lpa_exit(void);",
+          "brief": "Cleans up the Local Profile Assistant (LPA) for eSIM management. Deactivates the LPA module, releasing resources.  Call this before shutdown or when LPA functionality is no longer needed.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - LPA uninitialized successfully. RETURN_ERR - Error during cleanup (e.g., resource release issues, ongoing operations, LPA module errors).",
+          "deprecated": false,
+          "line": 245
+        },
+        {
+          "name": "cellular_esim_get_eid",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_esim_get_eid();",
+          "brief": "Retrieves the EID (eUICC Identifier) from the device's eSIM. Fetches the unique identifier of the embedded SIM, essential for managing eSIM profiles and subscriptions.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - EID retrieved successfully. RETURN_ERR - Error retrieving the EID (e.g., eSIM communication issues, eSIM not present, configuration errors).",
+          "deprecated": false,
+          "line": 256
+        },
+        {
+          "name": "cellular_esim_get_euicc",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_esim_get_euicc();",
+          "brief": "Fetches information about the embedded Universal Integrated Circuit Card (eUICC). Retrieves details from the eUICC (or eSIM), providing data necessary for managing mobile subscriptions.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK - eUICC information retrieved successfully. RETURN_ERR - Error during retrieval (e.g., eUICC access issues, communication errors, configuration problems).",
+          "deprecated": false,
+          "line": 267
+        }
+      ]
+    }
+  ],
+  "total_api_count": 11
+}

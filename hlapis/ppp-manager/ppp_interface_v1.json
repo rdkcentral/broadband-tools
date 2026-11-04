@@ -1,0 +1,912 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkPppManager",
+    "moduleName": "TR181_RdkPppManager",
+    "version": "0.1.0-draft",
+    "description": "PPP (Point-to-Point Protocol) WAN interface management for RDK-B, providing TR-181 access to PPPoE session configuration and status for DSL/fiber WAN connections.",
+    "sourceBranch": "main",
+    "sourceCommit": "999bf005452a5d4579d6d2899b6f89b9e2f12cd3",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name RdkPppManager --module-name TR181_RdkPppManager --description PPP (Point-to-Point Protocol) WAN interface management for RDK-B, providing TR-181 access to PPPoE session configuration and status for DSL/fiber WAN connections. --output ppp_interface.json"
+  },
+  "elements": {
+    "Device.PPP.Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.PPP.InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.PPP.Interface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.AuthenticationProtocol": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.AutoDisconnectTime": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.CompressionProtocol": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.ConnectionStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.ConnectionTrigger": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.CurrentMRUSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.EncryptionProtocol": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPCP.DNSServers": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPCP.LocalIPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPCP.PassthroughDHCPPool": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPCP.PassthroughEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPCP.RemoteIPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPCPEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPv6CP.LocalInterfaceIdentifier": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPv6CP.RemoteInterfaceIdentifier": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IPv6CPEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.IdleDisconnectTime": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.LCPEcho": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.LCPEchoRetry": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.LastConnectionError": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.MaxMRUSize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.PPPoE.ACName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.PPPoE.ServiceName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.PPPoE.SessionID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.BroadcastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.BroadcastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.MulticastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.MulticastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.UnicastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.UnicastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Stats.UnknownProtoPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.Username": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.WarnDisconnectDelay": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.X_RDK_LinkType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.X_T_ONLINE_DE_SRD": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.Interface.{i}.X_T_ONLINE_DE_SRU": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    },
+    "Device.PPP.SupportedNCPs": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkPppManager.xml"
+      }
+    }
+  }
+}

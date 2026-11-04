@@ -1,0 +1,68 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspHotspot",
+    "moduleName": "CcspHotspot",
+    "version": "0.1.0-draft",
+    "description": "GRE tunnel management for Xfinity Hotspot guest WiFi on RDK-B, including endpoint health monitoring, VLAN/client management, and DHCP snooping.",
+    "sourceBranch": "develop",
+    "sourceCommit": "6dd31db76a221806cc838679dec556fac804d72e",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir source/hotspotfd/config --name CcspHotspot --module-name CcspHotspot --description GRE tunnel management for Xfinity Hotspot guest WiFi on RDK-B, including endpoint health monitoring, VLAN/client management, and DHCP snooping. --output hotspot_interface.json"
+  },
+  "elements": {
+    "Device.X_COMCAST-COM_GRE.Hotspot.ClientChange": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "hotspot.XML"
+      }
+    },
+    "Device.X_COMCAST-COM_GRE.Hotspot.RejectAssociatedClient": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "hotspotfd.c",
+        "table": "hotspotRbusDataElements",
+        "subscribeHandler": "rbus_disassocEventSubHandler"
+      }
+    },
+    "Device.X_COMCAST-COM_GRE.Tunnel.1.TunnelStatus": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "hotspotfd.c",
+        "table": "dataElements",
+        "getHandler": "TunnelStatus_GetStringHandler",
+        "setHandler": "TunnelStatus_SetStringHandler",
+        "subscribeHandler": "TunnelStatus_EventSubHandler"
+      }
+    }
+  }
+}

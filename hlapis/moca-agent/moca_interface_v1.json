@@ -1,0 +1,2203 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspMoCA",
+    "moduleName": "CcspMoCA",
+    "version": "0.1.0-draft",
+    "description": "MoCA (Multimedia over Coax Alliance) interface management for RDK-B, providing TR-181 access to MoCA network interface configuration, statistics, and associated-device status.",
+    "sourceBranch": "develop",
+    "sourceCommit": "4c2c4087bee8fc95430be0d5f9d470c0f6ace623",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name CcspMoCA --module-name CcspMoCA --description MoCA (Multimedia over Coax Alliance) interface management for RDK-B, providing TR-181 access to MoCA network interface configuration, statistics, and associated-device status. --output moca_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.Logging.xOpsDMMoCALogEnabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.Logging.xOpsDMMoCALogPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.MoCA.InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.MoCA.Interface.{i}.AssociatedDeviceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.Active": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.HighestVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.NodeID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.PHYRxRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.PHYTxRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.PacketAggregationCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.PreferredNC": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.QAM256Capable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.RxBcastPowerLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.RxErroredAndMissedPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.RxPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.RxPowerLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.RxSNR": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.TxBcastRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.TxPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.TxPowerControlReduction": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.X_CISCO_COM_NumberOfClients": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDevice.{i}.X_CISCO_COM_RxBcastRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AssociatedDeviceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.AutoPowerControlPhyRate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.BackupNC": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.BeaconPowerLimit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.CurrentOperFreq": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.CurrentVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.FirmwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.FreqCapabilityMask": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.FreqCurrentMask": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.FreqCurrentMaskSetting": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.HighestVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.KeyPassphrase": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.LastOperFreq": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.LinkUpTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.MaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.MaxEgressBW": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.MaxIngressBW": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.MaxNodes": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.NetworkCoordinator": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.NetworkTabooMask": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.NodeID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.NodeTabooMask": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "hexBinary(8)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.PacketAggregationCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.PowerCntlPhyTarget": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.PreferredNC": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.PrivacyEnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.PrivacyEnabledSetting": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QAM256Capable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.EgressNumFlows": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.MoCA.Interface.{i}.QoS.FlowStatsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.EgressNodeID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.FlowID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.FlowPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.FlowTag": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.IngressNodeID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.LeaseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.LeaseTimeLeft": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.MaxBurstSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.MaxRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.PacketDA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.FlowStatsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.IngressNumFlows": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.QoS.X_CISCO_COM_Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.BroadcastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.BroadcastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.MulticastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.MulticastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.UnicastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.UnicastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.UnknownProtoPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrAverageRx": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrAverageTx": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrCounterTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrCounterTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrCounterTable.{i}.Rx": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrCounterTable.{i}.Tx": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtAggrCounterTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Adm": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Async": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Lc": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Map": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Probe": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Rsrv": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTable.{i}.Type": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Stats.X_CISCO_COM_ExtCounterTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.TxBcastPowerReduction": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.TxBcastRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.TxPowerLimit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.Upstream": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_AutoPowerControlEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_BestNetworkCoordinatorID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_ChannelScanMask": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_ChannelScanning": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_CycleMaster": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_EnableTabooBit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_MixedMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_NumberOfConnectedClients": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_PeerTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "64",
+      "numberOfEntriesElement": "Device.MoCA.Interface.{i}.X_CISCO_COM_PeerTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_PeerTable.{i}.PeerSpeed": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_PeerTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_COM_Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_CISCO_NetworkCoordinatorMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_RDKCENTRAL-COM_MeshTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "256",
+      "numberOfEntriesElement": "Device.MoCA.Interface.{i}.X_RDKCENTRAL-COM_MeshTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_RDKCENTRAL-COM_MeshTable.{i}.MeshPHYTxRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_RDKCENTRAL-COM_MeshTable.{i}.MeshRxNodeId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_RDKCENTRAL-COM_MeshTable.{i}.MeshTxNodeId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.Interface.{i}.X_RDKCENTRAL-COM_MeshTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.MocaResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.X_CISCO_COM_ProvisioningFilename": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.X_CISCO_COM_ProvisioningServerAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.X_CISCO_COM_ProvisioningServerAddressType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.X_RDKCENTRAL-COM_ForceEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.X_RDKCENTRAL-COM_MoCAHost_Sync": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    },
+    "Device.MoCA.X_RDKCENTRAL-COM_xOpsDeviceMgmt.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-MoCA.XML"
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "telemetry",
+    "moduleName": "COSA_TR181_T2_USGv2",
+    "version": "0.1.0-draft",
+    "description": "Telemetry 2.0 (T2) framework for RDK-B: report profile management, event marking, and bulk data upload to the cloud.",
+    "sourceBranch": "develop",
+    "sourceCommit": "f0625b0151611332ad7be1ff989faa6ca516dc1b",
+    "generated": "2026-08-23",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --source-dir . --config-dir config --name telemetry --module-name COSA_TR181_T2_USGv2 --description Telemetry 2.0 (T2) framework for RDK-B: report profile management, event marking, and bulk data upload to the cloud. --output t2_interface.json"
+  },
+  "elements": {
+    "Device.DCM.Processconfig": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "ifdef DCMAGENT"
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "subscribeHandler": "(rbusEventSubHandler_t)eventSubHandler"
+      }
+    },
+    "Device.DCM.Setconfig": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "ifdef DCMAGENT"
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "subscribeHandler": "(rbusEventSubHandler_t)eventSubHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Privacy.PrivacyMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "getHandler": "t2PropertyDataGetHandler",
+        "setHandler": "t2PropertyDataSetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_T2.AbortDCMReport()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "handler": "dcmOnDemandMethodHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_T2.ReportProfiles": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "getHandler": "t2PropertyDataGetHandler",
+        "setHandler": "t2PropertyDataSetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_T2.ReportProfilesMsgPack": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "getHandler": "t2PropertyDataGetHandler",
+        "setHandler": "t2PropertyDataSetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_T2.Temp_ReportProfiles": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "getHandler": "t2PropertyDataGetHandler",
+        "setHandler": "t2PropertyDataSetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_T2.UploadDCMReport()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "handler": "dcmOnDemandMethodHandler"
+      }
+    },
+    "Device.X_RDK_T2.TotalUsedMem": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "rbusInterface.c",
+        "table": "dataElements",
+        "getHandler": "t2PropertyDataGetHandler"
+      }
+    }
+  }
+}

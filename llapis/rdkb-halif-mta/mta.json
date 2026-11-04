@@ -1,0 +1,893 @@
+{
+  "component": "mta",
+  "repo_dir": "rdkb-halif-mta",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/mta_hal.h",
+      "api_count": 49,
+      "apis": [
+        {
+          "name": "mta_hal_InitDB",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT mta_hal_InitDB(void);",
+          "brief": "Retrieves the global information for all shared DBs and makes them accessible locally.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 511
+        },
+        {
+          "name": "mta_hal_GetDHCPInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PMTAMGMT_MTA_DHCP_INFO",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_GetDHCPInfo(PMTAMGMT_MTA_DHCP_INFO pInfo);",
+          "brief": "Retrieve all the relevant DHCP info for MTA.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 523
+        },
+        {
+          "name": "mta_hal_GetDHCPV6Info",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PMTAMGMT_MTA_DHCPv6_INFO",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_GetDHCPV6Info(PMTAMGMT_MTA_DHCPv6_INFO pInfo);",
+          "brief": "Retrieve all the relevant DHCPv6 info for MTA.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 536
+        },
+        {
+          "name": "mta_hal_LineTableGetNumberOfEntries",
+          "return_type": "ULONG",
+          "params": [],
+          "param_count": 0,
+          "signature": "ULONG mta_hal_LineTableGetNumberOfEntries(void);",
+          "brief": "Get the number of entries in the line table.",
+          "params_doc": {},
+          "return_doc": "ULONG - number of entries RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 547
+        },
+        {
+          "name": "mta_hal_LineTableGetEntry",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "Index"
+            },
+            {
+              "type": "PMTAMGMT_MTA_LINETABLE_INFO",
+              "name": "pEntry"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_LineTableGetEntry(ULONG Index, PMTAMGMT_MTA_LINETABLE_INFO pEntry);",
+          "brief": "Get an entry of the line table at the given index",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 560
+        },
+        {
+          "name": "mta_hal_TriggerDiagnostics",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "Index"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_TriggerDiagnostics(ULONG Index);",
+          "brief": "Trigger GR909 Diagnostics",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 572
+        },
+        {
+          "name": "mta_hal_GetServiceFlow",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "Count"
+            },
+            {
+              "type": "PMTAMGMT_MTA_SERVICE_FLOW *",
+              "name": "ppCfg"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_GetServiceFlow(ULONG* Count, PMTAMGMT_MTA_SERVICE_FLOW *ppCfg);",
+          "brief": "Get all the service flow info",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 584
+        },
+        {
+          "name": "mta_hal_DectGetEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pBool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_DectGetEnable(BOOLEAN *pBool);",
+          "brief": "Get info on if DECT(Digital Enhanced Cordless Telecommunications) is enabled",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 595
+        },
+        {
+          "name": "mta_hal_DectSetEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "bBool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_DectSetEnable(BOOLEAN bBool);",
+          "brief": "Set DECT according to the boolean value passed",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 607
+        },
+        {
+          "name": "mta_hal_DectGetRegistrationMode",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN*",
+              "name": "pBool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_DectGetRegistrationMode(BOOLEAN* pBool);",
+          "brief": "Get DECT registration mode, whether enabled or not.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 618
+        },
+        {
+          "name": "mta_hal_DectSetRegistrationMode",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "bBool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_DectSetRegistrationMode(BOOLEAN bBool);",
+          "brief": "Set DECT registration mode according to the boolean value passed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 630
+        },
+        {
+          "name": "mta_hal_DectDeregisterDectHandset",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "uValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_DectDeregisterDectHandset(ULONG uValue);",
+          "brief": "Deregister DECT Handset",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 642
+        },
+        {
+          "name": "mta_hal_GetDect",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PMTAMGMT_MTA_DECT",
+              "name": "pDect"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_GetDect(PMTAMGMT_MTA_DECT pDect);",
+          "brief": "Get DECT info \\n The structure members are defined as below:",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 654
+        },
+        {
+          "name": "mta_hal_GetDectPIN",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char*",
+              "name": "pPINString"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_GetDectPIN(char* pPINString);",
+          "brief": "get DECT PIN \\n It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 666
+        },
+        {
+          "name": "mta_hal_SetDectPIN",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char*",
+              "name": "pPINString"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_SetDectPIN(char* pPINString);",
+          "brief": "Set DECT PIN using the provided PIN string. \\n It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 679
+        },
+        {
+          "name": "mta_hal_GetHandsets",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "pulCount"
+            },
+            {
+              "type": "PMTAMGMT_MTA_HANDSETS_INFO*",
+              "name": "ppHandsets"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_GetHandsets(ULONG* pulCount, PMTAMGMT_MTA_HANDSETS_INFO* ppHandsets);",
+          "brief": "Get MTA handset info",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 690
+        },
+        {
+          "name": "mta_hal_GetCalls",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "InstanceNumber"
+            },
+            {
+              "type": "ULONG *",
+              "name": "Count"
+            },
+            {
+              "type": "PMTAMGMT_MTA_CALLS *",
+              "name": "ppCfg"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT mta_hal_GetCalls(ULONG InstanceNumber, ULONG *Count, PMTAMGMT_MTA_CALLS *ppCfg);",
+          "brief": "Retrieve all call info for the given instance number of LineTable",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 703
+        },
+        {
+          "name": "mta_hal_GetCALLP",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "LineNumber"
+            },
+            {
+              "type": "PMTAMGMT_MTA_CALLP",
+              "name": "pCallp"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_GetCALLP(ULONG LineNumber, PMTAMGMT_MTA_CALLP pCallp);",
+          "brief": "Retrieve the Call processing status information for the line number",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 717
+        },
+        {
+          "name": "mta_hal_GetDSXLogs",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "Count"
+            },
+            {
+              "type": "PMTAMGMT_MTA_DSXLOG *",
+              "name": "ppDSXLog"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_GetDSXLogs(ULONG *Count, PMTAMGMT_MTA_DSXLOG *ppDSXLog);",
+          "brief": "Retrieve all DSX log entries",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 729
+        },
+        {
+          "name": "mta_hal_GetDSXLogEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pBool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_GetDSXLogEnable(BOOLEAN *pBool);",
+          "brief": "Get DSX log enable status",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 740
+        },
+        {
+          "name": "mta_hal_SetDSXLogEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Bool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_SetDSXLogEnable(BOOLEAN Bool);",
+          "brief": "Set value of DSX log enable to the value passed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 752
+        },
+        {
+          "name": "mta_hal_ClearDSXLog",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Bool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_ClearDSXLog(BOOLEAN Bool);",
+          "brief": "Clear DSX logs based on the value passed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 765
+        },
+        {
+          "name": "mta_hal_GetCallSignallingLogEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pBool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_GetCallSignallingLogEnable(BOOLEAN *pBool);",
+          "brief": "Get the value of if CallSignalling log is enabled",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 777
+        },
+        {
+          "name": "mta_hal_SetCallSignallingLogEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Bool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_SetCallSignallingLogEnable(BOOLEAN Bool);",
+          "brief": "Set value of CallSignalling enable to the value passed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 790
+        },
+        {
+          "name": "mta_hal_ClearCallSignallingLog",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Bool"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_ClearCallSignallingLog(BOOLEAN Bool);",
+          "brief": "Clear CallSignalling log based on the value passed.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected.",
+          "deprecated": false,
+          "line": 804
+        },
+        {
+          "name": "mta_hal_GetMtaLog",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "Count"
+            },
+            {
+              "type": "PMTAMGMT_MTA_MTALOG_FULL *",
+              "name": "ppCfg"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_GetMtaLog(ULONG *Count, PMTAMGMT_MTA_MTALOG_FULL *ppCfg);",
+          "brief": "Get all log entries from the MTA Log",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 816
+        },
+        {
+          "name": "mta_hal_BatteryGetInstalled",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN*",
+              "name": "Val"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetInstalled(BOOLEAN* Val);",
+          "brief": "Check to see if the battery is installed",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 827
+        },
+        {
+          "name": "mta_hal_BatteryGetTotalCapacity",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "Val"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetTotalCapacity(ULONG* Val);",
+          "brief": "Get the total capacity of the battery",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 838
+        },
+        {
+          "name": "mta_hal_BatteryGetActualCapacity",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "Val"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetActualCapacity(ULONG* Val);",
+          "brief": "Retrieve the actual capacity of the battery",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 849
+        },
+        {
+          "name": "mta_hal_BatteryGetRemainingCharge",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "Val"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetRemainingCharge(ULONG* Val);",
+          "brief": "Retrieve the current charge remaining in the battery",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 860
+        },
+        {
+          "name": "mta_hal_BatteryGetRemainingTime",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "Val"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetRemainingTime(ULONG* Val);",
+          "brief": "Get estimated battery remaining time if current usage continues",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 871
+        },
+        {
+          "name": "mta_hal_BatteryGetNumberofCycles",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG*",
+              "name": "Val"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetNumberofCycles(ULONG* Val);",
+          "brief": "Get max number of cycles the battery can be charge cycled",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 882
+        },
+        {
+          "name": "mta_hal_BatteryGetPowerStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "Val"
+            },
+            {
+              "type": "ULONG *",
+              "name": "len"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_BatteryGetPowerStatus(CHAR *Val, ULONG *len);",
+          "brief": "Get power status of MTA \\n It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 895
+        },
+        {
+          "name": "mta_hal_BatteryGetCondition",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "Val"
+            },
+            {
+              "type": "ULONG *",
+              "name": "len"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_BatteryGetCondition(CHAR *Val, ULONG *len);",
+          "brief": "Get the battery condition \\n It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 908
+        },
+        {
+          "name": "mta_hal_BatteryGetStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR*",
+              "name": "Val"
+            },
+            {
+              "type": "ULONG *",
+              "name": "len"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_BatteryGetStatus(CHAR* Val, ULONG *len);",
+          "brief": "Get the battery status \\n \"Discharging\", or \"Unknown\". \\n It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 922
+        },
+        {
+          "name": "mta_hal_BatteryGetLife",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR*",
+              "name": "Val"
+            },
+            {
+              "type": "ULONG *",
+              "name": "len"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_BatteryGetLife(CHAR* Val, ULONG *len);",
+          "brief": "Get the battery life status \\n It is a zero-terminated string.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 935
+        },
+        {
+          "name": "mta_hal_BatteryGetInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PMTAMGMT_MTA_BATTERY_INFO",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetInfo(PMTAMGMT_MTA_BATTERY_INFO pInfo);",
+          "brief": "Get the battery info",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 948
+        },
+        {
+          "name": "mta_hal_BatteryGetPowerSavingModeStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_BatteryGetPowerSavingModeStatus(ULONG *pValue);",
+          "brief": "Get the battery Power Saving Mode Status",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 959
+        },
+        {
+          "name": "mta_hal_Get_MTAResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_Get_MTAResetCount(ULONG *resetcnt);",
+          "brief": "Get the reset count of MTA",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 971
+        },
+        {
+          "name": "mta_hal_Get_LineResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_Get_LineResetCount(ULONG *resetcnt);",
+          "brief": "Get the reset count of MTA Lines",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 983
+        },
+        {
+          "name": "mta_hal_ClearCalls",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "InstanceNumber"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_ClearCalls(ULONG InstanceNumber);",
+          "brief": "clear the VQM stats per line",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 995
+        },
+        {
+          "name": "mta_hal_getDhcpStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "MTAMGMT_MTA_STATUS *",
+              "name": "output_pIpv4status"
+            },
+            {
+              "type": "MTAMGMT_MTA_STATUS *",
+              "name": "output_pIpv6status"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_getDhcpStatus(MTAMGMT_MTA_STATUS *output_pIpv4status, MTAMGMT_MTA_STATUS *output_pIpv6status);",
+          "brief": "Get the DHCP status for MTA",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1007
+        },
+        {
+          "name": "mta_hal_getConfigFileStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "MTAMGMT_MTA_STATUS *",
+              "name": "poutput_status"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_getConfigFileStatus(MTAMGMT_MTA_STATUS *poutput_status);",
+          "brief": "Get the MTA config file status.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1018
+        },
+        {
+          "name": "mta_hal_getLineRegisterStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "MTAMGMT_MTA_STATUS *",
+              "name": "output_status_array"
+            },
+            {
+              "type": "int",
+              "name": "array_size"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT mta_hal_getLineRegisterStatus(MTAMGMT_MTA_STATUS *output_status_array, int array_size);",
+          "brief": "Get the register status for all lines",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1030
+        },
+        {
+          "name": "mta_hal_devResetNow",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "bResetValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_devResetNow(BOOLEAN bResetValue);",
+          "brief": "Set boolean value passed to reset MTA device.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1042
+        },
+        {
+          "name": "mta_hal_getMtaOperationalStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "MTAMGMT_MTA_STATUS *",
+              "name": "operationalStatus"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_getMtaOperationalStatus(MTAMGMT_MTA_STATUS *operationalStatus);",
+          "brief": "Get the operational status of MTA",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1053
+        },
+        {
+          "name": "mta_hal_getMtaProvisioningStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "MTAMGMT_MTA_PROVISION_STATUS *",
+              "name": "provisionStatus"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_getMtaProvisioningStatus(MTAMGMT_MTA_PROVISION_STATUS *provisionStatus);",
+          "brief": "Get the provisional status of MTA",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1064
+        },
+        {
+          "name": "mta_hal_start_provisioning",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PMTAMGMT_MTA_PROVISIONING_PARAMS",
+              "name": "pParameters"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT mta_hal_start_provisioning(PMTAMGMT_MTA_PROVISIONING_PARAMS pParameters);",
+          "brief": "This API call will start IP provisioning for all the lines for IPv4/IPv6 , or dual mode",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1113
+        },
+        {
+          "name": "mta_hal_LineRegisterStatus_callback_register",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "mta_hal_getLineRegisterStatus_callback",
+              "name": "callback_proc"
+            }
+          ],
+          "param_count": 1,
+          "signature": "void mta_hal_LineRegisterStatus_callback_register(mta_hal_getLineRegisterStatus_callback callback_proc);",
+          "brief": "Register a callback function for line register status updates. This function registers a callback that will be called whenever there is an update in the line register status.",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 1135
+        }
+      ]
+    }
+  ],
+  "total_api_count": 49
+}

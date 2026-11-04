@@ -1,0 +1,74 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkLedManager",
+    "moduleName": "RdkLedManager",
+    "version": "0.1.0-draft",
+    "description": "LED state and pattern control for RDK-B hubs, translating system-wide events (rbus/sysevents) into LED color/pattern changes.",
+    "sourceBranch": "main",
+    "sourceCommit": "9052056356af1e604124c6e81d36a7d575196d38",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --name RdkLedManager --module-name RdkLedManager --description LED state and pattern control for RDK-B hubs, translating system-wide events (rbus/sysevents) into LED color/pattern changes. --output led_interface.json"
+  },
+  "elements": {
+    "Device.X_RDK_LedManager.BrightnessData": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef LEDMGR_WEBCONFIG"
+      ],
+      "source": {
+        "file": "ledmgr_rbus_handler_apis.c",
+        "table": "ledMgrRbusDataElements",
+        "getHandler": "LedMgr_Rbus_GetHandler",
+        "setHandler": "LedMgr_Rbus_Brightness_SetHandler"
+      }
+    },
+    "Device.X_RDK_LedManager.FullJsonData": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef LEDMGR_WEBCONFIG"
+      ],
+      "source": {
+        "file": "ledmgr_rbus_handler_apis.c",
+        "table": "ledMgrRbusDataElements",
+        "getHandler": "LedMgr_Rbus_GetHandler",
+        "setHandler": "LedMgr_Rbus_FullJson_SetHandler"
+      }
+    },
+    "Device.X_RDK_LedManager.OnOffData": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef LEDMGR_WEBCONFIG"
+      ],
+      "source": {
+        "file": "ledmgr_rbus_handler_apis.c",
+        "table": "ledMgrRbusDataElements",
+        "getHandler": "LedMgr_Rbus_GetHandler",
+        "setHandler": "LedMgr_Rbus_OnOff_SetHandler"
+      }
+    }
+  }
+}

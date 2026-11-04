@@ -1,0 +1,791 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspTr069Pa",
+    "moduleName": "CcspTr069Pa",
+    "version": "0.1.0-draft",
+    "description": "TR-069/CWMP protocol agent bridging RDK-B's CCSP data model to Auto Configuration Servers for remote device management.",
+    "sourceBranch": "develop",
+    "sourceCommit": "8009e167fad8c424a800ec5007a85c9d294ff690",
+    "generated": "2026-08-22",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --source-dir source-embedded --name CcspTr069Pa --module-name CcspTr069Pa --description TR-069/CWMP protocol agent bridging RDK-B's CCSP data model to Auto Configuration Servers for remote device management. --output tr69pa_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.SupportedDataModel.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.DeviceInfo.SupportedDataModelNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_supported_data_model.c",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DeviceInfo.SupportedDataModel.{i}.Features": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_supported_data_model.c"
+      }
+    },
+    "Device.DeviceInfo.SupportedDataModel.{i}.URL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_supported_data_model.c"
+      }
+    },
+    "Device.DeviceInfo.SupportedDataModel.{i}.URN": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_supported_data_model.c"
+      }
+    },
+    "Device.ManagementServer.ACSOverride": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.AliasBasedAddressing": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.AutonomousTransferCompletePolicy.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "autonomousTransferCompletePolicyParameters"
+      }
+    },
+    "Device.ManagementServer.AutonomousTransferCompletePolicy.FileTypeFilter": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "autonomousTransferCompletePolicyParameters"
+      }
+    },
+    "Device.ManagementServer.AutonomousTransferCompletePolicy.ResultTypeFilter": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "autonomousTransferCompletePolicyParameters"
+      }
+    },
+    "Device.ManagementServer.AutonomousTransferCompletePolicy.TransferTypeFilter": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "autonomousTransferCompletePolicyParameters"
+      }
+    },
+    "Device.ManagementServer.CWMPRetryIntervalMultiplier": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.CWMPRetryMinimumWaitInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.ConnectionRequestPassword": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.ConnectionRequestURL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.ConnectionRequestUsername": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.DUStateChangeComplPolicy.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "duStateChangeComplPolicyParameters"
+      }
+    },
+    "Device.ManagementServer.DUStateChangeComplPolicy.FaultCodeFilter": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "duStateChangeComplPolicyParameters"
+      }
+    },
+    "Device.ManagementServer.DUStateChangeComplPolicy.OperationTypeFilter": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "duStateChangeComplPolicyParameters"
+      }
+    },
+    "Device.ManagementServer.DUStateChangeComplPolicy.ResultTypeFilter": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "duStateChangeComplPolicyParameters"
+      }
+    },
+    "Device.ManagementServer.DefaultActiveNotificationThrottle": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.DownloadProgressURL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.EnableCWMP": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.KickURL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.NATDetected": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.ParameterKey": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.PeriodicInformEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.PeriodicInformInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.PeriodicInformTime": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNMaximumKeepAlivePeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNMinimumKeepAlivePeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNPassword": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNServerAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNServerPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.STUNUsername": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.UDPConnectionRequestAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.UDPConnectionRequestAddressNotificationLimit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.URL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.UpgradesManaged": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.Username": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.X_CISCO_COM_ConnectionRequestURLPath": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.X_CISCO_COM_ConnectionRequestURLPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    },
+    "Device.ManagementServer.X_CISCO_COM_DiagComplete": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ccsp_management_server.c",
+        "table": "managementServerParameters"
+      }
+    }
+  }
+}

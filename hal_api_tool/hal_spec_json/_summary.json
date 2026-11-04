@@ -1,0 +1,288 @@
+{
+  "generated_at": "2026-08-28T20:02:03Z",
+  "component_count": 21,
+  "total_api_count": 1073,
+  "components": [
+    {
+      "component": "bridge-util",
+      "repo_dir": "rdkb-halif-bridge-util",
+      "header_count": 2,
+      "api_count": 3,
+      "headers": [
+        {
+          "file": "include/bridge_util_hal.h",
+          "api_count": 3
+        },
+        {
+          "file": "include/network_interface.h",
+          "api_count": 0
+        }
+      ]
+    },
+    {
+      "component": "cellular",
+      "repo_dir": "rdkb-halif-cellular",
+      "header_count": 1,
+      "api_count": 36,
+      "headers": [
+        {
+          "file": "include/cellular_hal.h",
+          "api_count": 36
+        }
+      ]
+    },
+    {
+      "component": "cellular-modem",
+      "repo_dir": "rdkb-halif-cellular-modem",
+      "header_count": 1,
+      "api_count": 3,
+      "headers": [
+        {
+          "file": "include/cellular_modem_hal_api.h",
+          "api_count": 3
+        }
+      ]
+    },
+    {
+      "component": "cm",
+      "repo_dir": "rdkb-halif-cm",
+      "header_count": 1,
+      "api_count": 51,
+      "headers": [
+        {
+          "file": "include/cm_hal.h",
+          "api_count": 51
+        }
+      ]
+    },
+    {
+      "component": "dhcp",
+      "repo_dir": "rdkb-halif-dhcp",
+      "header_count": 2,
+      "api_count": 54,
+      "headers": [
+        {
+          "file": "include/dhcp4cApi.h",
+          "api_count": 27
+        },
+        {
+          "file": "include/dhcpv4c_api.h",
+          "api_count": 27
+        }
+      ]
+    },
+    {
+      "component": "dhcp6c",
+      "repo_dir": "rdkb-halif-dhcp6c",
+      "header_count": 1,
+      "api_count": 2,
+      "headers": [
+        {
+          "file": "include/dhcp6cApi.h",
+          "api_count": 2
+        }
+      ]
+    },
+    {
+      "component": "emmc",
+      "repo_dir": "rdkb-halif-emmc",
+      "header_count": 1,
+      "api_count": 2,
+      "headers": [
+        {
+          "file": "include/ccsp_hal_emmc.h",
+          "api_count": 2
+        }
+      ]
+    },
+    {
+      "component": "epon",
+      "repo_dir": "rdkb-halif-epon",
+      "header_count": 1,
+      "api_count": 15,
+      "headers": [
+        {
+          "file": "epon_hal.h",
+          "api_count": 15
+        }
+      ]
+    },
+    {
+      "component": "ethsw",
+      "repo_dir": "rdkb-halif-ethsw",
+      "header_count": 1,
+      "api_count": 20,
+      "headers": [
+        {
+          "file": "include/ccsp_hal_ethsw.h",
+          "api_count": 20
+        }
+      ]
+    },
+    {
+      "component": "fwupgrade",
+      "repo_dir": "rdkb-halif-fwupgrade",
+      "header_count": 1,
+      "api_count": 10,
+      "headers": [
+        {
+          "file": "include/fwupgrade_hal.h",
+          "api_count": 10
+        }
+      ]
+    },
+    {
+      "component": "gpon",
+      "repo_dir": "rdkb-halif-gpon",
+      "header_count": 0,
+      "api_count": 0,
+      "headers": []
+    },
+    {
+      "component": "lpa",
+      "repo_dir": "rdkb-halif-lpa",
+      "header_count": 1,
+      "api_count": 11,
+      "headers": [
+        {
+          "file": "include/lpa_hal.h",
+          "api_count": 11
+        }
+      ]
+    },
+    {
+      "component": "moca",
+      "repo_dir": "rdkb-halif-moca",
+      "header_count": 1,
+      "api_count": 21,
+      "headers": [
+        {
+          "file": "include/moca_hal.h",
+          "api_count": 21
+        }
+      ]
+    },
+    {
+      "component": "mso",
+      "repo_dir": "rdkb-halif-mso",
+      "header_count": 1,
+      "api_count": 3,
+      "headers": [
+        {
+          "file": "include/mso_mgmt_hal.h",
+          "api_count": 3
+        }
+      ]
+    },
+    {
+      "component": "mta",
+      "repo_dir": "rdkb-halif-mta",
+      "header_count": 1,
+      "api_count": 49,
+      "headers": [
+        {
+          "file": "include/mta_hal.h",
+          "api_count": 49
+        }
+      ]
+    },
+    {
+      "component": "platform",
+      "repo_dir": "rdkb-halif-platform",
+      "header_count": 1,
+      "api_count": 71,
+      "headers": [
+        {
+          "file": "include/platform_hal.h",
+          "api_count": 71
+        }
+      ]
+    },
+    {
+      "component": "vlan",
+      "repo_dir": "rdkb-halif-vlan",
+      "header_count": 1,
+      "api_count": 16,
+      "headers": [
+        {
+          "file": "include/vlan_hal.h",
+          "api_count": 16
+        }
+      ]
+    },
+    {
+      "component": "voice",
+      "repo_dir": "rdkb-halif-voice",
+      "header_count": 0,
+      "api_count": 0,
+      "headers": []
+    },
+    {
+      "component": "wan",
+      "repo_dir": "rdkb-halif-wan",
+      "header_count": 1,
+      "api_count": 15,
+      "headers": [
+        {
+          "file": "include/wan_hal.h",
+          "api_count": 15
+        }
+      ]
+    },
+    {
+      "component": "wifi",
+      "repo_dir": "rdkb-halif-wifi",
+      "header_count": 10,
+      "api_count": 691,
+      "headers": [
+        {
+          "file": "include/wifi_hal.h",
+          "api_count": 0
+        },
+        {
+          "file": "include/wifi_hal_ap.h",
+          "api_count": 117
+        },
+        {
+          "file": "include/wifi_hal_client_mgt.h",
+          "api_count": 41
+        },
+        {
+          "file": "include/wifi_hal_deprecated.h",
+          "api_count": 172
+        },
+        {
+          "file": "include/wifi_hal_emu.h",
+          "api_count": 257
+        },
+        {
+          "file": "include/wifi_hal_extender.h",
+          "api_count": 25
+        },
+        {
+          "file": "include/wifi_hal_generic.h",
+          "api_count": 10
+        },
+        {
+          "file": "include/wifi_hal_radio.h",
+          "api_count": 52
+        },
+        {
+          "file": "include/wifi_hal_sta.h",
+          "api_count": 6
+        },
+        {
+          "file": "include/wifi_hal_telemetry.h",
+          "api_count": 11
+        }
+      ]
+    },
+    {
+      "component": "xdsl",
+      "repo_dir": "rdkb-halif-xdsl",
+      "header_count": 0,
+      "api_count": 0,
+      "headers": []
+    }
+  ]
+}

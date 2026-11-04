@@ -1,0 +1,73 @@
+{
+  "component": "bridge-util",
+  "repo_dir": "rdkb-halif-bridge-util",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/bridge_util_hal.h",
+      "api_count": 3,
+      "apis": [
+        {
+          "name": "HandlePreConfigVendor",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "bridgeDetails *",
+              "name": "bridgeInfo"
+            },
+            {
+              "type": "int",
+              "name": "InstanceNumber"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int HandlePreConfigVendor(bridgeDetails *bridgeInfo,int InstanceNumber);",
+          "brief": "This function will apply OEM/SOC-specific configurations and is called before updateBridgeInfo() by the client A bridge is created, updated, or deleted by calling updateBridgeInfo(). This will ensure that any vendor-specific settings are correctly applied before any changes to the bridge. The range of acceptable values is defined by `enum Config`.",
+          "params_doc": {},
+          "return_doc": "The result status of the operation. 0 on success. -1 on failure. @see updateBridgeInfo() TODO: `int InstanceNumber` should be stated as `enum Config InstanceNumber`.",
+          "deprecated": false,
+          "line": 283
+        },
+        {
+          "name": "HandlePostConfigVendor",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "bridgeDetails *",
+              "name": "bridgeInfo"
+            },
+            {
+              "type": "int",
+              "name": "Config"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int HandlePostConfigVendor(bridgeDetails *bridgeInfo,int Config);",
+          "brief": "This function will apply OEM/SOC-specific configurations and is called after updateBridgeInfo() by the client A bridge is created, updated, or deleted by calling updateBridgeInfo(). This will ensure that any vendor-specific settings are correctly applied after any changes to the bridge. The range of acceptable values is defined by `enum Config`.",
+          "params_doc": {},
+          "return_doc": "The result status of the operation. 0 on success. -1 on failure. @see updateBridgeInfo() TODO: `int InstanceNumber` should be stated as `enum Config Config`.",
+          "deprecated": false,
+          "line": 301
+        },
+        {
+          "name": "getVendorIfaces",
+          "return_type": "char *",
+          "params": [],
+          "param_count": 0,
+          "signature": "char * getVendorIfaces();",
+          "brief": "Retrieves a list of vendor-specific interface names for bridge management. These names can be used for various network operations, such as creating, updating, or deleting network bridges.",
+          "params_doc": {},
+          "return_doc": "zero terminated vendor interface name string, or NULL for no interfaces vendor interface which is a character array. NULL - is returned if there are no interfaces",
+          "deprecated": false,
+          "line": 311
+        }
+      ]
+    },
+    {
+      "file": "include/network_interface.h",
+      "api_count": 0,
+      "apis": []
+    }
+  ],
+  "total_api_count": 3
+}

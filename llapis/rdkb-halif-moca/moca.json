@@ -1,0 +1,450 @@
+{
+  "component": "moca",
+  "repo_dir": "rdkb-halif-moca",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/moca_hal.h",
+      "api_count": 21,
+      "apis": [
+        {
+          "name": "moca_associatedDevice_callback_register",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "moca_associatedDevice_callback",
+              "name": "callback_proc"
+            }
+          ],
+          "param_count": 1,
+          "signature": "void moca_associatedDevice_callback_register(moca_associatedDevice_callback callback_proc);",
+          "brief": "Registers a callback function to be invoked on MoCA associated device events. This function allows you to register a callback function that will be called whenever a MoCA client is activated or deactivated on the network.",
+          "params_doc": {
+            "callback_proc": "Pointer to the callback function of type `moca_associatedDevice_callback`. This function will be called with the interface index and associated device information."
+          },
+          "return_doc": "",
+          "deprecated": false,
+          "line": 492
+        },
+        {
+          "name": "moca_GetIfConfig",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_cfg_t *",
+              "name": "pmoca_config"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_GetIfConfig(ULONG ifIndex, moca_cfg_t *pmoca_config);",
+          "brief": "Gets the MoCA Configuration Parameters that were previously set.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. STATUS_SUCCESS - if successful. STATUS_FAILURE - if any error is detected.",
+          "deprecated": false,
+          "line": 519
+        },
+        {
+          "name": "moca_SetIfConfig",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_cfg_t *",
+              "name": "pmoca_config"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_SetIfConfig(ULONG ifIndex, moca_cfg_t *pmoca_config);",
+          "brief": "Sets the MoCA Configuration Parameters.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. STATUS_SUCCESS - if successful. STATUS_FAILURE - if any error is detected.",
+          "deprecated": false,
+          "line": 531
+        },
+        {
+          "name": "moca_IfGetDynamicInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_dynamic_info_t *",
+              "name": "pmoca_dynamic_info"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_IfGetDynamicInfo(ULONG ifIndex, moca_dynamic_info_t *pmoca_dynamic_info);",
+          "brief": "Gets the dynamic status information of a MoCA interface and its associated network.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 543
+        },
+        {
+          "name": "moca_IfGetStaticInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_static_info_t *",
+              "name": "pmoca_static_info"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_IfGetStaticInfo(ULONG ifIndex, moca_static_info_t *pmoca_static_info);",
+          "brief": "Retrieves static information about a MoCA interface. This function fetches static information (e.g., firmware version, MAC address, protocol capabilities) from the specified MoCA interface. The retrieved information is populated into the provided `moca_static_info_t` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 559
+        },
+        {
+          "name": "moca_IfGetStats",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_stats_t *",
+              "name": "pmoca_stats"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_IfGetStats(ULONG ifIndex, moca_stats_t *pmoca_stats);",
+          "brief": "Retrieves network layer statistics for a MoCA interface. This function fetches statistics related to the network layer operation of a specified MoCA interface. The retrieved statistics are populated into the provided `moca_stats_t` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 574
+        },
+        {
+          "name": "moca_GetNumAssociatedDevices",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "ULONG *",
+              "name": "pulCount"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_GetNumAssociatedDevices(ULONG ifIndex, ULONG *pulCount);",
+          "brief": "Retrieves the number of associated devices on a MoCA network. This function returns the count of devices connected to the MoCA network associated with the specified interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 588
+        },
+        {
+          "name": "moca_IfGetExtCounter",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_mac_counters_t *",
+              "name": "pmoca_mac_counters"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_IfGetExtCounter(ULONG ifIndex, moca_mac_counters_t *pmoca_mac_counters);",
+          "brief": "Retrieves MoCA MAC layer statistics for an interface. This function fetches statistical counters related to the MoCA MAC layer for the specified interface. The retrieved counters are populated into the provided `moca_mac_counters_t` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 603
+        },
+        {
+          "name": "moca_IfGetExtAggrCounter",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_aggregate_counters_t *",
+              "name": "pmoca_aggregate_counts"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_IfGetExtAggrCounter(ULONG ifIndex, moca_aggregate_counters_t *pmoca_aggregate_counts);",
+          "brief": "Retrieves aggregate transmit and receive data unit counters for a MoCA interface. This function fetches the aggregate counts of transmitted and received data units (excluding MoCA control packets) for the specified MoCA interface. The retrieved counters are populated into the provided `moca_aggregate_counters_t` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 618
+        },
+        {
+          "name": "moca_GetMocaCPEs",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_cpe_t *",
+              "name": "cpes"
+            },
+            {
+              "type": "INT *",
+              "name": "pnum_cpes"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT moca_GetMocaCPEs(ULONG ifIndex, moca_cpe_t *cpes, INT *pnum_cpes);",
+          "brief": "Retrieves the MAC addresses of all MoCA nodes on the network. This function fetches the MAC addresses of all MoCA Customer Premises Equipment (CPE) nodes connected to the MoCA network associated with the specified interface. The retrieved MAC addresses are stored in the provided `cpes` array, and the count of nodes is returned in `pnum_cpes`. The array should be pre-allocated with enough space for `kMoca_MaxCpeList` (256) entries.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 636
+        },
+        {
+          "name": "moca_GetAssociatedDevices",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_associated_device_t **",
+              "name": "ppdevice_array"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT moca_GetAssociatedDevices(ULONG ifIndex, moca_associated_device_t **ppdevice_array);",
+          "brief": "Retrieves information about all associated devices on the MoCA network. This function fetches detailed information about each MoCA device connected to the network associated with the specified interface. The retrieved data includes MAC addresses, node IDs, PHY rates, power levels, and more. Each structure in the array contains information about a single associated device. The caller is responsible for allocating memory for this array.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 653
+        },
+        {
+          "name": "moca_FreqMaskToValue",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UCHAR *",
+              "name": "mask"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT moca_FreqMaskToValue(UCHAR *mask);",
+          "brief": "Converts a frequency mask to a frequency value. This utility function takes a bit mask representing a set of frequencies and returns the corresponding frequency value. The specific interpretation of the mask and the resulting frequency value may be vendor-specific.",
+          "params_doc": {
+            "mask": "[in] Pointer to an array of bytes (`UCHAR`) representing the frequency mask. The buffer size should be at least 16 bytes and is vendor-dependent."
+          },
+          "return_doc": "Frequency value corresponding to the given mask if successful. @note The interpretation of the frequency mask and the range of valid output values may be vendor-specific.",
+          "deprecated": false,
+          "line": 669
+        },
+        {
+          "name": "moca_HardwareEquipped",
+          "return_type": "BOOL",
+          "params": [],
+          "param_count": 0,
+          "signature": "BOOL moca_HardwareEquipped(void);",
+          "brief": "Checks if MoCA hardware is equipped and available. This function determines whether MoCA hardware is present and correctly configured on the system.",
+          "params_doc": {},
+          "return_doc": "TRUE if MoCA hardware is equipped and available, FALSE otherwise.",
+          "deprecated": false,
+          "line": 678
+        },
+        {
+          "name": "moca_GetFullMeshRates",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_mesh_table_t *",
+              "name": "pDeviceArray"
+            },
+            {
+              "type": "ULONG *",
+              "name": "pulCount"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT moca_GetFullMeshRates(ULONG ifIndex, moca_mesh_table_t *pDeviceArray, ULONG *pulCount);",
+          "brief": "Retrieves MoCA full mesh PHY rates. This function fetches the complete mesh PHY (physical layer) rates between all pairs of MoCA nodes on the network associated with the specified interface. The retrieved rates are stored in the provided `pDeviceArray`, and the number of entries in the array is returned in `pulCount`. The caller must allocate enough memory for this array to hold entries for all possible node pairs.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation. @note This function is only available when the `MOCA_VAR` macro is not defined.",
+          "deprecated": false,
+          "line": 698
+        },
+        {
+          "name": "moca_GetFlowStatistics",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "ifIndex"
+            },
+            {
+              "type": "moca_flow_table_t *",
+              "name": "pDeviceArray"
+            },
+            {
+              "type": "ULONG *",
+              "name": "pulCount"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT moca_GetFlowStatistics(ULONG ifIndex, moca_flow_table_t *pDeviceArray, ULONG *pulCount);",
+          "brief": "Retrieves MoCA flow statistics. This function fetches the entries in the MoCA flow table, which contains statistics for ingress PQoS (Priority Quality of Service) flows on the specified MoCA interface. The caller must allocate enough memory for this array to hold all entries.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 716
+        },
+        {
+          "name": "moca_GetResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT moca_GetResetCount(ULONG *resetcnt);",
+          "brief": "Retrieves the MoCA reset count. This function fetches the number of times the MoCA module has been reset. If the operation fails, the value pointed to by `resetcnt` remains unchanged.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 730
+        },
+        {
+          "name": "moca_setIfAcaConfig",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int",
+              "name": "interfaceIndex"
+            },
+            {
+              "type": "moca_aca_cfg_t",
+              "name": "acaCfg"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int moca_setIfAcaConfig(int interfaceIndex, moca_aca_cfg_t acaCfg);",
+          "brief": "Initiates the MoCA Automatic Channel Adaptation (ACA) process. This function configures and potentially starts the ACA process on the specified MoCA interface. The ACA process automatically selects the best operating channel for the MoCA network. Setting the `ACAStart` member to `TRUE` will trigger the ACA process.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS  - The ACA process was successfully configured and started (if `ACAStart` was TRUE). STATUS_FAILURE  - An error occurred during configuration or initialization. STATUS_INPROGRESS - An ACA process is already running on the interface. @note * If the `ACAStart` flag in `acaCfg` is set to `TRUE`, the ACA process will begin immediately. * If `ACAStart` is `FALSE`, only the configuration parameters will be set, and the ACA process won't start. * If an ACA process is already in progress on the interface, this function will return `STATUS_INPROGRESS` and will not start a new ACA process.",
+          "deprecated": false,
+          "line": 753
+        },
+        {
+          "name": "moca_getIfAcaConfig",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int",
+              "name": "interfaceIndex"
+            },
+            {
+              "type": "moca_aca_cfg_t *",
+              "name": "acaCfg"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int moca_getIfAcaConfig(int interfaceIndex, moca_aca_cfg_t *acaCfg);",
+          "brief": "Retrieves the current MoCA ACA configuration parameters. This function fetches the configuration parameters that were set for the Automatic Channel Adaptation (ACA) process on the specified MoCA interface. The retrieved configuration is stored in the provided `acaCfg` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - The operation was successful. STATUS_FAILURE - An error occurred during the operation.",
+          "deprecated": false,
+          "line": 768
+        },
+        {
+          "name": "moca_cancelIfAca",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int",
+              "name": "interfaceIndex"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int moca_cancelIfAca(int interfaceIndex);",
+          "brief": "Cancels an ongoing MoCA Automatic Channel Adaptation (ACA) process. This function terminates a currently running ACA process on the specified MoCA interface. If no ACA process is active, it has no effect.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - The ACA process was successfully cancelled or was not running. STATUS_FAILURE - An error occurred while attempting to cancel the ACA process.",
+          "deprecated": false,
+          "line": 782
+        },
+        {
+          "name": "moca_getIfAcaStatus",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int",
+              "name": "interfaceIndex"
+            },
+            {
+              "type": "moca_aca_stat_t *",
+              "name": "pacaStat"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int moca_getIfAcaStatus(int interfaceIndex,moca_aca_stat_t *pacaStat);",
+          "brief": "Retrieves the status and results of a MoCA Automatic Channel Adaptation (ACA) process. This function fetches the current status, results, and configuration details of an ongoing or completed ACA process on the specified MoCA interface. The retrieved information is stored in the provided `moca_aca_stat_t` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - The operation was successful, and ACA status and results were retrieved. STATUS_FAILURE - An error occurred during the operation, and no valid ACA information was obtained.",
+          "deprecated": false,
+          "line": 798
+        },
+        {
+          "name": "moca_getIfScmod",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int",
+              "name": "interfaceIndex"
+            },
+            {
+              "type": "int *",
+              "name": "pnumOfEntries"
+            },
+            {
+              "type": "moca_scmod_stat_t **",
+              "name": "ppscmodStat"
+            }
+          ],
+          "param_count": 3,
+          "signature": "int moca_getIfScmod(int interfaceIndex,int *pnumOfEntries,moca_scmod_stat_t **ppscmodStat);",
+          "brief": "Retrieves MoCA Subcarrier Modulation (SCMOD) statistics after an ACA process. This function fetches the SCMOD statistics collected after an Automatic Channel Adaptation (ACA) process on the specified MoCA interface. These statistics provide detailed information about the modulation schemes and error rates for each subcarrier on the MoCA channel. Each structure contains SCMOD statistics for a pair of nodes on the MoCA network. The caller is responsible for allocating memory for this array.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - The operation was successful, and SCMOD statistics were retrieved. STATUS_FAILURE - An error occurred during the operation, and no valid SCMOD information was obtained.",
+          "deprecated": false,
+          "line": 816
+        }
+      ]
+    }
+  ],
+  "total_api_count": 21
+}

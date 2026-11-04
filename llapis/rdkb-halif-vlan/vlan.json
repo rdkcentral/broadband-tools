@@ -1,0 +1,332 @@
+{
+  "component": "vlan",
+  "repo_dir": "rdkb-halif-vlan",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/vlan_hal.h",
+      "api_count": 16,
+      "apis": [
+        {
+          "name": "vlan_hal_addGroup",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            },
+            {
+              "type": "const char *",
+              "name": "default_vlanID"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int vlan_hal_addGroup(const char *groupName, const char *default_vlanID);",
+          "brief": "Creates a new VLAN group and assigns the default VLAN ID. This function adds a new VLAN group to the system using the provided bridge name (`groupName`) and sets its default VLAN ID (`default_vlanID`). If a group with the same name already exists and has the same `default_vlanID`, it is considered a success. Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The operation succeeded, or the group already existed with the expected VLAN ID. RETURN_ERR - An error occurred during group creation. @note Possible errors: - VLAN ID is outside the valid range (1-4094). - A group with the same name exists, but with a different VLAN ID. - System-level errors during bridge creation or VLAN configuration. @todo Refactor return codes to use a more specific and informative enum (see general TODO).",
+          "deprecated": false,
+          "line": 206
+        },
+        {
+          "name": "vlan_hal_delGroup",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int vlan_hal_delGroup(const char *groupName);",
+          "brief": "Deletes an existing VLAN group and its associated interface memberships. This function removes a VLAN group identified by its bridge name (`groupName`). If the group does not exist, the function considers this a success and returns `RETURN_OK`. Any interfaces associated with the deleted group are also removed from the VLAN configuration. be deleted (e.g., \"brlan0\").",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The operation was successful, or the group did not exist. RETURN_ERR - An error occurred during the deletion process. @note Possible error scenarios include: - System-level errors during bridge deletion or interface removal. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 229
+        },
+        {
+          "name": "vlan_hal_addInterface",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            },
+            {
+              "type": "const char *",
+              "name": "ifName"
+            },
+            {
+              "type": "const char *",
+              "name": "vlanID"
+            }
+          ],
+          "param_count": 3,
+          "signature": "int vlan_hal_addInterface(const char *groupName, const char *ifName, const char *vlanID);",
+          "brief": "Adds an interface to an existing VLAN group and assigns a VLAN ID. This function adds a network interface (`ifName`) to a specified VLAN group (`groupName`). If the interface is already a member of the group with the expected VLAN ID (`vlanID`), it is considered a success. interface will be added (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul. This is vendor-specific. group.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The operation succeeded, or the interface was already a member of the group with the expected VLAN ID. RETURN_ERR - An error occurred. @note Possible errors: - The VLAN group does not exist. - The VLAN ID is outside the valid range (1-4094). - The interface is already in the group with a different VLAN ID. - System-level errors during interface addition or VLAN configuration. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 261
+        },
+        {
+          "name": "vlan_hal_delInterface",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            },
+            {
+              "type": "const char *",
+              "name": "ifName"
+            },
+            {
+              "type": "const char *",
+              "name": "vlanID"
+            }
+          ],
+          "param_count": 3,
+          "signature": "int vlan_hal_delInterface(const char *groupName, const char *ifName, const char *vlanID);",
+          "brief": "Removes an interface from a VLAN group. This function deassociates a network interface (`ifName`) from the specified VLAN group (`groupName`). If the interface is not a member of the group, it is considered a success. interface will be removed (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul. This is vendor-specific. group.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The operation succeeded, or the interface was not a member of the group. RETURN_ERR - An error occurred during the removal process. @note Possible errors: - The VLAN group does not exist. - The interface is not a member of the VLAN group. - System-level errors during interface removal or VLAN configuration. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 292
+        },
+        {
+          "name": "vlan_hal_printGroup",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int vlan_hal_printGroup(const char *groupName);",
+          "brief": "Outputs the settings of a specific VLAN group for debugging. This function retrieves and displays the configuration details of a VLAN group identified by its bridge name (`groupName`). The output is intended for diagnostic purposes and may be printed to a console or log. dump (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The group settings were successfully dumped. RETURN_ERR - An error occurred (e.g., the group was not found, or there was a system error). @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 314
+        },
+        {
+          "name": "vlan_hal_printAllGroup",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int vlan_hal_printAllGroup();",
+          "brief": "Outputs the settings of all VLAN groups for debugging. This function retrieves and displays the configuration details of all VLAN groups on the system. The output is typically directed to a console or log file and is intended for diagnostic purposes. The output method is implementation-specific, but in this case, it uses `printf` for logging to the console.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - All group settings were successfully dumped. RETURN_ERR - An error occurred during the process of retrieving or displaying the group settings. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 333
+        },
+        {
+          "name": "vlan_hal_delete_all_Interfaces",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int vlan_hal_delete_all_Interfaces(const char *groupName);",
+          "brief": "Removes all interfaces from a VLAN group. This function deassociates all network interfaces from the specified VLAN group (`groupName`). which to remove all interfaces (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - All interfaces were successfully removed from the group. RETURN_ERR - An error occurred during the removal process. @note Possible errors: - The VLAN group does not exist. - System-level errors during interface removal or VLAN configuration. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 357
+        },
+        {
+          "name": "_is_this_group_available_in_linux_bridge",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "br_name"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int _is_this_group_available_in_linux_bridge(char * br_name);",
+          "brief": "Checks if a given bridge exists in the Linux bridge system. This utility function determines whether a bridge identified by its name (`br_name`) is currently present in the Linux bridge configuration. It can be used to verify the existence of a bridge before performing operations on it. values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The bridge exists in the Linux bridge system. RETURN_ERR - The bridge was not found or an error occurred during the check.",
+          "deprecated": false,
+          "line": 375
+        },
+        {
+          "name": "_is_this_interface_available_in_linux_bridge",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "if_name"
+            },
+            {
+              "type": "char *",
+              "name": "vlanID"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int _is_this_interface_available_in_linux_bridge(char * if_name, char *vlanID);",
+          "brief": "Checks if a given interface exists in any Linux bridge. This utility function determines whether a network interface, identified by its name (`if_name`) and associated VLAN ID (`vlanID`), is currently a member of any bridge within the Linux bridge system. This can be useful for checking the VLAN configuration of an interface. (e.g., \"eth0\"). This name is vendor-specific.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The interface exists within a Linux bridge. RETURN_ERR - The interface was not found in any bridge or an error occurred during the check.",
+          "deprecated": false,
+          "line": 394
+        },
+        {
+          "name": "_is_this_interface_available_in_given_linux_bridge",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "if_name"
+            },
+            {
+              "type": "char *",
+              "name": "br_name"
+            },
+            {
+              "type": "char *",
+              "name": "vlanID"
+            }
+          ],
+          "param_count": 3,
+          "signature": "int _is_this_interface_available_in_given_linux_bridge(char * if_name, char * br_name,char *vlanID);",
+          "brief": "Checks if a specific interface is a member of a given Linux bridge. This utility function determines whether a network interface (`if_name`) with a specific VLAN ID (`vlanID`) is currently associated with a particular Linux bridge (`br_name`). (e.g., \"eth0\"). This name is vendor-specific. membership (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The interface is a member of the specified bridge with the given VLAN ID. RETURN_ERR - The interface is not a member of the bridge or an error occurred during the check.",
+          "deprecated": false,
+          "line": 417
+        },
+        {
+          "name": "_get_shell_outputbuffer",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "char *",
+              "name": "cmd"
+            },
+            {
+              "type": "char *",
+              "name": "out"
+            },
+            {
+              "type": "int",
+              "name": "len"
+            }
+          ],
+          "param_count": 3,
+          "signature": "void _get_shell_outputbuffer(char * cmd, char * out, int len);",
+          "brief": "This HAL utility is used get the buffer from shell output. \\n The maximum output length is 512.",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 428
+        },
+        {
+          "name": "_get_shell_outputbuffer_res",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "FILE *",
+              "name": "fp"
+            },
+            {
+              "type": "char *",
+              "name": "out"
+            },
+            {
+              "type": "int",
+              "name": "len"
+            }
+          ],
+          "param_count": 3,
+          "signature": "void _get_shell_outputbuffer_res(FILE *fp, char * out, int len);",
+          "brief": "Retrieves output from a file stream (likely from a shell command). This utility function reads data from a `FILE` stream (`fp`), which is typically the output of a shell command, and copies it into a provided buffer (`out`).",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 441
+        },
+        {
+          "name": "insert_VLAN_ConfigEntry",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "groupName"
+            },
+            {
+              "type": "char *",
+              "name": "vlanID"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int insert_VLAN_ConfigEntry(char *groupName, char *vlanID);",
+          "brief": "Stores the VLAN ID and group name configuration. This utility function inserts a new configuration entry for a VLAN group into a persistent storage (implementation-specific). The entry associates the provided `groupName` with the `vlanID`. the configuration (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul. to store in the configuration.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The configuration entry was successfully inserted. RETURN_ERR - An error occurred during the insertion process (e.g., storage error, invalid parameters). @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 465
+        },
+        {
+          "name": "delete_VLAN_ConfigEntry",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "groupName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int delete_VLAN_ConfigEntry(char *groupName);",
+          "brief": "Deletes the VLAN configuration entry for a group. This utility function removes the configuration entry associated with the provided `groupName` from a persistent storage (implementation-specific). configuration entry is to be deleted (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The configuration entry was successfully deleted. RETURN_ERR - An error occurred during the deletion process (e.g., entry not found, storage error). @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 486
+        },
+        {
+          "name": "get_vlanId_for_GroupName",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "groupName"
+            },
+            {
+              "type": "char *",
+              "name": "vlanID"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int get_vlanId_for_GroupName(const char *groupName, char *vlanID);",
+          "brief": "Retrieves the VLAN ID associated with a given group name. This utility function searches for the VLAN configuration entry corresponding to the specified `groupName` and, if found, retrieves the associated `vlanID`. The `vlanID` is stored in the provided output parameter. (e.g., \"brlan0\"). Valid values are: brlan0, brlan1, brlan2, brlan3, brlan4, brlan5, brlan7, brlan10, brlan106, brlan403, brlan112, brlan113, brebhaul. will be stored.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - The VLAN ID was found and stored in `vlanID`. RETURN_ERR - The group name was not found, or an error occurred during the retrieval process. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 511
+        },
+        {
+          "name": "print_all_vlanId_Configuration",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int print_all_vlanId_Configuration(void);",
+          "brief": "Prints all stored VLAN ID and group name configurations. This function retrieves and displays all VLAN configuration entries, typically from a persistent storage (implementation-specific). Each entry will include the VLAN group name and its associated VLAN ID. The output is likely directed to a console or log for debugging purposes.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK - All configurations were successfully printed. RETURN_ERR - An error occurred during the retrieval or display process. @todo Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 528
+        }
+      ]
+    }
+  ],
+  "total_api_count": 16
+}

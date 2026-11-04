@@ -1,0 +1,5545 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkXdslManager",
+    "moduleName": "TR181_RdkXdslManager",
+    "version": "0.1.0-draft",
+    "description": "DSL (Digital Subscriber Line) WAN interface management for RDK-B, providing TR-181 access to xDSL line configuration, status, and statistics.",
+    "sourceBranch": "main",
+    "sourceCommit": "a5de683a428b890ca8f1c6ae6f12bafbd631a37b",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name RdkXdslManager --module-name TR181_RdkXdslManager --description DSL (Digital Subscriber Line) WAN interface management for RDK-B, providing TR-181 access to xDSL line configuration, status, and statistics. --output xdsl_interface.json"
+  },
+  "elements": {
+    "Device.ATM.Diagnostics.F5Loopback.AverageResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.FailureCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.MaximumResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.MinimumResponseTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.NumberOfRepetitions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.SuccessCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Diagnostics.F5Loopback.Timeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.ATM.LinkNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.ATM.Link.{i}.AAL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.AutoConfig": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.DestinationAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Enable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Encapsulation": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.FCSPreserved": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.LinkType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.QOS.MaximumBurstSize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.QOS.PeakCellRate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.QOS.QoSClass": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.QOS.SustainableCellRate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.BroadcastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.BroadcastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.CRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.HECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.MulticastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.MulticastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.ReceivedBlocks": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.TransmittedBlocks": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.UnicastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.UnicastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Stats.UnknownProtoPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.Link.{i}.VCSearchList": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.ATM.LinkNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DSL.ChannelNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DSL.Channel.{i}.ACTINP": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.ACTINPREIN": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.ACTNDR": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.ActualInterleavingDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.DownstreamCurrRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.INPREPORT": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.INTLVBLOCK": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.INTLVDEPTH": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.LPATH": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.LSYMB": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.LinkEncapsulationSupported": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.LinkEncapsulationUsed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.LowerLayers": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.NFEC": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.RFEC": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.XTUCCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.XTUCFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.XTUCHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.XTURCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.XTURFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.XTURHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.X_RDK_ErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.X_RDK_InitErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.X_RDK_InitTimeouts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.X_RDK_LinkRetrain": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDay.X_RDK_SeverelyErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.CurrentDayStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowTime.XTUCCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowTime.XTUCFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowTime.XTUCHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowTime.XTURCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowTime.XTURFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowTime.XTURHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.LastShowtimeStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.XTUCCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.XTUCFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.XTUCHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.XTURCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.XTURFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.XTURHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHour.X_RDK_LinkRetrain": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.QuarterHourStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowTime.XTUCCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowTime.XTUCFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowTime.XTUCHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowTime.XTURCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowTime.XTURFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowTime.XTURHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.ShowtimeStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.Total.XTUCCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.Total.XTUCFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.Total.XTUCHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.Total.XTURCRCErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.Total.XTURFECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.Total.XTURHECErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Stats.TotalStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Channel.{i}.UpstreamCurrRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.ChannelNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.ACTATPds": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.ACTATPus": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.ACTPSDds": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.ACTPSDus": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.BITSpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.BITSpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLINGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLINGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLINSCds": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLINSCus": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLINpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLINpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLOGGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLOGGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLOGMTds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLOGMTus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLOGpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.HLOGpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.LATNpbds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.LATNpbus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.QLNGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.QLNGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.QLNMTds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.QLNMTus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.QLNpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.QLNpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SATNds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SATNus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SNRGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SNRGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SNRMTds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SNRMTus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SNRpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.ADSLLineTest.SNRpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.AttenuationCharacteristics": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.CapacityEstimate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.CapacityEstimateEnabling": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.CapacityNoisePSD": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.CapacitySignalPSD": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.CapacityTargetMargin": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.LoopLength": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.LoopTermination": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.LoopTopology": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTP.MissingFilter": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTQLN.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTQLN.ExtendedBandwidthOperation": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTQLN.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTQLN.QLN": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTQLN.QLNGroupSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTQLN.QLNMaxMeasurementDuration": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.DiagnosticsState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.ExtendedBandwidthOperation": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.Interface": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.UER": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.UERGroupSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.UERMaxMeasurementDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.UERScaleFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Diagnostics.SELTUER.UERVar": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.DSL.LineNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.DSL.Line.{i}.ACTINPROCds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.ACTINPROCus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.ACTRAMODEds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.ACTRAMODEus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.ACTSNRMODEds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.ACTSNRMODEus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.ACTUALCE": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.AllowedProfiles": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.CurrentProfile": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.DownstreamAttenuation": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.DownstreamMaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.DownstreamNoiseMargin": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.DownstreamPower": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.EnableDataGathering": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.FirmwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.INMCCds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.INMIATOds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.INMIATSds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.INMINPEQMODEds": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LIMITMASK": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LastStateTransmittedDownstream": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LastStateTransmittedUpstream": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LineEncoding": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LineNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LinkStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.LowerLayers": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.MREFPSDds": {
+      "access": [
+        "read"
+      ],
+      "type": "base64(145)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.MREFPSDus": {
+      "access": [
+        "read"
+      ],
+      "type": "base64(145)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.PowerManagementState": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.RXTHRSHds": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.SNRMROCds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.SNRMROCus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.SNRMpbds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.SNRMpbus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.StandardUsed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.StandardsSupported": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDay.ErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDay.SeverelyErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDay.X_RDK_InitErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDay.X_RDK_InitTimeouts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDay.X_RDK_LinkRetrain": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDay.X_RDK_SuccessfulRetrains": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.CurrentDayStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.LastShowtime.ErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.LastShowtime.SeverelyErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.LastShowtimeStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.QuarterHour.ErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.QuarterHour.SeverelyErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.QuarterHour.X_RDK_LinkRetrain": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.QuarterHourStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.Showtime.ErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.Showtime.SeverelyErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.ShowtimeStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.Total.ErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.Total.SeverelyErroredSecs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Stats.TotalStart": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.SuccessFailureCause": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TRELLISds": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TRELLISus": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.HLOGGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.HLOGGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.HLOGMTds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.HLOGMTus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.HLOGpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.HLOGpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.LATNds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.LATNus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.QLNGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.QLNGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.QLNMTds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.QLNMTus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.QLNpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.QLNpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SATNds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SATNus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SNRGds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SNRGus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SNRMTds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SNRMTus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SNRpsds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.TestParams.SNRpsus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UPBOKLE": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UPBOKLEPb": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UPBOKLER": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UPBOKLERPb": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.US0MASK": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.Upstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UpstreamAttenuation": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UpstreamMaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UpstreamNoiseMargin": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.UpstreamPower": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.VirtualNoisePSDds": {
+      "access": [
+        "read"
+      ],
+      "type": "base64(97)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.VirtualNoisePSDus": {
+      "access": [
+        "read"
+      ],
+      "type": "base64(49)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTSE": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTSUsed": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCANSIRev": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCANSIStd": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCCountry": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCSerial": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCSystemCountry": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(2",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCSystemVendor": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(4",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCSystemVendorSpecific": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(2",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCVendor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCVendorSpecific": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(2",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTUCVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(16",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURANSIRev": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURANSIStd": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURCountry": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURSerial": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURSystemCountry": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(2",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURSystemVendor": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(4",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURSystemVendorId": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURSystemVendorSpecific": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(2",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURVendor": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(4",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURVendorId": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(8",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURVendorSpecific": {
+      "access": [
+        "read"
+      ],
+      "type": "hexBinary(2",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.Line.{i}.XTURVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.LineNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_NLNM.echotonoiseratio": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_Report.DSL.Default.OverrideTTL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_Report.DSL.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_Report.DSL.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_Report.DSL.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_Report.DSL.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.DSL.X_RDK_Report.DSL.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.PTM.LinkNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.PTM.Link.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Enable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.BroadcastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.BroadcastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.MulticastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.MulticastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.UnicastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.UnicastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Stats.UnknownProtoPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.Link.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    },
+    "Device.PTM.LinkNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkXdslManager.xml"
+      }
+    }
+  }
+}

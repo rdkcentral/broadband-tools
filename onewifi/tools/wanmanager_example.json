@@ -1,0 +1,147 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkWanManager",
+    "moduleName": "TR181_RdkWanManager",
+    "version": "0.1.0-draft",
+    "description": "WAN interface selection, failover, and IP/DHCP/MAP-T/DS-Lite configuration for RDK-B broadband.",
+    "sourceBranch": "main",
+    "sourceCommit": "7ac3287d7652e5a4c50086b130a637cb1040f20e",
+    "generated": "2026-08-19",
+    "generatedBy": "emit_spec_json.py --repo-root . --name RdkWanManager --module-name TR181_RdkWanManager --prefix Device.X_RDK_WanManager --output wanmanager_interface.json"
+  },
+  "elements": {
+    "Device.X_RDK_WanManager.Interface.{i}.Selection.Enable": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "boolean",
+      "description": "Enables or disables this WAN interface as a candidate for selection.",
+      "persistence": "yes",
+      "defaultValue": "true",
+      "enumeration": [
+        "true",
+        "false"
+      ],
+      "flags": [
+        "ifndef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "setHandler": "WanMgr_Interface_SetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.CPEInterface.{i}.Phy.Status": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "Physical link status of the underlying interface.",
+      "persistence": "no",
+      "defaultValue": "",
+      "enumeration": [
+        "Up",
+        "Down"
+      ],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "getHandler": "WanMgr_Interface_GetHandler",
+        "subscribeHandler": "wanMgrDmlPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "Number of currently configured WAN interface instances.",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.InterfaceNumberOfEntries",
+      "description": "The set of WAN interfaces WanManager is currently managing.",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.Marking.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_WanManager.Interface.{i}.MarkingNumberOfEntries",
+      "description": "Packet marking rules applied to traffic on this WAN interface.",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkWanManager_v2.xml",
+        "addFunction": "Marking_AddEntry",
+        "delFunction": "Marking_DelEntry"
+      }
+    },
+    "Device.X_RDK_WanManager.InitialScanComplete": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "Fired once the initial scan of all configured WAN interfaces completes at boot.",
+      "output": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrRbusDataElements",
+        "subscribeHandler": "WanMgr_Rbus_SubscribeHandler"
+      }
+    },
+    "Device.X_RDK_WanManager.Interface.{i}.WanStart()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "Requests WanManager to bring up this WAN interface.",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "wanmgr_rbus_handler_apis.c",
+        "table": "wanMgrIfacePublishElements",
+        "handler": "WanMgr_rbusMethod_Iface_StartWan"
+      }
+    }
+  }
+}

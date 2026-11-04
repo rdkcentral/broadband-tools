@@ -1,0 +1,938 @@
+{
+  "component": "dhcp",
+  "repo_dir": "rdkb-halif-dhcp",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/dhcp4cApi.h",
+      "api_count": 27,
+      "apis": [
+        {
+          "name": "dhcp4c_get_ert_lease_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_lease_time(unsigned int *pValue);",
+          "brief": "Retrieves the E-Router's offered DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure.",
+          "deprecated": false,
+          "line": 137
+        },
+        {
+          "name": "dhcp4c_get_ert_remain_lease_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_remain_lease_time(unsigned int *pValue);",
+          "brief": "Retrieves the E-Router's remaining DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 148
+        },
+        {
+          "name": "dhcp4c_get_ert_remain_renew_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_remain_renew_time(unsigned int *pValue);",
+          "brief": "Retrieves the E-Router's remaining DHCP lease renewal time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 159
+        },
+        {
+          "name": "dhcp4c_get_ert_remain_rebind_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_remain_rebind_time(unsigned int *pValue);",
+          "brief": "Retrieves the E-Router's remaining DHCP lease rebind time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 170
+        },
+        {
+          "name": "dhcp4c_get_ert_config_attempts",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_config_attempts(int *pValue);",
+          "brief": "Retrieves the number of configuration attempts made by the E-Router.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 181
+        },
+        {
+          "name": "dhcp4c_get_ert_ifname",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_ifname(char *pName);",
+          "brief": "Retrieves the E-Router interface name. This function populates the provided buffer with the name of the E-Router interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., null pointer, retrieval error).",
+          "deprecated": false,
+          "line": 194
+        },
+        {
+          "name": "dhcp4c_get_ert_fsm_state",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_fsm_state(int *pValue);",
+          "brief": "Retrieves the E-Router's DHCP client state.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @note Possible values for `pValue`: - 1: RELEASED or INIT_REBOOT - 2: INIT_SELECTING - 3: REQUESTING - 4: REBINDING - 5: BOUND - 6: RENEWING or RENEW_REQUESTED TODO: Consider changing `pValue` to a `DhcpClientState` enum type for improved type safety and readability.",
+          "deprecated": false,
+          "line": 215
+        },
+        {
+          "name": "dhcp4c_get_ert_ip_addr",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_ip_addr(unsigned int *pValue);",
+          "brief": "Retrieves the IP address of the E-Router interface. This function retrieves the IPv4 address currently assigned to the E-Router interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 228
+        },
+        {
+          "name": "dhcp4c_get_ert_mask",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_mask(unsigned int *pValue);",
+          "brief": "Retrieves the subnet mask of the E-Router interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 239
+        },
+        {
+          "name": "dhcp4c_get_ert_gw",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_gw(unsigned int *pValue);",
+          "brief": "Retrieves the E-Router's gateway IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 250
+        },
+        {
+          "name": "dhcp4c_get_ert_dns_svrs",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "ipv4AddrList_t *",
+              "name": "pList"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_dns_svrs(ipv4AddrList_t *pList);",
+          "brief": "Retrieves the E-Router's list of DNS servers.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 261
+        },
+        {
+          "name": "dhcp4c_get_ert_dhcp_svr",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ert_dhcp_svr(unsigned int *pValue);",
+          "brief": "Retrieves the IP address of the E-Router's DHCP server. This function fetches the IPv4 address of the DHCP server used by the E-Router.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 274
+        },
+        {
+          "name": "dhcp4c_get_ecm_lease_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_lease_time(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) offered DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 285
+        },
+        {
+          "name": "dhcp4c_get_ecm_remain_lease_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_remain_lease_time(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) remaining DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 296
+        },
+        {
+          "name": "dhcp4c_get_ecm_remain_renew_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_remain_renew_time(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) remaining DHCP lease renewal time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 307
+        },
+        {
+          "name": "dhcp4c_get_ecm_remain_rebind_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_remain_rebind_time(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) remaining DHCP lease rebind time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 318
+        },
+        {
+          "name": "dhcp4c_get_ecm_config_attempts",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_config_attempts(int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) number of DHCP configuration attempts.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 329
+        },
+        {
+          "name": "dhcp4c_get_ecm_ifname",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_ifname(char *pName);",
+          "brief": "Retrieves the ECM (Embedded Cable Modem) interface name. This function populates the provided buffer with the name of the ECM interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., null pointer, retrieval error).",
+          "deprecated": false,
+          "line": 342
+        },
+        {
+          "name": "dhcp4c_get_ecm_fsm_state",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_fsm_state(int *pValue);",
+          "brief": "Retrieves the ECM's DHCP client state. This function retrieves the current state of the DHCP client associated with the Embedded Cable Modem (ECM). @see `enum DHCPC_CMD` for possible values.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). TODO: Consider returning a `DHCPClientState` enum instead of an integer for improved type safety and clarity.",
+          "deprecated": false,
+          "line": 358
+        },
+        {
+          "name": "dhcp4c_get_ecm_ip_addr",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_ip_addr(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 370
+        },
+        {
+          "name": "dhcp4c_get_ecm_mask",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_mask(unsigned int *pValue);",
+          "brief": "Retrieves the subnet mask of the ECM (Embedded Cable Modem) interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 381
+        },
+        {
+          "name": "dhcp4c_get_ecm_gw",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_gw(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) gateway IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 392
+        },
+        {
+          "name": "dhcp4c_get_ecm_dns_svrs",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "ipv4AddrList_t *",
+              "name": "pList"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_dns_svrs(ipv4AddrList_t *pList);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) list of DNS servers.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 403
+        },
+        {
+          "name": "dhcp4c_get_ecm_dhcp_svr",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_ecm_dhcp_svr(unsigned int *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) DHCP server IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 415
+        },
+        {
+          "name": "dhcp4c_get_emta_remain_lease_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_emta_remain_lease_time(unsigned int *pValue);",
+          "brief": "Retrieves the eMTA's remaining DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 427
+        },
+        {
+          "name": "dhcp4c_get_emta_remain_renew_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_emta_remain_renew_time(unsigned int *pValue);",
+          "brief": "Retrieves the eMTA's remaining DHCP lease renewal time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 438
+        },
+        {
+          "name": "dhcp4c_get_emta_remain_rebind_time",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int dhcp4c_get_emta_remain_rebind_time(unsigned int *pValue);",
+          "brief": "Retrieves the eMTA's (Embedded Multimedia Terminal Adapter) remaining DHCP lease rebind time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 449
+        }
+      ]
+    },
+    {
+      "file": "include/dhcpv4c_api.h",
+      "api_count": 27,
+      "apis": [
+        {
+          "name": "dhcpv4c_get_ert_lease_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_lease_time(UINT *pValue);",
+          "brief": "Retrieves the E-Router's offered DHCP lease time (in seconds).",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 118
+        },
+        {
+          "name": "dhcpv4c_get_ert_remain_lease_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_remain_lease_time(UINT *pValue);",
+          "brief": "Retrieves the E-Router's remaining DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 129
+        },
+        {
+          "name": "dhcpv4c_get_ert_remain_renew_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_remain_renew_time(UINT *pValue);",
+          "brief": "Retrieves the E-Router's remaining DHCP lease renewal time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 140
+        },
+        {
+          "name": "dhcpv4c_get_ert_remain_rebind_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_remain_rebind_time(UINT *pValue);",
+          "brief": "Retrieves the E-Router's remaining DHCP lease rebind time (in seconds).",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 151
+        },
+        {
+          "name": "dhcpv4c_get_ert_config_attempts",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_config_attempts(INT *pValue);",
+          "brief": "Retrieves the number of configuration attempts made by the E-Router.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 162
+        },
+        {
+          "name": "dhcpv4c_get_ert_ifname",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_ifname(CHAR *pName);",
+          "brief": "Retrieves the E-Router interface name. This function populates the provided buffer with the name of the E-Router interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., null pointer, retrieval error).",
+          "deprecated": false,
+          "line": 175
+        },
+        {
+          "name": "dhcpv4c_get_ert_fsm_state",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_fsm_state(INT *pValue);",
+          "brief": "Retrieves the E-Router's DHCP client state. This function gets the current state of the DHCP client associated with the E-Router. @see `_COSA_DML_DHCPC_STATUS` for possible values.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). TODO: Update `pValue` type to `_COSA_DML_DHCPC_STATUS` for type safety and clarity.",
+          "deprecated": false,
+          "line": 191
+        },
+        {
+          "name": "dhcpv4c_get_ert_ip_addr",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_ip_addr(UINT *pValue);",
+          "brief": "Retrieves the IP address of the E-Router interface. This function gets the IPv4 address currently assigned to the E-Router interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented. TODO: Consider using a more appropriate data type for `pValue` to store the IPv4 address.",
+          "deprecated": false,
+          "line": 207
+        },
+        {
+          "name": "dhcpv4c_get_ert_mask",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_mask(UINT *pValue);",
+          "brief": "Retrieves the subnet mask of the E-Router interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). TODO: Consider using a more appropriate data type for `pValue` to store the subnet mask.",
+          "deprecated": false,
+          "line": 220
+        },
+        {
+          "name": "dhcpv4c_get_ert_gw",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_gw(UINT *pValue);",
+          "brief": "Retrieves the IP address of the E-Router's gateway.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented. TODO: Consider using a more appropriate data type for `pValue` to store the IPv4 address.",
+          "deprecated": false,
+          "line": 235
+        },
+        {
+          "name": "dhcpv4c_get_ert_dns_svrs",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "dhcpv4c_ip_list_t *",
+              "name": "pList"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_dns_svrs(dhcpv4c_ip_list_t *pList);",
+          "brief": "Retrieves the list of DNS servers associated with the E-Router.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 246
+        },
+        {
+          "name": "dhcpv4c_get_ert_dhcp_svr",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ert_dhcp_svr(UINT *pValue);",
+          "brief": "Retrieves the E-Router's DHCP server IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented. TODO: Consider using a more appropriate data type for `pValue` to store the IPv4 address.",
+          "deprecated": false,
+          "line": 261
+        },
+        {
+          "name": "dhcpv4c_get_ecm_lease_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_lease_time(UINT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) offered DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 272
+        },
+        {
+          "name": "dhcpv4c_get_ecm_remain_lease_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_remain_lease_time(UINT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) remaining DHCP lease time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 283
+        },
+        {
+          "name": "dhcpv4c_get_ecm_remain_renew_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_remain_renew_time(UINT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) remaining DHCP lease renewal time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 294
+        },
+        {
+          "name": "dhcpv4c_get_ecm_remain_rebind_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_remain_rebind_time(UINT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) remaining DHCP lease rebind time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 305
+        },
+        {
+          "name": "dhcpv4c_get_ecm_config_attempts",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_config_attempts(INT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) number of DHCP configuration attempts.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 316
+        },
+        {
+          "name": "dhcpv4c_get_ecm_ifname",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pName"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_ifname(CHAR *pName);",
+          "brief": "Retrieves the ECM (Embedded Cable Modem) interface name. This function populates the provided buffer with the name of the ECM interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., null pointer, retrieval error).",
+          "deprecated": false,
+          "line": 329
+        },
+        {
+          "name": "dhcpv4c_get_ecm_fsm_state",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "INT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_fsm_state(INT *pValue);",
+          "brief": "Retrieves the ECM's DHCP client state. This function gets the current state of the DHCP client associated with the Embedded Cable Modem (ECM). See `_COSA_DML_DHCPC_STATUS` for possible values.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). TODO: Update `pValue` type to `_COSA_DML_DHCPC_STATUS` for type safety and clarity.",
+          "deprecated": false,
+          "line": 345
+        },
+        {
+          "name": "dhcpv4c_get_ecm_ip_addr",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_ip_addr(UINT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented. TODO: Consider using a more appropriate data type for `pValue` to store the IPv4 address.",
+          "deprecated": false,
+          "line": 360
+        },
+        {
+          "name": "dhcpv4c_get_ecm_mask",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_mask(UINT *pValue);",
+          "brief": "Retrieves the subnet mask of the ECM (Embedded Cable Modem) interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). TODO: Consider using a more appropriate data type for `pValue` to store the subnet mask.",
+          "deprecated": false,
+          "line": 373
+        },
+        {
+          "name": "dhcpv4c_get_ecm_gw",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_gw(UINT *pValue);",
+          "brief": "Retrieves the subnet mask of the ECM (Embedded Cable Modem) interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented. TODO: Consider using a more appropriate data type for `pValue` to store the subnet mask.",
+          "deprecated": false,
+          "line": 388
+        },
+        {
+          "name": "dhcpv4c_get_ecm_dns_svrs",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "dhcpv4c_ip_list_t *",
+              "name": "pList"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_dns_svrs(dhcpv4c_ip_list_t *pList);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) list of DNS servers.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented.",
+          "deprecated": false,
+          "line": 401
+        },
+        {
+          "name": "dhcpv4c_get_ecm_dhcp_svr",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_ecm_dhcp_svr(UINT *pValue);",
+          "brief": "Retrieves the ECM's (Embedded Cable Modem) DHCP server IP address.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error). @see ipv4AddrList_t  For a description of how IPv4 addresses are represented. TODO: Consider using a more appropriate data type for `pValue` to store the IPv4 address.",
+          "deprecated": false,
+          "line": 416
+        },
+        {
+          "name": "dhcpv4c_get_emta_remain_lease_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_emta_remain_lease_time(UINT *pValue);",
+          "brief": "Retrieves the eMTA's (Embedded Multimedia Terminal Adapter) remaining DHCP lease time (in seconds).",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 428
+        },
+        {
+          "name": "dhcpv4c_get_emta_remain_renew_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_emta_remain_renew_time(UINT *pValue);",
+          "brief": "Retrieves the eMTA's (Embedded Multimedia Terminal Adapter) remaining DHCP lease renewal time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 439
+        },
+        {
+          "name": "dhcpv4c_get_emta_remain_rebind_time",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT dhcpv4c_get_emta_remain_rebind_time(UINT *pValue);",
+          "brief": "Retrieves the eMTA's (Embedded Multimedia Terminal Adapter) remaining DHCP lease rebind time.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILURE - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 450
+        }
+      ]
+    }
+  ],
+  "total_api_count": 54
+}

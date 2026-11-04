@@ -1,0 +1,62 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "SecureUPnP",
+    "moduleName": "xupnp",
+    "version": "0.1.0-draft",
+    "description": "Secure UPnP/DLNA service for RDK-B, providing media device discovery and content browsing over the home network.",
+    "sourceBranch": "develop",
+    "sourceCommit": "271e0cb8566b822cdd766c49bc5420ee8f6b0ad7",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --source-dir . --name SecureUPnP --module-name xupnp --description Secure UPnP/DLNA service for RDK-B, providing media device discovery and content browsing over the home network. --output secureupnp_interface.json"
+  },
+  "elements": {
+    "Device.Methods.dlna.browseContentOnServer()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "mbwsr_rpc_srv.c",
+        "table": "dataElements",
+        "handler": "remoteMethodHandler"
+      }
+    },
+    "Device.Methods.dlna.getDiscoveredDeviceAt()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "mbwsr_rpc_srv.c",
+        "table": "dataElements",
+        "handler": "remoteMethodHandler"
+      }
+    },
+    "Device.Methods.dlna.getDiscoveredDevicesSize()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "mbwsr_rpc_srv.c",
+        "table": "dataElements",
+        "handler": "remoteMethodHandler"
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkFwUpgradeManager",
+    "moduleName": "TR181_RdkFirmwareUpgradeManager",
+    "version": "0.1.0-draft",
+    "description": "Firmware download and upgrade management for RDK-B, including download status, protocol/URL configuration, and scheduled reboot deferral.",
+    "sourceBranch": "develop",
+    "sourceCommit": "d39625e5c95310d758e457ea2f0fc143ff8749dc",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name RdkFwUpgradeManager --module-name TR181_RdkFirmwareUpgradeManager --description Firmware download and upgrade management for RDK-B, including download status, protocol/URL configuration, and scheduled reboot deferral. --output platmgr_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadAndFactoryReset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadNow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadProtocol": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadURL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareToDownload": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.RPC.DeferFWDownloadReboot": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkFwUpgradeManager.xml"
+      }
+    }
+  }
+}

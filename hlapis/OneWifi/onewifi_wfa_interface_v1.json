@@ -1,0 +1,5357 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "OneWifi-WFA",
+    "version": "0.1.0-draft",
+    "description": "EasyMesh Multi-AP (Device.WiFi.DataElements.*) data model, extracted from OneWiFi's macro-based bus_data_cb_func_t registration convention."
+  },
+  "elements": {
+    "Device.WiFi.DataElements.Network": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DATAELEMS_NETWORK_OBJ",
+        "inferred": false,
+        "getHandler": "wfa_network_get"
+      }
+    },
+    "Device.WiFi.DataElements.Network.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DATAELEMS_NETWORK",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.ColocatedAgentID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_NETWORK_COLAGTID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.ControllerID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_NETWORK_CTRLID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.DeviceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_TABLE",
+        "addFunction": "de_device_table_add_row_handler",
+        "delFunction": "de_device_table_remove_row_handler",
+        "inferred": false
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.APMLDNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLD_TABLE",
+        "addFunction": "de_apmld_table_add_row_handler",
+        "delFunction": "de_apmld_table_remove_row_handler",
+        "inferred": false
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.APMLDConfig": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLD_CONFIG",
+        "inferred": false,
+        "getHandler": "wfa_apmld_get",
+        "setHandler": "default_set_param_value"
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.APMLDConfig.EMLMREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLDCFG_EMLMR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.APMLDConfig.EMLSREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLDCFG_EMLSR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.APMLDConfig.NSTREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLDCFG_NSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.APMLDConfig.STREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLDCFG_STR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAPNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": false
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.BroadcastBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_BCBYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.BroadcastBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_BCBYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_ERRSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.LinkID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_LINKID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.MulticastBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_MCBYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.MulticastBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_MCBYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_PCKTSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_PCKTSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.RUID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_RUID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.UnicastBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_UCBYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAP.{i}.UnicastBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFAP_UCBYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.AffiliatedAPNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLD_AFFAPNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.MLDMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLD_MACADDRESS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLDNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": false
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTANumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": false
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_BYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_BYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_ERRSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.EstMACDataRateDownlink": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_ESTMACDRDL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.EstMACDataRateUplink": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_ESTMACDRUL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_MACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_PCKTSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_PCKTSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTA.{i}.SignalStrength": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_AFFSTA_SIGNALSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.AffiliatedSTANumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_AFFSTANOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_BYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_BYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_ERRSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_ERRSRCVD",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.IsbSTA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_ISBSTA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.LastConnectTime": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_LASTCONTME",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.MLDMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_MLDMACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_PCKTSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_PCKTSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.RetransCount": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_RETRANSCNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.STAMLDConfig": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_CONFIG",
+        "inferred": false,
+        "getHandler": "de_stamld_get"
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.STAMLDConfig.EMLMREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLDCFG_EMLMR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.STAMLDConfig.EMLSREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLDCFG_EMLSR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.STAMLDConfig.NSTREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLDCFG_NSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.STAMLDConfig.STREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLDCFG_STR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.WiFi7Capabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAMLD_WIFI7CAPS",
+        "inferred": false,
+        "getHandler": "de_stamld_get"
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.WiFi7Capabilities.EMLMRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WIFI7CAPS_EMLMR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.WiFi7Capabilities.EMLSRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WIFI7CAPS_EMLSR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.WiFi7Capabilities.NSTRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WIFI7CAPS_NSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLD.{i}.WiFi7Capabilities.STRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WIFI7CAPS_STR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMLD.{i}.STAMLDNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_APMLD_STAMLDNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.APMetricsReportingInterval": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_APMERINT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.AssociatedSTAReportingInterval": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_ASSOCSTAREPINT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BTMSteeringDisallowedSTAList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BTMSDSTALIST",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulALID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BHALID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulDown.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.BackhaulDownNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BHDOWN_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulDown.{i}.BackhaulDownALID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BHDOWN_ALID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulDown.{i}.BackhaulDownMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BHDOWN_MACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulDownMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BHDMACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulDownNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BHDOWNNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BHMACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulMediaType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BHMEDIATYPE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BackhaulPHYRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BHPHYRATE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.BasicPrioritization": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BPRIO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.CACStatusNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CACSTAT_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.CACNonOccupancyChannel.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.CACNonOccupancyChannelNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CACNON_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.CACNonOccupancyChannel.{i}.Channel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CACNON_CHANNEL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.CACNonOccupancyChannel.{i}.OpClass": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CACNON_OPCLASS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.CACNonOccupancyChannel.{i}.Seconds": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CACNON_SECONDS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatus.{i}.CACNonOccupancyChannelNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CACSTAT_NONOCCNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CACStatusNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_CACSTATNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CollectionInterval": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_COLLINT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ControllerOperationMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_CONOPMODE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CoordinatedCACAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_COORCACALW",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.CountryCode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_COUNTRCODE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.DFSEnable": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_DFSENABLE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.DSCPMap": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_DSCPM",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Default8021Q.DefaultPCP": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_DE8021QDPCP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Default8021Q.PrimaryVID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_DE8021QPVID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.EasyConnectCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_EASYCCAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.EnhancedPrioritization": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_EPRIO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ExecutionEnv": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_EXECENV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_ID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.LocalSteeringDisallowedSTAList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_LSDSTALIST",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Manufacturer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MANUFACT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ManufacturerModel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MFCMODEL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MaxNumMLDs": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MACNUMMLDS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MaxPrioritizationRules": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAXPRIRULE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MaxReportingRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAXRRATE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MaxUnsuccessfulAssociationReportingRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAXUSASSOCREPRATE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MaxVIDs": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAXVIDS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAPCAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAPDEV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MAPDEV_BACKHAUL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MAPDEVBH_STATS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_BYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_BYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_ERRSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_ERRSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.LastDataDownlinkRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_LSTDTADLR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.LastDataUplinkRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_LSTDTAULR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.LinkUtilization": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_LINKUTIL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_PCKTSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_PCKTSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPDevice.Backhaul.Stats.SignalStrength": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_MDBHSTATS_SIGNALSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.MultiAPProfile": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_MAPPROF",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.NumberOfRadios": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_NUMRADIO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.PrioritizationSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_PRIOSUPP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.RadioNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSSNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.AssociationAllowanceStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_ASSOC_STAT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.BackhaulAKMsAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BHAULAKMS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.BackhaulSuiteSelector": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BH_SUITE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.BackhaulUse": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BHAULUSE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.BroadcastBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BCAST_RX",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.BroadcastBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BCAST_TX",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.ByteCounterUnits": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_BYTCNTUNITS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.Enabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_ENABLED",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.EstServiceParametersBE": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_EST_BE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.EstServiceParametersBK": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_EST_BK",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.EstServiceParametersVI": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_EST_VI",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.EstServiceParametersVO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_EST_VO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.FronthaulAKMsAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_FHAULAKMS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.FronthaulSuiteSelector": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_FH_SUITE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.FronthaulUse": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_FHAULUSE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_LASTCHG",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.LinkRemovalImminent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_LINK_IMM",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.MultiBSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_MULTI_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.MulticastBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_MCAST_RX",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.MulticastBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_MCAST_TX",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.NumberOfSTA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_NUM_STA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.Profile1bSTAsDisallowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_PROF1_DIS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.Profile2bSTAsDisallowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_PROF2_DIS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.QMDescriptor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_QM_DESC",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.R1disallowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_R1_DIS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.R2disallowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_R2_DIS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.SSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_SSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STANumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_BYTESRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_BYTESSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.ClientCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_CLIENTCAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_ERRSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_ERRSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.EstMACDataRateDownlink": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_ESTMACDTARDL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.EstMACDataRateUplink": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_ESTMACDTARUL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.HTCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_HTCAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.Hostname": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_HOSTNAME",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.IPV4Address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_IPV4ADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.IPV6Address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_IPV6ADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.LastConnectTime": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_LASTCONNTIME",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.LastDataDownlinkRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_LSTDTADLR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.LastDataUplinkRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_LSTDTAULR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_MACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_PCKTSRCV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_PCKTSSNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.PairwiseAKM": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_PAIRWSAKM",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.PairwiseCipher": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_PAIRWSCIPHER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.RSNCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_RSNCAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.RetransCount": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_RETRANSCNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.SignalStrength": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_SIGNALSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.UtilizationReceive": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_UTILRECV",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.UtilizationTransmit": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_UTILTRMT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.VHTCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_VHTCAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.WiFi6Capabilities.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STA_WIFI6CAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.WiFi6Capabilities.HE160": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAWF6CAPS_HE160",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.STA.{i}.WiFi6Capabilities.MCSNSS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_STAWF6CAPS_MCSNSS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.TimeStamp": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_TS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.TransmittedBSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_TX_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.UnicastBytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_UCAST_RX",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BSS.{i}.UnicastBytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSS_UCAST_TX",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BackhaulSta.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_BHSTA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.BackhaulSta.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BHSTA_MACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_CAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.AKMBackHaulNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_AKMBHNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.AKMFrontHaulNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_AKMFHNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.CapableOperatingClassProfileNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_CAPOPNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.DSCPPolicyCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_DSCP_POLICY",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.HTCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_HTCAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.MSCSCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_MSCS_CAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.QoSMapCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_QOSMAP_CAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.SCSCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_SCS_CAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.SCSTrafficDescriptionCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_SCSTRAFDESC",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.VHTCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RCAPS_VHTCAPS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPS_WF6AP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.AnticipatedChannelUsage": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_ANT_CH_USE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.Beamformee80orLess": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_BFEE_80L",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.BeamformeeAbove80": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_BFEE_80A",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.DLOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_DL_OFDMA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.HE160": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_HE160",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.HE8080": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_HE8080",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MCSNSS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MCSNSS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MUBeamformer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MU_BFER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MUEDCA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MU_EDCA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MURTS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MU_RTS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MaxDLMUMIMO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MAX_DL_MUMIMO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MaxDLOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MAX_DL_OF",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MaxULMUMIMO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MAX_UL_MUMIMO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MaxULOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MAX_UL_OF",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.MultiBSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_MULTI_BSS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.RTS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_RTS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.SUBeamformee": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_SU_BFEE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.SUBeamformer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_SU_BFER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.SpatialReuse": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_SPAT_REUSE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.TWTRequestor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_TWT_REQ",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.TWTResponder": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_TWT_RSP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.ULMUMIMO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_UL_MUMIMO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6APRole.ULOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6AP_UL_OFDMA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPS_WF6BSTA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.AnticipatedChannelUsage": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_ANT_CH_USAGE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.Beamformee80orLess": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_BFEE_80_LESS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.BeamformeeAbove80": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_BFEE_ABV_80",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.DLOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_DL_OFDMA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.HE160": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_HE160",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MCSNSS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MCSNSS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MUBeamformer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MU_BFER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MUEDCA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MUEDCA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MURTS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MU_RTS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MaxDLMUMIMO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MAX_DL_MUMIMO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MaxDLOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MAX_DL_OFDMA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MaxULMUMIMO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MAX_UL_MUMIMO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MaxULOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MAX_UL_OFDMA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.MultiBSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_MULTI_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.RTS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_RTS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.SUBeamformee": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_SU_BFEE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.SUBeamformer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_SU_BFER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.SpatialReuse": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_SPATIAL_REUSE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.TWTRequestor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_TWT_REQ",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.TWTResponder": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_TWT_RSP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.ULMUMIMO": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_UL_MUMIMO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi6bSTARole.ULOFDMA": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF6BSTA_UL_OFDMA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi7APRole.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPS_WF7AP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi7APRole.EMLMRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7AP_EMLMR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi7APRole.EMLSRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7AP_EMLSR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi7APRole.NSTRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7AP_NSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi7APRole.STRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7AP_STR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Capabilities.WiFi7APRole.TIDLinkMapNegotiation": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7AP_TID_MAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CapableOperatingClassProfile.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CapableOperatingClassProfileNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPOP_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CapableOperatingClassProfile.{i}.Class": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPOP_CLASS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CapableOperatingClassProfile.{i}.MaxTxPower": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPOP_MAXTXPOWER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CapableOperatingClassProfile.{i}.NonOperable": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPOP_NONOPERABLE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CapableOperatingClassProfile.{i}.NumberOfNonOperChan": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPOP_NONOPCNT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ChipsetVendor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_CHIPVENDOR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CurrentOperatingClassProfile.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CurrentOperatingClassProfileNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CUROP_TABLE",
+        "addFunction": null,
+        "delFunction": null,
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CurrentOperatingClassProfile.{i}.Channel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CUROP_CHANNEL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CurrentOperatingClassProfile.{i}.Class": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CUROP_CLASS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CurrentOperatingClassProfile.{i}.TxPower": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CUROP_TXPOWER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.CurrentOperatingClassProfileNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_CURROPNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Enabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_ENABLED",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_ID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Noise": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_NOISE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.NumberOfBSS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_BSSNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.NumberOfCurrOpClass": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_NUMCUROPCLASS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.NumberOfUnassocSta": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_NOUNASSCSTA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ReceiveOther": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_RECEIVEOTHER",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ReceiveSelf": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_RECEIVESELF",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ScanCapability.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPS_SCANCAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ScanCapability.NumberOfOpClassScans": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SCANCAP_OPCLSCANSNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.ScanCapability.TimeStamp": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SCANCAP_TIMESTAMP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Transmit": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_TRANSMIT",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.UnassociatedStaList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_UNASSCSTALIST",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.Utilization": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_RADIO_UTILIZATION",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.WiFi7bSTARole.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_CAPS_WF7BSTA",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.WiFi7bSTARole.EMLMRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7BSTA_EMLMR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.WiFi7bSTARole.EMLSRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7BSTA_EMLSR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.WiFi7bSTARole.NSTRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7BSTA_NSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.WiFi7bSTARole.STRSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7BSTA_STR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.Radio.{i}.WiFi7bSTARole.TIDLinkMapNegotiation": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_WF7BSTA_TID_MAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.RadioNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_RADIONOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ReportIndependentScans": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_REPINDSCAN",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ReportUnsuccessfulAssociations": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_RUASSOC",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.SSIDtoVIDMapping": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_STVMAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.STASteeringDisallowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_STASDISALW",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.STASteeringState": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_STASSTATE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.SerialNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_SERIALNO",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.ServicePrioritizationAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_SERPRIOALW",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.SoftwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_SWVERSION",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.TIDLinkMapping": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_TIDLMAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.TestCapabilities": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_TESTCAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.TrafficSeparationAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_TRASEPALW",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.TrafficSeparationCapability": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_TRSEPCAP",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.TrafficSeparationPolicy": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_TSEPPOLI",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BSTAMLD",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.AffiliatedbSTAList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTAMLD_AFFBSTAS",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.BSSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTAMLD_BSSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.MLDMACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTAMLD_MACADDR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.bSTAMLDConfig.": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTAMLD_CONFIG",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.bSTAMLDConfig.EMLMREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTACFG_EMLMR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.bSTAMLDConfig.EMLSREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTACFG_EMLSR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.bSTAMLDConfig.NSTREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTACFG_NSTR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLD.bSTAMLDConfig.STREnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_BSTACFG_STR",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.Device.{i}.bSTAMLDMaxLinks": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_DEVICE_BSTAMLDMACLINK",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.ID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_NETWORK_ID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.NumberOfDevices": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_NETWORK_DEVNOE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.WiFi.DataElements.Network.SSIDNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_TABLE",
+        "addFunction": "de_ssid_table_add_row_handler",
+        "delFunction": "de_ssid_table_remove_row_handler",
+        "inferred": false
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.AKMsAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_AKMALLOWE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.AdvertisementEnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_ADVENABLED",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.Band": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_BAND",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.Enable": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_ENABLE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.HaulType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_HAULTYPE",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.MFPConfig": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_MFPCONFIG",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.MobilityDomain": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_MOBDOMAIN",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.SSID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_SSID",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SSID.{i}.SuiteSelector": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_SSID_SUITESEL",
+        "inferred": true
+      }
+    },
+    "Device.WiFi.DataElements.Network.SetSSID()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "macro": "DE_NETWORK_SETSSID",
+        "inferred": true
+      }
+    }
+  }
+}

@@ -1,0 +1,866 @@
+{
+  "component": "cm",
+  "repo_dir": "rdkb-halif-cm",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/cm_hal.h",
+      "api_count": 51,
+      "apis": [
+        {
+          "name": "cm_hal_InitDB",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT cm_hal_InitDB(void);",
+          "brief": "Initializes the Hardware Abstraction Layer (HAL) and its dependencies.",
+          "params_doc": {},
+          "return_doc": "Status of the initialization. RETURN_OK on successful initialization. RETURN_ERR on initialization failure, such as failure to create threads or open files.",
+          "deprecated": false,
+          "line": 482
+        },
+        {
+          "name": "docsis_InitDS",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT docsis_InitDS(void);",
+          "brief": "Initializes the downstream (DS) PHY layer and hardware access. This function prepares the following for downstream communication: - Global PHY-level data structures - Direct access to the DS hardware",
+          "params_doc": {},
+          "return_doc": "Status of the initialization. RETURN_OK on success.",
+          "deprecated": false,
+          "line": 494
+        },
+        {
+          "name": "docsis_InitUS",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT docsis_InitUS(void);",
+          "brief": "Initializes the upstream (US) PHY layer and hardware access. Prepares the following for upstream communication: - Global PHY-level data structures - Direct access to the US hardware",
+          "params_doc": {},
+          "return_doc": "Status of the initialization. RETURN_OK on success.",
+          "deprecated": false,
+          "line": 506
+        },
+        {
+          "name": "docsis_getCMStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "cm_status"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_getCMStatus(CHAR *cm_status);",
+          "brief": "Retrieves and formats the Cable Modem's DOCSIS status. This function populates the provided buffer with a string representing the current DOCSIS status.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., retrieval error, memory allocation issue). TODO: cm_status must be updated to an enum. **Possible cm_status values:** - \"Unsupported status\" - \"OTHER\" - \"NOT_READY\" - \"NOT_SYNCHRONIZED\" - \"PHY_SYNCHRONIZED\" - \"US_PARAMETERS_ACQUIRED\" - \"RANGING_COMPLETE\" - \"DHCPV4_COMPLETE\" - \"TOD_ESTABLISHED\" - \"SECURITY_ESTABLISHED\" - \"CONFIG_FILE_DOWNLOAD_COMPLETE\" - \"REGISTRATION_COMPLETE\" - \"OPERATIONAL\" - \"ACCESS_DENIED\" - \"EAE_IN_PROGRESS\" - \"DHCPV4_IN_PROGRESS\" - \"DHCPV6_IN_PROGRESS\" - \"DHCPV6_COMPLETE\" - \"REGISTRATION_IN_PROGRESS\" - \"BPI_INIT\" - \"FORWARDING_DISABLED\" - \"DS_TOPOLOGY_RESOLUTION_IN_PROGRESS\" - \"RANGING_IN_PROGRESS\" - \"RF_MUTE_ALL\"",
+          "deprecated": false,
+          "line": 547
+        },
+        {
+          "name": "docsis_GetDSChannel",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_CM_DS_CHANNEL *",
+              "name": "ppinfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetDSChannel(PCMMGMT_CM_DS_CHANNEL *ppinfo);",
+          "brief": "Retrieves information about a downstream (DS) channel. This function populates a provided `PCMMGMT_CM_DS_CHANNEL` structure with downstream channel details. **Important:** The caller is responsible for freeing the dynamically allocated memory of the returned structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., retrieval error, memory allocation issue).",
+          "deprecated": false,
+          "line": 562
+        },
+        {
+          "name": "docsis_GetUsStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "USHORT",
+              "name": "i"
+            },
+            {
+              "type": "PCMMGMT_CM_US_CHANNEL",
+              "name": "pinfo"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT docsis_GetUsStatus(USHORT i, PCMMGMT_CM_US_CHANNEL pinfo);",
+          "brief": "Retrieve status of the upstream (US) channel information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. RETURN_OK if successful. RETURN_ERR if an error occurs during the retrieval of upstream status or memory allocation fails.",
+          "deprecated": false,
+          "line": 575
+        },
+        {
+          "name": "docsis_GetUSChannel",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_CM_US_CHANNEL *",
+              "name": "ppinfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetUSChannel(PCMMGMT_CM_US_CHANNEL *ppinfo);",
+          "brief": "Retrieves information about an upstream (US) channel. This function populates a provided `PCMMGMT_CM_US_CHANNEL` structure with upstream channel details. **Important:** The caller is responsible for freeing the dynamically allocated memory of the returned structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., retrieval error, memory allocation issue).",
+          "deprecated": false,
+          "line": 590
+        },
+        {
+          "name": "docsis_GetDOCSISInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_CM_DOCSIS_INFO",
+              "name": "pinfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetDOCSISInfo(PCMMGMT_CM_DOCSIS_INFO pinfo);",
+          "brief": "Retrieves the current DOCSIS registration status. This function populates a provided `PCMMGMT_CM_DOCSIS_INFO` structure with DOCSIS registration details. **Important:** The caller must provide a pre-allocated `PCMMGMT_CM_DOCSIS_INFO` structure. The function does *not* manage memory allocation for this structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., retrieval error, invalid input).",
+          "deprecated": false,
+          "line": 605
+        },
+        {
+          "name": "docsis_GetNumOfActiveTxChannels",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "cnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetNumOfActiveTxChannels(ULONG *cnt);",
+          "brief": "Retrieves the number of active upstream channels in the current registration. This function populates the provided variable with the count of active upstream channels.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., retrieval error, NULL 'cnt' pointer).",
+          "deprecated": false,
+          "line": 618
+        },
+        {
+          "name": "docsis_GetNumOfActiveRxChannels",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "cnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetNumOfActiveRxChannels(ULONG *cnt);",
+          "brief": "Retrieves the number of active downstream channels in the current registration. This function populates the provided variable with the count of active downstream channels.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., retrieval error, NULL 'cnt' pointer).",
+          "deprecated": false,
+          "line": 631
+        },
+        {
+          "name": "docsis_GetErrorCodewords",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_CM_ERROR_CODEWORDS *",
+              "name": "ppinfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetErrorCodewords(PCMMGMT_CM_ERROR_CODEWORDS *ppinfo);",
+          "brief": "Scans active downstream channels and reports packet errors. This function populates a provided `PCMMGMT_CM_ERROR_CODEWORDS` structure with error details. **Important:** The caller must provide a pre-allocated `PCMMGMT_CM_ERROR_CODEWORDS` structure. The function does *not* manage memory allocation for this structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., scanning error, NULL 'ppinfo' pointer).",
+          "deprecated": false,
+          "line": 646
+        },
+        {
+          "name": "docsis_GetMddIpModeOverride",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetMddIpModeOverride(CHAR *pValue);",
+          "brief": "Retrieves the current IP Provisioning Mode Override status. This function populates the provided buffer with a string representing the current mode.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., invalid parameter, retrieval error). **Possible Values:** - \"ipv4Only\" - \"ipv6Only\" - \"honorMdd\" **Note:** While \"APM\" and \"DualStack\" might be technically supported, the expected behavior is to only return \"ipv4Only\", \"ipv6Only\", and \"honorMdd\".",
+          "deprecated": false,
+          "line": 666
+        },
+        {
+          "name": "docsis_SetMddIpModeOverride",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_SetMddIpModeOverride(CHAR *pValue);",
+          "brief": "Set the IP Provisioning Mode Override status. This function updates the status using the provided value.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., invalid parameter, setting error). **Note:** While \"APM\" and \"DualStack\" might be returned by the getter function, they cannot be directly set using this function.",
+          "deprecated": false,
+          "line": 681
+        },
+        {
+          "name": "docsis_GetUSChannelId",
+          "return_type": "UINT8",
+          "params": [],
+          "param_count": 0,
+          "signature": "UINT8 docsis_GetUSChannelId(void);",
+          "brief": "Retrieves the Upstream channel ID within its MAC (Media Access Control) domain. This function returns the ID of the upstream channel associated with the local network segment (MAC domain).",
+          "params_doc": {},
+          "return_doc": "Channel ID (value between 0 and 255).",
+          "deprecated": false,
+          "line": 690
+        },
+        {
+          "name": "docsis_SetUSChannelId",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "INT",
+              "name": "index"
+            }
+          ],
+          "param_count": 1,
+          "signature": "void docsis_SetUSChannelId(INT index);",
+          "brief": "Sets the Upstream channel ID within its MAC (Media Access Control) domain. This function updates the ID of the upstream channel associated with the local network segment (MAC domain). The MAC domain includes network devices sharing the same MAC address and communication protocols.",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 699
+        },
+        {
+          "name": "docsis_GetDownFreq",
+          "return_type": "ULONG",
+          "params": [],
+          "param_count": 0,
+          "signature": "ULONG docsis_GetDownFreq(void);",
+          "brief": "Retrieves the current primary downstream channel frequency. This function returns the frequency of the main downstream channel as found in the Low-Level Kernel Filtering (LKF) table.",
+          "params_doc": {},
+          "return_doc": "Channel frequency in Hertz (Hz).",
+          "deprecated": false,
+          "line": 708
+        },
+        {
+          "name": "docsis_SetStartFreq",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "value"
+            }
+          ],
+          "param_count": 1,
+          "signature": "void docsis_SetStartFreq(ULONG value);",
+          "brief": "Set the primary downstream channel frequency in the LKF table. Modifies the Low-Level Kernel Filtering (LKF) table to use the specified frequency for the primary downstream channel.",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 717
+        },
+        {
+          "name": "docsis_GetDocsisEventLogItems",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CMMGMT_CM_EventLogEntry_t *",
+              "name": "entryArray"
+            },
+            {
+              "type": "INT",
+              "name": "len"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT docsis_GetDocsisEventLogItems(CMMGMT_CM_EventLogEntry_t *entryArray, INT len);",
+          "brief": "Retrieves DOCSIS event log entries. Populates the provided array with up to 'len' DOCSIS event log entries.",
+          "params_doc": {},
+          "return_doc": "Number of log entries successfully retrieved and placed into 'entryArray'.",
+          "deprecated": false,
+          "line": 729
+        },
+        {
+          "name": "docsis_ClearDocsisEventLog",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT docsis_ClearDocsisEventLog(void);",
+          "brief": "Clears the DOCSIS event log. This function clears the log asynchronously, likely by sending a message to a driver event handler. **Important:** This function must not block or use blocking system calls.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., an error setting the log clear entry).",
+          "deprecated": false,
+          "line": 742
+        },
+        {
+          "name": "cm_hal_GetDHCPInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_CM_DHCP_INFO",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_GetDHCPInfo(PCMMGMT_CM_DHCP_INFO pInfo);",
+          "brief": "Retrieves the DHCP information for the Cable Modem (CM). Populates the provided `PCMMGMT_CM_DHCP_INFO` structure with the CM's DHCP details. **Important:** The caller is responsible for allocating and freeing the memory for the `pInfo` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, data acquisition failure, internal error).",
+          "deprecated": false,
+          "line": 757
+        },
+        {
+          "name": "cm_hal_GetIPv6DHCPInfo",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_CM_IPV6DHCP_INFO",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_GetIPv6DHCPInfo(PCMMGMT_CM_IPV6DHCP_INFO pInfo);",
+          "brief": "Retrieves IPv6 DHCP information for the Cable Modem (CM). This function populates a caller-provided `CMMGMT_CM_IPV6DHCP_INFO` structure with IPv6 DHCP details obtained from the CM. **Important:** The caller is responsible for allocating and freeing the memory for the `pInfo` structure.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, retrieval error, invalid data from DHCP server).",
+          "deprecated": false,
+          "line": 772
+        },
+        {
+          "name": "cm_hal_GetCPEList",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PCMMGMT_DML_CPE_LIST *",
+              "name": "ppCPEList"
+            },
+            {
+              "type": "ULONG *",
+              "name": "InstanceNum"
+            },
+            {
+              "type": "CHAR *",
+              "name": "LanMode"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT cm_hal_GetCPEList(PCMMGMT_DML_CPE_LIST *ppCPEList, ULONG *InstanceNum, CHAR *LanMode);",
+          "brief": "Retrieves a list of CPEs (Customer Premises Equipment) connected to the Cable Modem (CM). Populates a caller-provided `PCMMGMT_DML_CPE_LIST` structure with CPE details and updates the `InstanceNum` with the count. **Important:** The caller must: - Allocate memory for the `ppCPEList` structure and the `LanMode` string. - Free the allocated memory for both parameters afterward.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., invalid parameters, memory allocation issues, or retrieval errors).",
+          "deprecated": false,
+          "line": 791
+        },
+        {
+          "name": "cm_hal_GetMarket",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "market"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_GetMarket(CHAR *market);",
+          "brief": "Retrieves the modem's market region (e.g., \"US\" for United States, \"EURO\" for Europe). Populates the provided buffer with the market region identifier.",
+          "params_doc": {},
+          "return_doc": "Status of the operation. RETURN_OK on success. RETURN_ERR on failure (e.g., invalid 'market' pointer, insufficient buffer size, or data retrieval issues).",
+          "deprecated": false,
+          "line": 804
+        },
+        {
+          "name": "cm_hal_Set_HTTP_Download_Url",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pHttpUrl"
+            },
+            {
+              "type": "char *",
+              "name": "pfilename"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT cm_hal_Set_HTTP_Download_Url(char *pHttpUrl, char *pfilename);",
+          "brief": "Configures an HTTP download. Prepares the configuration file for an HTTP download by specifying the download URL and the desired filename for the retrieved data.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if a download is already in progress or the provided URL is invalid. **TODO:** Change `pHttpUrl` and `pfilename` to `const char*` as they are input parameters and should not be modified.",
+          "deprecated": false,
+          "line": 822
+        },
+        {
+          "name": "cm_hal_Get_HTTP_Download_Url",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pHttpUrl"
+            },
+            {
+              "type": "char *",
+              "name": "pfilename"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT cm_hal_Get_HTTP_Download_Url(char *pHttpUrl, char *pfilename);",
+          "brief": "Retrieves the configured HTTP download URL and filename. Populates the provided buffers with the URL and filename stored in the HTTP download configuration file. **Important:** The caller must pre-allocate buffers of at least 200 bytes for both `pHttpUrl` and `pfilename`. Insufficient buffer sizes can lead to memory corruption.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if the configured URL is empty or an error occurs.",
+          "deprecated": false,
+          "line": 838
+        },
+        {
+          "name": "cm_hal_Set_HTTP_Download_Interface",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "unsigned int",
+              "name": "interface"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Set_HTTP_Download_Interface(unsigned int interface);",
+          "brief": "Configures the HTTP download interface. Specifies the network interface to be used for HTTP downloads. - 0 for wan0 - 1 for erouter0",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if an invalid interface value is provided.",
+          "deprecated": false,
+          "line": 853
+        },
+        {
+          "name": "cm_hal_Get_HTTP_Download_Interface",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "pinterface"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Get_HTTP_Download_Interface(unsigned int *pinterface);",
+          "brief": "Retrieves the configured HTTP download interface. Populates the provided variable with the network interface identifier. - 0 for wan0 - 1 for erouter0",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR on failure (e.g., invalid parameter, memory allocation issues).",
+          "deprecated": false,
+          "line": 868
+        },
+        {
+          "name": "cm_hal_HTTP_Download",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT cm_hal_HTTP_Download();",
+          "brief": "Initiates an HTTP download. Starts the download process using the previously configured settings.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if a download is already in progress or an error occurs.",
+          "deprecated": false,
+          "line": 879
+        },
+        {
+          "name": "cm_hal_Get_HTTP_Download_Status",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT cm_hal_Get_HTTP_Download_Status();",
+          "brief": "Retrieves the current HTTP download status.",
+          "params_doc": {},
+          "return_doc": "An integer representing the download status: * 0: Download not started. * 1-99: Download progress percentage. * 100: Download complete, pending reboot. * 400-407: Specific HTTP error codes (see descriptions below). * 500: General download failure. **Error Codes:** * 400: Invalid HTTP server URL. * 401: Cannot connect to the HTTP server. * 402: File not found on the HTTP server. * 403-407: Various download protection failures (HW_Type, HW Mask, DL Rev, DL Header, DL CVC).",
+          "deprecated": false,
+          "line": 897
+        },
+        {
+          "name": "cm_hal_Reboot_Ready",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Reboot_Ready(ULONG *pValue);",
+          "brief": "Checks if the system is ready for a reboot. Populates the provided variable with the reboot readiness status. - 1: System is ready for reboot. - 2: System is not ready for reboot.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if an error occurs (e.g., during status retrieval or resource access).",
+          "deprecated": false,
+          "line": 912
+        },
+        {
+          "name": "cm_hal_HTTP_Download_Reboot_Now",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT cm_hal_HTTP_Download_Reboot_Now();",
+          "brief": "Initiates a system reboot, performing pre-reboot checks and updates. This function: 1. Creates a reboot file. 2. Manages the reboot counter (retrieving and updating as needed). 3. Triggers the system reboot.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if the reboot file creation or the reboot process itself fails.",
+          "deprecated": false,
+          "line": 926
+        },
+        {
+          "name": "cm_hal_FWupdateAndFactoryReset",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pUrl"
+            },
+            {
+              "type": "char *",
+              "name": "pImagename"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT cm_hal_FWupdateAndFactoryReset(char *pUrl, char *pImagename);",
+          "brief": "Initiates a firmware update and factory reset. This function updates the device's firmware (optionally from a specified URL) and then performs a factory reset.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK on success. RETURN_ERR if a reboot is already in progress or other errors occur.",
+          "deprecated": false,
+          "line": 940
+        },
+        {
+          "name": "cm_hal_ReinitMac",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT cm_hal_ReinitMac();",
+          "brief": "Resets the Cable Modem's (CM) MAC layer while preserving channels. This function reinitializes the Media Access Control (MAC) layer of the CM. Existing downstream (DS) and upstream (US) channels are maintained during this process.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., locking/unlocking CM issues).",
+          "deprecated": false,
+          "line": 951
+        },
+        {
+          "name": "docsis_GetProvIpType",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetProvIpType(CHAR *pValue);",
+          "brief": "Retrieves the provisioned IP type for the wan0 interface. Populates the provided variable with the current IP type. - \"DHCP\" (or its numeric equivalent) - \"STATIC\" (or its numeric equivalent)",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - on success. RETURN_ERR - if an error occurs (e.g., null pointer, retrieval failure).",
+          "deprecated": false,
+          "line": 966
+        },
+        {
+          "name": "docsis_GetCert",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CHAR *",
+              "name": "pCert"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetCert(CHAR *pCert);",
+          "brief": "Retrieves the filepath of the Cable Modem (CM) certificate. Populates the provided buffer with the path where the CM certificate is stored.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - on success. RETURN_ERR - on failure (e.g., null pointer, retrieval errors, or file access issues).",
+          "deprecated": false,
+          "line": 979
+        },
+        {
+          "name": "docsis_GetCertStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pVal"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_GetCertStatus(ULONG *pVal);",
+          "brief": "Retrieves the Cable Modem (CM) certificate status. Populates the provided variable with the certificate's enabled/disabled state. - 0: Certificate disabled. - 1: Certificate enabled.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - on success. RETURN_ERR - on failure (e.g., null pointer, inability to access configuration).",
+          "deprecated": false,
+          "line": 994
+        },
+        {
+          "name": "cm_hal_Get_CableModemResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Get_CableModemResetCount(ULONG *resetcnt);",
+          "brief": "Retrieves the number of Cable Modem (CM) resets. Populates the provided variable with the count of CM resets.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - on success. RETURN_ERR - on failure (e.g., null pointer, inability to access reset data).",
+          "deprecated": false,
+          "line": 1007
+        },
+        {
+          "name": "cm_hal_Get_LocalResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Get_LocalResetCount(ULONG *resetcnt);",
+          "brief": "Retrieves the number of local Cable Modem (CM) resets. Populates the provided variable with the count of CM resets initiated locally (e.g., by user action or software command).",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - on success. RETURN_ERR - on failure (e.g., null pointer, inability to access reset data).",
+          "deprecated": false,
+          "line": 1020
+        },
+        {
+          "name": "cm_hal_Get_DocsisResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Get_DocsisResetCount(ULONG *resetcnt);",
+          "brief": "Retrieves the number of DOCSIS-related Cable Modem (CM) resets. Populates the provided variable with the count of CM resets triggered by DOCSIS events or operations.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - on success. RETURN_ERR - on failure (e.g., null pointer, inability to access reset data).",
+          "deprecated": false,
+          "line": 1033
+        },
+        {
+          "name": "cm_hal_Get_ErouterResetCount",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "resetcnt"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Get_ErouterResetCount(ULONG *resetcnt);",
+          "brief": "Retrieves the number of eRouter resets. Populates the provided variable with the count of resets for the eRouter component.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, inability to access reset data).",
+          "deprecated": false,
+          "line": 1046
+        },
+        {
+          "name": "cm_hal_HTTP_LED_Flash",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "LedFlash"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_HTTP_LED_Flash(BOOLEAN LedFlash);",
+          "brief": "Controls the flashing of the HTTP LED. Enables or disables the flashing of the HTTP LED. - true (1):  Enable LED flashing. - false (0): Disable LED flashing.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success.",
+          "deprecated": false,
+          "line": 1060
+        },
+        {
+          "name": "docsis_GetDsOfdmChanTable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PDOCSIF31_CM_DS_OFDM_CHAN *",
+              "name": "ppinfo"
+            },
+            {
+              "type": "int *",
+              "name": "output_NumberOfEntries"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT docsis_GetDsOfdmChanTable(PDOCSIF31_CM_DS_OFDM_CHAN *ppinfo, int *output_NumberOfEntries);",
+          "brief": "Retrieves the Downstream OFDM (DSOFDM) channel table. Populates the provided pointer with a dynamically allocated array of `DOCSIF31_CM_DS_OFDM_CHAN` structures. Also updates the `output_NumberOfEntries` with the array size. @note for detailed information on Docsis3.1, please refer to the specification at the top of this file **Important:** The caller is responsible for deallocating the memory for `ppinfo`.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointers, allocation issues, retrieval errors).",
+          "deprecated": false,
+          "line": 1077
+        },
+        {
+          "name": "docsis_GetUsOfdmaChanTable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PDOCSIF31_CM_US_OFDMA_CHAN *",
+              "name": "ppinfo"
+            },
+            {
+              "type": "int *",
+              "name": "output_NumberOfEntries"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT docsis_GetUsOfdmaChanTable(PDOCSIF31_CM_US_OFDMA_CHAN *ppinfo, int *output_NumberOfEntries);",
+          "brief": "Retrieves the Upstream OFDMA (USOFDMA) channel table. Populates the provided pointer with a dynamically allocated array of `DOCSIF31_CM_US_OFDMA_CHAN` structures. Also updates the `output_NumberOfEntries` with the array size. @note for detailed information on Docsis3.1, please refer to the specification at the top of this file **Important:**  The caller is responsible for deallocating the memory for `ppinfo`.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointers, allocation issues, retrieval errors).",
+          "deprecated": false,
+          "line": 1094
+        },
+        {
+          "name": "docsis_GetStatusOfdmaUsTable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "PDOCSIF31_CMSTATUSOFDMA_US *",
+              "name": "ppinfo"
+            },
+            {
+              "type": "int *",
+              "name": "output_NumberOfEntries"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT docsis_GetStatusOfdmaUsTable(PDOCSIF31_CMSTATUSOFDMA_US *ppinfo, int *output_NumberOfEntries);",
+          "brief": "Retrieves the Upstream OFDMA (USOFDMA) channel status table. Populates the provided pointer with a dynamically allocated array of `DOCSIF31_CMSTATUSOFDMA_US` structures and updates `output_NumberOfEntries` with the array size. @note for detailed information on Docsis3.1, please refer to the specification at the top of this file **Important:** The caller is responsible for deallocating the memory for `ppinfo`.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid parameters, allocation issues, or retrieval errors).",
+          "deprecated": false,
+          "line": 1111
+        },
+        {
+          "name": "docsis_LLDgetEnableStatus",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT docsis_LLDgetEnableStatus();",
+          "brief": "Retrieves the Low Latency DOCSIS (LLD) enablement status.",
+          "params_doc": {},
+          "return_doc": "Status of LLD configuration: ENABLE - LLD is enabled in the bootfile. DISABLE - LLD is disabled or the entry is missing in the bootfile. RETURN_ERR -  On error (e.g., retrieval issues, unsupported firmware). **TODO:** In future updates, this function will return a well-defined enum (`LLD_STATUS` or similar) instead of integer values.",
+          "deprecated": false,
+          "line": 1127
+        },
+        {
+          "name": "cm_hal_snmpv3_kickstart_initialize",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "snmpv3_kickstart_table_t *",
+              "name": "pKickstart_Table"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_snmpv3_kickstart_initialize(snmpv3_kickstart_table_t *pKickstart_Table);",
+          "brief": "Initializes SNMPv3 security parameters for the Cable Modem (CM). Uses the provided SNMPv3 kickstart table to configure the CM's SNMPv3 settings.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid parameters, SNMPv3 setup errors).",
+          "deprecated": false,
+          "line": 1140
+        },
+        {
+          "name": "docsis_IsEnergyDetected",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pEnergyDetected"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT docsis_IsEnergyDetected(BOOLEAN *pEnergyDetected);",
+          "brief": "Detects DOCSIS energy to determine WAN connection status. Populates the provided boolean variable to indicate the presence or absence of DOCSIS energy. - Set to false (0) if no DOCSIS energy is detected (no connection). - Set to true (1) if DOCSIS energy is detected (connection established).",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, unsupported firmware).",
+          "deprecated": false,
+          "line": 1155
+        },
+        {
+          "name": "cm_hal_set_ReinitMacThreshold",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG",
+              "name": "value"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_set_ReinitMacThreshold(ULONG value);",
+          "brief": "Sets the threshold for MAC layer reinitialization. Updates the MAC reinitialization threshold to the provided value. When this threshold is reached, the Cable Modem's MAC layer will be automatically reinitialized.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., setting errors, validation issues, configuration errors).",
+          "deprecated": false,
+          "line": 1168
+        },
+        {
+          "name": "cm_hal_get_ReinitMacThreshold",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_get_ReinitMacThreshold(ULONG *pValue);",
+          "brief": "Retrieves the MAC layer reinitialization threshold. Populates the provided variable with the current threshold used to trigger an automatic reinitialization of the Cable Modem's MAC layer.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, issues retrieving the value).",
+          "deprecated": false,
+          "line": 1181
+        },
+        {
+          "name": "cm_hal_get_DiplexerSettings",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CM_DIPLEXER_SETTINGS *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_get_DiplexerSettings(CM_DIPLEXER_SETTINGS *pValue);",
+          "brief": "Retrieves the current Diplexer configuration. Populates the provided structure with the Diplexer's settings, which control how it filters and routes signals based on frequency. **Diplexer Background:** A Diplexer is a passive device that separates or combines signals of different frequencies, often used in cable modems to manage signal traffic.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid parameters, retrieval errors).",
+          "deprecated": false,
+          "line": 1196
+        },
+        {
+          "name": "cm_hal_Register_DiplexerVariationCallback",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "cm_hal_DiplexerVariationCallback",
+              "name": "callback_proc"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT cm_hal_Register_DiplexerVariationCallback(cm_hal_DiplexerVariationCallback callback_proc);",
+          "brief": "Registers a callback for dynamic Diplexer setting updates. This function registers a callback to be triggered when the Diplexer settings change. The callback receives updated frequency band selection, signal filtering, or routing parameters. **Important:** The registered callback cannot be removed and should be provided during initialization.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On successful callback registration. RETURN_ERR - If not supported/implemented, or in case of errors (e.g., stub function, misconfiguration).",
+          "deprecated": false,
+          "line": 1228
+        }
+      ]
+    }
+  ],
+  "total_api_count": 51
+}

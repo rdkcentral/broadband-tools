@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cpokuru.github.io/CoreRDK-Broadband-Platform/schemas/hw-compat.schema.json",
+  "title": "RDK-B Core Broadband Hardware Compatibility Metrics",
+  "description": "Per-profile minimum CPU/RAM/flash and required peripheral hardware, published for consumption by the Core RDK Broadband docs site UI and related tooling.",
+  "type": "object",
+  "required": [
+    "specVersion",
+    "profileId",
+    "profileName",
+    "cpu",
+    "memory",
+    "storage",
+    "referenceDevice",
+    "peripherals",
+    "validationStatus"
+  ],
+  "properties": {
+    "specVersion": {
+      "type": "string",
+      "description": "Version of this JSON schema (semantic version), e.g. \"1.0\"."
+    },
+    "profileId": {
+      "type": "string",
+      "description": "Machine-readable profile identifier, kebab-case (e.g. \"ethwan-wifi-router\", \"ext-easymesh\")."
+    },
+    "profileName": {
+      "type": "string",
+      "description": "Human-readable profile name for display, matching the Hardware Compatibility Specification Section 1.1."
+    },
+    "cpu": {
+      "type": "object",
+      "required": ["architecture", "family", "minClockGHz", "minCores"],
+      "properties": {
+        "architecture": { "type": "string", "description": "Instruction set / architecture family, e.g. \"arm64\"." },
+        "family": { "type": "string", "description": "SoC core family, e.g. \"Cortex-A73/A53\"." },
+        "minClockGHz": { "type": "number", "description": "Minimum sustained clock speed in GHz." },
+        "minCores": { "type": "integer", "description": "Minimum number of CPU cores." },
+        "coreTopology": { "type": "string", "description": "Optional. Core arrangement note, e.g. \"dual-cluster\", \"single-cluster\"." }
+      }
+    },
+    "memory": {
+      "type": "object",
+      "required": ["minRamMB"],
+      "properties": {
+        "minRamMB": { "type": "integer", "description": "Minimum RAM in megabytes." }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "required": ["minFlashMB", "type"],
+      "properties": {
+        "minFlashMB": { "type": "integer", "description": "Minimum flash storage in megabytes." },
+        "type": { "type": "string", "description": "Flash technology, e.g. \"eMMC\", \"SPI-NAND\"." },
+        "partitionLayout": { "type": "string", "description": "Optional. OTA partition layout, e.g. \"A/B\", \"single-bank\"." },
+        "filesystem": { "type": "string", "description": "Optional. Filesystem used on flash, e.g. \"UBI/UBIFS\"." }
+      }
+    },
+    "referenceDevice": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "description": "Name of the validated reference device, e.g. \"BPI-R4\"." },
+        "soc": { "type": "string", "description": "Optional. SoC used on the reference device." },
+        "buildBranch": { "type": "string", "description": "Optional. Source branch used for the validated build." }
+      }
+    },
+    "peripherals": {
+      "type": "object",
+      "description": "Required and optional peripheral hardware for this profile, grouped by class.",
+      "required": ["connectivity", "storageInterface", "mediaTuner"],
+      "properties": {
+        "connectivity": {
+          "type": "object",
+          "description": "WAN, LAN, Wi-Fi, EasyMesh, and IoT radio requirements.",
+          "properties": {
+            "wan": {
+              "type": "object",
+              "properties": {
+                "required": { "type": "boolean" },
+                "interfaces": { "type": "array", "items": { "type": "string" } },
+                "minPorts": { "type": "integer" },
+                "notes": { "type": "string" }
+              }
+            },
+            "lan": {
+              "type": "object",
+              "properties": {
+                "required": { "type": "string", "enum": ["required", "optional", "not-applicable"] },
+                "interfaces": { "type": "array", "items": { "type": "string" } },
+                "notes": { "type": "string" }
+              }
+            },
+            "wifi": {
+              "type": "object",
+              "properties": {
+                "required": { "type": "boolean" },
+                "requiredStandards": { "type": "array", "items": { "type": "string" } },
+                "optionalStandards": { "type": "array", "items": { "type": "string" } },
+                "requiredSecurity": { "type": "array", "items": { "type": "string" } },
+                "notes": { "type": "string" }
+              }
+            },
+            "easyMesh": {
+              "type": "object",
+              "properties": {
+                "required": { "type": "boolean" },
+                "role": { "type": "string", "enum": ["controller", "agent-only", "controller+agent", "none"] },
+                "transport": { "type": "string" },
+                "notes": { "type": "string" }
+              }
+            },
+            "bluetoothIot": {
+              "type": "object",
+              "properties": {
+                "required": { "type": "string", "enum": ["required", "optional", "not-applicable"] },
+                "protocols": { "type": "array", "items": { "type": "string" } },
+                "notes": { "type": "string" }
+              }
+            }
+          }
+        },
+        "storageInterface": {
+          "type": "object",
+          "properties": {
+            "types": { "type": "array", "items": { "type": "string" } },
+            "filesystem": { "type": "string" },
+            "partitionLayout": { "type": "string" },
+            "notes": { "type": "string" }
+          }
+        },
+        "mediaTuner": {
+          "type": "object",
+          "properties": {
+            "applicable": { "type": "boolean" },
+            "notes": { "type": "string" }
+          }
+        },
+        "diagnostics": {
+          "type": "object",
+          "properties": {
+            "localWebUI": { "type": "string", "enum": ["required", "optional", "not-applicable"] },
+            "uart": { "type": "string", "enum": ["required", "recommended", "not-applicable"] },
+            "notes": { "type": "string" }
+          }
+        }
+      }
+    },
+    "validationStatus": {
+      "type": "string",
+      "enum": ["not-started", "partial", "validated"],
+      "description": "Validation state of the values in this document, per the Reference Device Validation Methodology."
+    },
+    "lastValidated": {
+      "type": "string",
+      "format": "date",
+      "description": "Optional. ISO-8601 date (YYYY-MM-DD) of the most recent validation pass."
+    }
+  }
+}
