@@ -1,0 +1,466 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "Harvester",
+    "moduleName": "COSA_TR181_Harvester",
+    "version": "0.1.0-draft",
+    "description": "WiFi telemetry collection and reporting for RDK-B, gathering associated device, radio, and neighboring AP statistics via Avro-encoded messages over WebPA/Parodus.",
+    "sourceBranch": "develop",
+    "sourceCommit": "07e7926558c1895870ee8dbfb4984a29b088b077",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config-atom --name Harvester --module-name COSA_TR181_Harvester --description WiFi telemetry collection and reporting for RDK-B, gathering associated device, radio, and neighboring AP statistics via Avro-encoded messages over WebPA/Parodus. --output harvester_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.MloRfcEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "harvester_rbus_api.c",
+        "table": "dataElements",
+        "getHandler": "harvesterMLO_RfcGetHandler",
+        "setHandler": "harvesterMLO_RfcSetHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.Default.OverrideTTL": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.Default.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.InterfaceDevicesWifi.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.Default.OverrideTTL": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.Default.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.LastScanData": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.OnDemandScan": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NeighboringAP.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.Default.OverrideTTL": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.Default.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.RadioInterfaceStatistics.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Harvester.XML"
+      }
+    }
+  }
+}

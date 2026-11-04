@@ -1,0 +1,269 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspXdnsSsp",
+    "moduleName": "CcspXdnsSsp",
+    "version": "0.1.0-draft",
+    "description": "Extended DNS (XDNS) component for RDK-B, providing DNS-based content filtering, parental controls, and per-client custom DNS configuration via /etc/resolv.conf and WebConfig integration.",
+    "sourceBranch": "develop",
+    "sourceCommit": "adee34ce73a6dd65a6881e7cc32dce161f356714",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name CcspXdnsSsp --module-name CcspXdnsSsp --description Extended DNS (XDNS) component for RDK-B, providing DNS-based content filtering, parental controls, and per-client custom DNS configuration via /etc/resolv.conf and WebConfig integration. --output xdns_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_EnableXDNS": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AvoidUnNecesaryXDNSretries.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTable.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml",
+        "addFunction": "DNSMappingTable_AddEntry",
+        "delFunction": "DNSMappingTable_DelEntry"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTable.{i}.DnsIPv4": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTable.{i}.DnsIPv6": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTable.{i}.MacAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTable.{i}.Tag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSMappingTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DNSSecEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DefaultDeviceDnsIPv4": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DefaultDeviceDnsIPv6": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DefaultDeviceTag": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DefaultSecondaryDeviceDnsIPv4": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_XDNS.DefaultSecondaryDeviceDnsIPv6": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspXdns_dm.xml"
+      }
+    }
+  }
+}

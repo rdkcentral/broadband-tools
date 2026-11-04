@@ -1,0 +1,163 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "parodus2ccsp",
+    "moduleName": "COSA_TR181_Webpa",
+    "version": "0.1.0-draft",
+    "description": "WebPA client bridging RDK-B's CCSP data model to the parodus/Xmidt cloud messaging layer.",
+    "sourceBranch": "master",
+    "sourceCommit": "7b7d3eb2aa768e0bba4230d2bd5cc2fb3a5bdb24",
+    "generated": "2026-08-21",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir source/arch/intel_usg/boards/rdkb_atom/config/comcast --name parodus2ccsp --module-name COSA_TR181_Webpa --description WebPA client bridging RDK-B's CCSP data model to the parodus/Xmidt cloud messaging layer. --output parodus2ccsp_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.Webpa.X_COMCAST-COM_CID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.DeviceInfo.Webpa.X_COMCAST-COM_CMC": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.DeviceInfo.Webpa.X_COMCAST-COM_SyncProtocolVersion": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.Webpa.X_RDKCENTRAL-COM_Connected-Client": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.Webpa.X_RDKCENTRAL-COM_WebPA_Notification": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Webpa.DNSText.URL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Webpa.Server.URL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Webpa.TokenServer.URL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Webpa.Version": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "WebpaAgent.xml"
+      }
+    }
+  }
+}

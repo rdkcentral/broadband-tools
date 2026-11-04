@@ -1,0 +1,632 @@
+{
+  "component": "cellular",
+  "repo_dir": "rdkb-halif-cellular",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/cellular_hal.h",
+      "api_count": 36,
+      "apis": [
+        {
+          "name": "cellular_hal_IsModemDevicePresent",
+          "return_type": "unsigned int",
+          "params": [],
+          "param_count": 0,
+          "signature": "unsigned int cellular_hal_IsModemDevicePresent(void);",
+          "brief": "- Returns Modem Device Available Status",
+          "params_doc": {},
+          "return_doc": "The status of the operation TRUE if modem device presents FALSE if modem device not presents",
+          "deprecated": false,
+          "line": 458
+        },
+        {
+          "name": "cellular_hal_init",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularContextInitInputStruct *",
+              "name": "pstCtxInputStruct"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_init(CellularContextInitInputStruct *pstCtxInputStruct);",
+          "brief": "- Initialise the Cellular HAL",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 470
+        },
+        {
+          "name": "cellular_hal_open_device",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularDeviceContextCBStruct *",
+              "name": "pstDeviceCtxCB"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_open_device(CellularDeviceContextCBStruct *pstDeviceCtxCB);",
+          "brief": "- This API inform lower layer to create/open device. \\n It has two members to open and remove the modem from the device",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 538
+        },
+        {
+          "name": "cellular_hal_IsModemControlInterfaceOpened",
+          "return_type": "unsigned char",
+          "params": [],
+          "param_count": 0,
+          "signature": "unsigned char cellular_hal_IsModemControlInterfaceOpened(void);",
+          "brief": "- Returns Modem Control Interface Opened or Not",
+          "params_doc": {},
+          "return_doc": "The status of the operation TRUE if modem device opened FALSE if modem device not opened",
+          "deprecated": false,
+          "line": 548
+        },
+        {
+          "name": "cellular_hal_select_device_slot",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "cellular_device_slot_status_api_callback",
+              "name": "device_slot_status_cb"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_select_device_slot(cellular_device_slot_status_api_callback device_slot_status_cb);",
+          "brief": "- This API inform lower layer to select slot for opened device. \\n The members of the function cellular_device_slot_status_api_callback are: \\n slot_name - variable is a character pointer points the slot name. The buffer size should be atleast 64 bytes long. It is a vendor specific value. \\n slot_type - variable is a character pointer points the slot type. The buffer size should be atleast 64 bytes long. It is a vendor specific value. \\n slot_num - variable is a integer datatype contains the slot num. It is a vendor specific value. \\n device_slot_status - variable is from the enumerated datatype. \\n It can hold any value from the enum CellularDeviceSlotStatus_t.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 582
+        },
+        {
+          "name": "cellular_hal_sim_power_enable",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int",
+              "name": "slot_id"
+            },
+            {
+              "type": "unsigned char",
+              "name": "enable"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_sim_power_enable(unsigned int slot_id, unsigned char enable);",
+          "brief": "- This API perform to enable/disable SIM power from particular slot \\n The possible values can be 1 or 2 and depends on number of SIM slots provided by vendor.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 596
+        },
+        {
+          "name": "cellular_hal_get_total_no_of_uicc_slots",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int *",
+              "name": "total_count"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_total_no_of_uicc_slots(unsigned int *total_count);",
+          "brief": "- This API get UICC total slots count from modem \\n The possible values can be 1 or 2 and depends on number of SIM slots provided by vendor.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 609
+        },
+        {
+          "name": "cellular_hal_get_uicc_slot_info",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "unsigned int",
+              "name": "slot_index"
+            },
+            {
+              "type": "CellularUICCSlotInfoStruct *",
+              "name": "pstSlotInfo"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_get_uicc_slot_info(unsigned int slot_index, CellularUICCSlotInfoStruct *pstSlotInfo);",
+          "brief": "- This API get UICC slot information from modem",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 622
+        },
+        {
+          "name": "cellular_hal_get_active_card_status",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularUICCStatus_t *",
+              "name": "card_status"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_active_card_status(CellularUICCStatus_t *card_status);",
+          "brief": "- This API get current active card status information from modem. \\n card_status returns the SIM card status. It can be valid / blocked / error / empty.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 635
+        },
+        {
+          "name": "cellular_hal_monitor_device_registration",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "cellular_device_registration_status_callback",
+              "name": "device_registration_status_cb"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_monitor_device_registration(cellular_device_registration_status_callback device_registration_status_cb);",
+          "brief": "- This API inform lower layer to monitor device registration",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 663
+        },
+        {
+          "name": "cellular_hal_profile_create",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularProfileStruct *",
+              "name": "pstProfileInput"
+            },
+            {
+              "type": "cellular_device_profile_status_api_callback",
+              "name": "device_profile_status_cb"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_profile_create(CellularProfileStruct *pstProfileInput, cellular_device_profile_status_api_callback device_profile_status_cb);",
+          "brief": "- This API inform lower layer to create profile based on valid pstProfileInput. If NULL then select default profile.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 690
+        },
+        {
+          "name": "cellular_hal_profile_delete",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularProfileStruct *",
+              "name": "pstProfileInput"
+            },
+            {
+              "type": "cellular_device_profile_status_api_callback",
+              "name": "device_profile_status_cb"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_profile_delete(CellularProfileStruct *pstProfileInput, cellular_device_profile_status_api_callback device_profile_status_cb);",
+          "brief": "- This API inform lower layer to delete profile based on valid pstProfileInput.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 703
+        },
+        {
+          "name": "cellular_hal_profile_modify",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularProfileStruct *",
+              "name": "pstProfileInput"
+            },
+            {
+              "type": "cellular_device_profile_status_api_callback",
+              "name": "device_profile_status_cb"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_profile_modify(CellularProfileStruct *pstProfileInput, cellular_device_profile_status_api_callback device_profile_status_cb);",
+          "brief": "- This API inform lower layer to modify profile based on valid pstProfileInput. If NULL then return error.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 716
+        },
+        {
+          "name": "cellular_hal_get_profile_list",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularProfileStruct **",
+              "name": "ppstProfileOutput"
+            },
+            {
+              "type": "int *",
+              "name": "profile_count"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_get_profile_list(CellularProfileStruct **ppstProfileOutput, int *profile_count);",
+          "brief": "- This API get list of profiles from Modem \\n The possible range of acceptable values is 0 to (2^31)-1",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 730
+        },
+        {
+          "name": "cellular_hal_start_network",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularNetworkIPType_t",
+              "name": "ip_request_type"
+            },
+            {
+              "type": "CellularProfileStruct *",
+              "name": "pstProfileInput"
+            },
+            {
+              "type": "CellularNetworkCBStruct *",
+              "name": "pstCBStruct"
+            }
+          ],
+          "param_count": 3,
+          "signature": "int cellular_hal_start_network(CellularNetworkIPType_t ip_request_type, CellularProfileStruct *pstProfileInput, CellularNetworkCBStruct *pstCBStruct);",
+          "brief": "- This API inform lower layer to start network based on IP Type and Passed profile input. If NULL then start based on default profile.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 791
+        },
+        {
+          "name": "cellular_hal_stop_network",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularNetworkIPType_t",
+              "name": "ip_request_type"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_stop_network(CellularNetworkIPType_t ip_request_type);",
+          "brief": "- This API inform lower layer to stop network based on valid ip request type.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 802
+        },
+        {
+          "name": "cellular_hal_get_signal_info",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularSignalInfoStruct *",
+              "name": "signal_info"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_signal_info(CellularSignalInfoStruct *signal_info);",
+          "brief": "- This API get current signal information from Modem",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 814
+        },
+        {
+          "name": "cellular_hal_get_cell_location_info",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellLocationInfoStruct *",
+              "name": "loc_info"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_cell_location_info(CellLocationInfoStruct *loc_info);",
+          "brief": "- This API gets cell location information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 824
+        },
+        {
+          "name": "cellular_hal_set_modem_operating_configuration",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularModemOperatingConfiguration_t",
+              "name": "modem_operating_config"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_set_modem_operating_configuration(CellularModemOperatingConfiguration_t modem_operating_config);",
+          "brief": "- This API inform lower layer to configure modem operating mode.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 835
+        },
+        {
+          "name": "cellular_hal_get_device_imei",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "imei"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_device_imei(char *imei);",
+          "brief": "- Returns Modem Device IMEI information \\n The buffer size should be atleast 16 bytes long. Example: \"010928/00/389023/36\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 848
+        },
+        {
+          "name": "cellular_hal_get_device_imei_sv",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "imei_sv"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_device_imei_sv(char *imei_sv);",
+          "brief": "- Returns Modem Device IMEI Software Version \\n The buffer size should be atleast 16 bytes long. Example: 36.",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 861
+        },
+        {
+          "name": "cellular_hal_get_modem_current_iccid",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "iccid"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_modem_current_iccid(char *iccid);",
+          "brief": "- Returns Modem Device Current ICCID Information \\n The buffer size should be atleast 21 bytes long. Example: \"8901260410032962638F\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 874
+        },
+        {
+          "name": "cellular_hal_get_modem_current_msisdn",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "msisdn"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_modem_current_msisdn(char *msisdn);",
+          "brief": "- Returns Modem Device Current MSISDN Information \\n The buffer size should be atleast 20 bytes long. Example: \"9386720110\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 887
+        },
+        {
+          "name": "cellular_hal_get_packet_statistics",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularPacketStatsStruct *",
+              "name": "network_packet_stats"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_packet_statistics(CellularPacketStatsStruct *network_packet_stats);",
+          "brief": "- This API get current network packet statistics from modem",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 899
+        },
+        {
+          "name": "cellular_hal_get_current_modem_interface_status",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularInterfaceStatus_t *",
+              "name": "status"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_current_modem_interface_status(CellularInterfaceStatus_t *status);",
+          "brief": "- This API get current modem registration status",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 911
+        },
+        {
+          "name": "cellular_hal_set_modem_network_attach",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_hal_set_modem_network_attach(void);",
+          "brief": "- This API to attach modem with network registration",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 921
+        },
+        {
+          "name": "cellular_hal_set_modem_network_detach",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_hal_set_modem_network_detach(void);",
+          "brief": "- This API to detach modem with network registration",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 931
+        },
+        {
+          "name": "cellular_hal_get_modem_firmware_version",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "firmware_version"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_modem_firmware_version(char *firmware_version);",
+          "brief": "- This API get current firmware version of modem \\n The buffer size should be atleast 128 bytes long. Example: \"v2.1.3\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 944
+        },
+        {
+          "name": "cellular_hal_get_current_plmn_information",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularCurrentPlmnInfoStruct *",
+              "name": "plmn_info"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_current_plmn_information(CellularCurrentPlmnInfoStruct *plmn_info);",
+          "brief": "- This API get current plmn information from modem",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 956
+        },
+        {
+          "name": "cellular_hal_get_available_networks_information",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "CellularNetworkScanResultInfoStruct **",
+              "name": "network_info"
+            },
+            {
+              "type": "unsigned int *",
+              "name": "total_network_count"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int cellular_hal_get_available_networks_information(CellularNetworkScanResultInfoStruct **network_info, unsigned int *total_network_count);",
+          "brief": "- This API get current active card status information from modem \\n The possible range of acceptable values is 0 to 1100000. Example: 5",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 970
+        },
+        {
+          "name": "cellular_hal_get_modem_preferred_radio_technology",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "preferred_rat"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_modem_preferred_radio_technology(char *preferred_rat);",
+          "brief": "- Returns Modem preferred Radio Technologies \\n The buffer size sholud be atleast 128 bytes long. \\n Possible combination of strings: AUTO, CDMA20001X, EVDO, GSM, UMTS, LTE \\n Example: \"{UMTS,LTE / WCDMA,LTE}\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 985
+        },
+        {
+          "name": "cellular_hal_set_modem_preferred_radio_technology",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "preferred_rat"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_set_modem_preferred_radio_technology(char *preferred_rat);",
+          "brief": "- sets Modem preferred Radio Technologies \\n The buffer size sholud be atleast 128 bytes long. \\n Possible combination of strings: AUTO, CDMA20001X, EVDO, GSM, UMTS, LTE \\n Example: \"{LTE / AUTO}\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1000
+        },
+        {
+          "name": "cellular_hal_get_modem_current_radio_technology",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "current_rat"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_modem_current_radio_technology(char *current_rat);",
+          "brief": "- Returns Modem current Radio Technologies \\n The buffer size sholud be atleast 128 bytes long. \\n Possible strings: AUTO, CDMA20001X, EVDO, GSM, UMTS, LTE \\n Example: \"LTE\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1015
+        },
+        {
+          "name": "cellular_hal_get_modem_supported_radio_technology",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "supported_rat"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int cellular_hal_get_modem_supported_radio_technology(char *supported_rat);",
+          "brief": "- Returns Modem supported Radio access Technologies \\n The buffer size sholud be atleast 128 bytes long. \\n Possible combination of strings: AUTO, CDMA20001X, EVDO, GSM, UMTS, LTE \\n Example: \"UMTS, LTE\".",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1030
+        },
+        {
+          "name": "cellular_hal_modem_factory_reset",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_hal_modem_factory_reset(void);",
+          "brief": "- This API to factory reset the modem",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1040
+        },
+        {
+          "name": "cellular_hal_modem_reset",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int cellular_hal_modem_reset(void);",
+          "brief": "- This API to reset the modem",
+          "params_doc": {},
+          "return_doc": "The status of the operation RETURN_OK if successful RETURN_ERR if any error is detected",
+          "deprecated": false,
+          "line": 1050
+        }
+      ]
+    }
+  ],
+  "total_api_count": 36
+}

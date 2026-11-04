@@ -1,0 +1,11 @@
+# Default text (shows source tag per param)
+python3 tools/extract_datamodels.py
+
+# Exact dmcli style output — compare directly with your device
+python3 tools/extract_datamodels.py --output dmcli
+
+# Match your 2-interface device exactly
+python3 tools/extract_datamodels.py --instances 2 --output dmcli
+
+# JSON for further processing
+python3 tools/extract_datamodels.py --output json > dml.json

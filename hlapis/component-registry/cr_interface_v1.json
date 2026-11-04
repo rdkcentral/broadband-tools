@@ -1,0 +1,66 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspCr",
+    "moduleName": "CR",
+    "version": "0.1.0-draft",
+    "description": "Component Registry: central registration and discovery service for RDK-B CCSP components, providing namespace resolution and component lifecycle management.",
+    "sourceBranch": "develop",
+    "sourceCommit": "e3fa1e0331c460fdcfefc2ff91aa7c57a9ba1881",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name CcspCr --module-name CR --description Component Registry: central registration and discovery service for RDK-B CCSP components, providing namespace resolution and component lifecycle management. --output cr_interface.json"
+  },
+  "elements": {
+    "Device.CR.IsComponentRegistered()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ssp_rbus.c",
+        "table": "crDataElements",
+        "handler": "isRegisteredHandler"
+      }
+    },
+    "Device.CR.RegisterComponent()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ssp_rbus.c",
+        "table": "crDataElements",
+        "handler": "methodHandler"
+      }
+    },
+    "Device.CR.SystemReady": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "ssp_rbus.c",
+        "table": "crDataElements",
+        "getHandler": "getHandler",
+        "subscribeHandler": "subHandler"
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "component": "fwupgrade",
+  "repo_dir": "rdkb-halif-fwupgrade",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/fwupgrade_hal.h",
+      "api_count": 10,
+      "apis": [
+        {
+          "name": "fwupgrade_hal_set_download_url",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char*",
+              "name": "pUrl"
+            },
+            {
+              "type": "char*",
+              "name": "pfilename"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT fwupgrade_hal_set_download_url(char* pUrl, char* pfilename);",
+          "brief": "Sets the URL and filename for a firmware download. This function configures the URL from which the firmware image will be downloaded and the local filename to store it.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointers, failure to open configuration file). @note  Refer to relevant documentation or guidelines for specific filename format requirements and any additional error scenarios.",
+          "deprecated": false,
+          "line": 158
+        },
+        {
+          "name": "fwupgrade_hal_get_download_url",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "char *",
+              "name": "pUrl"
+            },
+            {
+              "type": "char*",
+              "name": "pfilename"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT fwupgrade_hal_get_download_url(char *pUrl, char* pfilename);",
+          "brief": "Retrieves the firmware download URL and filename. This function populates the provided buffers with the URL and filename of the firmware to be downloaded, as retrieved from the configuration.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointers, configuration errors). @note See relevant documentation for details on the expected filename format and potential error conditions.",
+          "deprecated": false,
+          "line": 174
+        },
+        {
+          "name": "fwupgrade_hal_set_download_interface",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "unsigned int",
+              "name": "interface"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT fwupgrade_hal_set_download_interface(unsigned int interface);",
+          "brief": "Configures the network interface for firmware downloads. This function sets the network interface used for downloading firmware updates over HTTP. - 0: wan0 - 1: erouter0",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid interface value, configuration file error).",
+          "deprecated": false,
+          "line": 189
+        },
+        {
+          "name": "fwupgrade_hal_get_download_interface",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "unsigned int*",
+              "name": "pinterface"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT fwupgrade_hal_get_download_interface(unsigned int* pinterface);",
+          "brief": "Retrieves the configured firmware download interface. This function fetches the network interface identifier used for firmware downloads. - 0: wan0 - 1: erouter0",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, configuration file error).",
+          "deprecated": false,
+          "line": 204
+        },
+        {
+          "name": "fwupgrade_hal_download",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT fwupgrade_hal_download();",
+          "brief": "Initiates firmware download and installation. This function fetches the firmware image from the configured URL, validates it, and performs the installation process.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On successful download and installation of the firmware. RETURN_ERR - On general failure (see potential causes below). 400 - Invalid URL or failure to resolve the hostname. **Potential Causes of RETURN_ERR:** - Failure to retrieve the HTTP download URL or filename. - Error downloading the image to the CPE. - Failure executing the OEM-specific firmware flasher. - Error setting the boot state to the new image.",
+          "deprecated": false,
+          "line": 222
+        },
+        {
+          "name": "fwupgrade_hal_get_download_status",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT fwupgrade_hal_get_download_status();",
+          "brief": "Retrieves the firmware (FW) download status.",
+          "params_doc": {},
+          "return_doc": "The firmware download status: 0 - Download not started. 1-99 - Percentage of download completed. 100 - Download complete, pending reboot. 400 - Invalid HTTP server URL. 401 - Cannot connect to HTTP server. 402 - File not found on HTTP server. 403 - HW Type DL Protection Failure. 404 - HW Mask DL Protection Failure. 405 - DL Rev Protection Failure. 406 - DL Header Protection Failure. 407 - DL CVC Failure. 500 - General Download Failure.",
+          "deprecated": false,
+          "line": 241
+        },
+        {
+          "name": "fwupgrade_hal_reboot_ready",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "pValue"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT fwupgrade_hal_reboot_ready(ULONG *pValue);",
+          "brief": "Retrieves the reboot readiness status. This function checks if the system is ready to be rebooted after a firmware update. - 1: Ready for reboot. - 2: Not ready for reboot.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer).",
+          "deprecated": false,
+          "line": 257
+        },
+        {
+          "name": "fwupgrade_hal_download_reboot_now",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT fwupgrade_hal_download_reboot_now();",
+          "brief": "Triggers an immediate reboot to apply downloaded firmware.",
+          "params_doc": {},
+          "return_doc": "Status of the reboot operation: RETURN_OK - On success. RETURN_ERR - If another reboot is already in progress or an error occurred.",
+          "deprecated": false,
+          "line": 266
+        },
+        {
+          "name": "fwupgrade_hal_update_and_factoryreset",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT fwupgrade_hal_update_and_factoryreset();",
+          "brief": "Performs a firmware update and factory reset on the device. This function initiates a firmware update process and, upon successful completion, performs a factory reset to restore the device to its default settings.",
+          "params_doc": {},
+          "return_doc": "Status of the update and reset operation. RETURN_OK - On success. RETURN_ERR - On failure (e.g., download error, reboot in progress).",
+          "deprecated": false,
+          "line": 278
+        },
+        {
+          "name": "fwupgrade_hal_download_install",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "const char *",
+              "name": "url"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT fwupgrade_hal_download_install(const char *url);",
+          "brief": "Downloads and installs a firmware update from the specified URL. This function fetches the firmware image from the provided URL and initiates the installation process.",
+          "params_doc": {},
+          "return_doc": "Status of the firmware download and upgrade operation. RETURN_OK - On success. RETURN_ERR - On failure (e.g., server unreachable, invalid URL, download or installation error).",
+          "deprecated": false,
+          "line": 291
+        }
+      ]
+    }
+  ],
+  "total_api_count": 10
+}

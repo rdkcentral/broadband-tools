@@ -1,0 +1,3559 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspMtaAgent",
+    "moduleName": "CcspMtaAgent",
+    "version": "0.1.0-draft",
+    "description": "Media Terminal Adapter (MTA) management for RDK-B, providing PacketCable/DOCSIS voice service configuration, DHCP/DHCPv6 provisioning, DECT support, and TR-104 VoIP parameter management via HAL.",
+    "sourceBranch": "develop",
+    "sourceCommit": "de26f98d232b5054ac5af951fd145c8a7b49418d",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name CcspMtaAgent --module-name CcspMtaAgent --description Media Terminal Adapter (MTA) management for RDK-B, providing PacketCable/DOCSIS voice service configuration, DHCP/DHCPv6 provisioning, DECT support, and TR-104 VoIP parameter management via HAL. --output mta_interface.json"
+  },
+  "elements": {
+    "Device.VoiceService.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.ActualCapacity": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.ChargerFirmwareRevision": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.Condition": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.Installed": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.Life": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.ModelNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.NumberofCycles": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.PartNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.PowerStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.RemainingCharge": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.RemainingTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.SerialNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Battery.TotalCapacity": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.BootFileName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.CallSignallingLogEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ClearCallSignallingLog": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ClearDSXLog": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ClearLineStats": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLog.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.DECTLogNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLog.{i}.Description": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLog.{i}.EventID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLog.{i}.EventLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLog.{i}.Index": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLog.{i}.Time": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DECTLogNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DHCPOption3": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DHCPOption6": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DHCPOption7": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DHCPOption8": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLog.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.DSXLogNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLog.{i}.Description": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLog.{i}.ID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLog.{i}.Level": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLog.{i}.Time": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLogEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.DSXLogNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.DeregisterDectHandset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.Dect.HandsetsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.HandsetFirmware": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.HandsetName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.LastActiveTime": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.OperatingTN": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.Handsets.{i}.SupportedTN": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.HandsetsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.HardwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.PIN": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.RFPI": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.RegisterDectHandset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.RegistrationMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Dect.SoftwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.EnableDECTLog": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.EnableMTALog": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.FQDN": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.Gateway": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.LineTableNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.CALLP.CallPState": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.CALLP.LCState": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.CALLP.LoopCurrent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.CAName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.CAPort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.ForeignEMF": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.HazardousPotential": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.LineNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.MWD": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.OverCurrentFault": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.ReceiverOffHook": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.ResistiveFaults": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.RingerEquivalency": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.TriggerDiagnostics": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.CallsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.BurstDensity": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.BurstDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.CWErrorRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.CWErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.CallDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.CallEndTime": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.CallStartTime": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.Codec": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.DiscardRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.DownstreamPower": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.EQIAverage": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.EQIInstantaneous": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.EQIMaximum": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.EQIMinimum": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.EchoReturnLoss": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.ExternalRFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.GapDensity": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.GapDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.Gmin": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.IntervalJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.JBAbsMaxDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.JBMaxDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.JBNominalDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.JitterBufRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.JitterBufferAdaptive": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.LossRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.MOS-CQ": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.MOS-LQ": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.MicroReflections": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.NoiseLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.Originator": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.PacketLoss": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.PktLossConcealment": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteBurstDensity": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteBurstDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteCodec": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteDiscardRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteEchoReturnLoss": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteExternalRFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteGapDensity": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteGapDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteGmin": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteIPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteIntervalJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteJBAbsMaxDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteJBMaxDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteJBNominalDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteJitterBufRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteJitterBufferAdaptive": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteLossRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteMOS-CQ": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteMOS-LQ": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteNoiseLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemotePktLossConcealment": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteRFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteRoundTripDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RemoteSignalLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RoundTripDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RxOctets": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.RxPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.SNR": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.SignalLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.TxOctets": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.TxPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.Calls.{i}.UpstreamPower": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.CallsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTable.{i}.VQM.ResetStats": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.LineTableNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALog.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.MTALogNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALog.{i}.Description": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALog.{i}.EventID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALog.{i}.EventLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALog.{i}.Index": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALog.{i}.Time": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTALogNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.MTAResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.PCVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.PrimaryDHCPServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.PrimaryDNS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.RebindTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.RenewTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.SecondaryDHCPServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.SecondaryDNS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceClass.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.ServiceClassNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceClass.{i}.ServiceClassName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceClassNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_MTA.ServiceFlowNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.DefaultFlow": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.Direction": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.MaxTrafficBurst": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.MaxTrafficRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.MinReservedPkt": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.MinReservedRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.NomGrantInterval": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.NomPollInterval": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.NumberOfPackets": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.SFID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.ScheduleType": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.ServiceClassName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.TolGrantJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.TrafficType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlow.{i}.UnsolicitGrantSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.ServiceFlowNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.SubnetMask": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcMtaDevCmsIpsecCtrl": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcMtaDevCmsKerbRealmName": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcMtaDevCmsSolicitedKeyTimeout": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcMtaDevEnabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcMtaDevRealmOrgName": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcMtaDevRealmPkinitGracePeriod": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcSigDefCallSigTos": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA.pktcSigDefMediaStreamTos": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.BootFileName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.DHCPOption3": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.DHCPOption6": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.DHCPOption7": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.DHCPOption8": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.FQDN": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.Gateway": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.IPV6Address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.PCVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.Prefix": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.PrimaryDHCPv6Server": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.PrimaryDNS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.RebindTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.RenewTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.SecondaryDHCPv6Server": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_CISCO_COM_MTA_V6.SecondaryDNS": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN_MTA.IPv4PrimaryDhcpServerOptions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN_MTA.IPv4SecondaryDhcpServerOptions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN_MTA.IPv6PrimaryDhcpServerOptions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN_MTA.IPv6SecondaryDhcpServerOptions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN_MTA.StartupIPMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_MTA.ConfigFileStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_MTA.Ipv4DhcpStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_MTA.Ipv6DhcpStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_MTA.LineRegisterStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_MTA.pktcMtaDevResetNow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "CcspMtaAgent.xml"
+      }
+    }
+  }
+}

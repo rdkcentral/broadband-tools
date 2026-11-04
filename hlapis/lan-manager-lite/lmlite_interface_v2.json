@@ -1,0 +1,1823 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspLMLite",
+    "moduleName": "CcspLMLite",
+    "version": "0.1.0-draft",
+    "description": "LAN-side network device discovery, presence detection, traffic analytics, and telemetry reporting for RDK-B broadband gateways.",
+    "sourceBranch": "develop",
+    "sourceCommit": "5d66415f4cdbf6387fc7f3f1e212b10241d0a563",
+    "generated": "2026-08-21",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --name CcspLMLite --module-name CcspLMLite --description LAN-side network device discovery, presence detection, traffic analytics, and telemetry reporting for RDK-B broadband gateways. --output lmlite_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.MloRfcEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "lm_rbus_api.c",
+        "table": "dataElements",
+        "getHandler": "lmLiteMLO_RfcGetHandler",
+        "setHandler": "lmLiteMLO_RfcSetHandler"
+      }
+    },
+    "Device.Hosts.Host.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "64",
+      "numberOfEntriesElement": "Device.Hosts.HostNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Hosts.Host.{i}.Active": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.AddressSource": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.AssociatedDevice": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.Comments": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.DHCPClient": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.HostName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.IPv4Address.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "16",
+      "numberOfEntriesElement": "Device.Hosts.Host.{i}.IPv4AddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Hosts.Host.{i}.IPv4Address.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.IPv4AddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.IPv6Address.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "16",
+      "numberOfEntriesElement": "Device.Hosts.Host.{i}.IPv6AddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Hosts.Host.{i}.IPv6Address.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.IPv6AddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.Layer1Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.Layer3Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.MloLink.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "4",
+      "numberOfEntriesElement": "Device.Hosts.Host.{i}.MloLinkNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Hosts.Host.{i}.MloLink.{i}.X_RDK-AssociatedDevice": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.MloLink.{i}.X_RDK-Layer1Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.MloLink.{i}.X_RDK-RSSI": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.MloLinkNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.PhysAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.RDK_PresenceActive": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.RDK_PresenceActiveLastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.VendorClassID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef VENDOR_CLASS_ID"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_CISCO_COM_ActiveTime": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_CISCO_COM_InactiveTime": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_CISCO_COM_RSSI": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_COMCAST-COM_LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_RDK-MldClient": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_RDK-MloLinkNumberofEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_RDKCENTRAL-COM_DeviceType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_RDKCENTRAL-COM_Layer1Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_RDKCENTRAL-COM_Parent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.Host.{i}.X_RDKCENTRAL-COM_PresenceNotificationEnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.HostNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_CISCO_COM_ConnectedDeviceNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_CISCO_COM_ConnectedWiFiNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_AddPresenceNotificationMac": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_BackgroundPresenceJoinInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_DeletePresenceNotificationMac": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_EthHost_Sync": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_HostCountPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_HostVersionId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_LMHost_Sync": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_LMHost_Sync_From_MoCA": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_LMHost_Sync_From_WiFi": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_PresenceLeaveIPv4CheckInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_PresenceLeaveIPv4Retries": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_PresenceLeaveIPv6CheckInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_PresenceLeaveIPv6Retries": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDKCENTRAL-COM_WebPA_PresenceNotificationEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.Hosts.X_RDK_PresenceDetectEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.ManagementServer.ManageableDevice.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "255",
+      "numberOfEntriesElement": "Device.ManagementServer.ManageableDeviceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.ManagementServer.ManageableDevice.{i}.Host": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.ManagementServer.ManageableDevice.{i}.ManufacturerOUI": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.ManagementServer.ManageableDevice.{i}.ProductClass": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.ManagementServer.ManageableDevice.{i}.SerialNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.ManagementServer.ManageableDeviceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "64",
+      "numberOfEntriesElement": "Device.XHosts.XHostNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.XHosts.XHost.{i}.Active": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.AddressSource": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.AssociatedDevice": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.Comments": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.DHCPClient": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.HostName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.Layer1Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.Layer3Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.PhysAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.XIPv4Address.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "16",
+      "numberOfEntriesElement": "Device.XHosts.XHost.{i}.XIPv4AddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.XHosts.XHost.{i}.XIPv4Address.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.XIPv4AddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.XIPv6Address.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "16",
+      "numberOfEntriesElement": "Device.XHosts.XHost.{i}.XIPv6AddressNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.XHosts.XHost.{i}.XIPv6Address.{i}.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.XIPv6AddressNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_CISCO_COM_ActiveTime": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_CISCO_COM_InactiveTime": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_CISCO_COM_RSSI": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_COMCAST-COM_LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_RDKCENTRAL-COM_DeviceType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_RDKCENTRAL-COM_Layer1Interface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHost.{i}.X_RDKCENTRAL-COM_Parent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.XHostNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.XHosts.X_CISCO_COM_ConnectedDeviceNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifndef FEATURE_RESOURCE_OPTIMIZATION"
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.Default.OverrideTTL": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.Default.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesStatus.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.Default.OverrideTTL": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.Default.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.PollingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_Report.NetworkDevicesTraffic.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "LMLite.XML"
+      }
+    },
+    "Device.X_RDK_WAN.Interface.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_WAN.InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "wtc_rbus_apis.c",
+        "table": "WTCRbusDataElements",
+        "addFunction": "WTC_TableAddRowHandler",
+        "delFunction": "WTC_TableRemoveRowHandler"
+      }
+    },
+    "Device.X_RDK_WAN.Interface.{i}.Stats.DscpCountEnable": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "wtc_rbus_apis.c",
+        "table": "WTCRbusDataElements",
+        "subscribeHandler": "WTC_TableStringEventSubHandler"
+      }
+    },
+    "Device.X_RDK_WAN.Interface.{i}.Stats.DscpCountInterval": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "wtc_rbus_apis.c",
+        "table": "WTCRbusDataElements",
+        "subscribeHandler": "WTC_TableUlongEventSubHandler"
+      }
+    },
+    "Device.X_RDK_WAN.Interface.{i}.Stats.DscpCountPerInterval": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "wtc_rbus_apis.c",
+        "table": "WTCRbusDataElements",
+        "subscribeHandler": "WTC_TableStringEventSubHandler"
+      }
+    },
+    "Device.X_RDK_WAN.Interface.{i}.Stats.DscpCountTotal": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "wtc_rbus_apis.c",
+        "table": "WTCRbusDataElements",
+        "subscribeHandler": "WTC_TableStringEventSubHandler"
+      }
+    }
+  }
+}

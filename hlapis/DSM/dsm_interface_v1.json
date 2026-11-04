@@ -1,0 +1,345 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "dsm",
+    "moduleName": "dsm_tr181_provider",
+    "version": "0.1.0-draft",
+    "description": "Software Modules (container/app lifecycle) management for RDK-B, implementing TR-181 Execution Environment, Deployment Unit, and Execution Unit.",
+    "sourceBranch": "main",
+    "sourceCommit": "dcd81408c4d41d9a9dfd37576e30fc7c42560167",
+    "generated": "2026-08-23",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --source-dir src --name dsm --module-name dsm_tr181_provider --description Software Modules (container/app lifecycle) management for RDK-B, implementing TR-181 Execution Environment, Deployment Unit, and Execution Unit. --output dsm_interface.json"
+  },
+  "elements": {
+    "Device.SoftwareModules.DUStateChange!": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp"
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.SoftwareModules.DeploymentUnitNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.ExecutionEnvRef": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "DeploymentUnit"
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.ExecutionUnitList": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "DeploymentUnit"
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "DeploymentUnit"
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.URL": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "DeploymentUnit"
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.Uninstall()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "DeploymentUnit"
+      }
+    },
+    "Device.SoftwareModules.DeploymentUnit.{i}.Update()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "DeploymentUnit"
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.SoftwareModules.ExecEnvNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.CurrentRunLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecEnv"
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecEnv"
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.InitialRunLevel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecEnv"
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecEnv"
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.SetRunLevel()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecEnv"
+      }
+    },
+    "Device.SoftwareModules.ExecEnv.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecEnv"
+      }
+    },
+    "Device.SoftwareModules.ExecutionUnit.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.SoftwareModules.ExecutionUnitNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.SoftwareModules.ExecutionUnit.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecutionUnit"
+      }
+    },
+    "Device.SoftwareModules.ExecutionUnit.{i}.SetRequestedState()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecutionUnit"
+      }
+    },
+    "Device.SoftwareModules.ExecutionUnit.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp",
+        "table": "ExecutionUnit"
+      }
+    },
+    "Device.SoftwareModules.InstallDU()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "dsm_rbus_provider.cpp"
+      }
+    }
+  }
+}

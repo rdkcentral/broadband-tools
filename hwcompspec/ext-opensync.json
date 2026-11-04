@@ -1,0 +1,92 @@
+{
+  "$schema": "https://cpokuru.github.io/CoreRDK-Broadband-Platform/schemas/hw-compat.schema.json",
+  "specVersion": "1.0",
+  "profileId": "ext-opensync",
+  "profileName": "EXT OpenSync",
+  "cpu": {
+    "architecture": "n/a",
+    "family": "n/a",
+    "minClockGHz": "n/a",
+    "minCores": "n/a",
+    "coreTopology": "n/a"
+  },
+  "memory": {
+    "minRamMB": "n/a"
+  },
+  "storage": {
+    "minFlashMB": "n/a",
+    "type": "n/a",
+    "partitionLayout": "n/a",
+    "filesystem": "n/a"
+  },
+  "referenceDevice": {
+    "name": "n/a",
+    "soc": "n/a",
+    "buildBranch": "n/a"
+  },
+  "peripherals": {
+    "connectivity": {
+      "wan": {
+        "required": "n/a",
+        "interfaces": [
+          "n/a"
+        ],
+        "minPorts": "n/a",
+        "notes": "n/a"
+      },
+      "lan": {
+        "required": "n/a",
+        "interfaces": [
+          "n/a"
+        ],
+        "notes": "n/a"
+      },
+      "wifi": {
+        "required": "n/a",
+        "requiredStandards": [
+          "n/a"
+        ],
+        "optionalStandards": [
+          "n/a"
+        ],
+        "requiredSecurity": [
+          "n/a"
+        ],
+        "notes": "n/a"
+      },
+      "easyMesh": {
+        "required": "n/a",
+        "role": "n/a",
+        "transport": "n/a",
+        "notes": "n/a"
+      },
+      "bluetoothIot": {
+        "required": "n/a",
+        "protocols": [
+          "n/a"
+        ],
+        "notes": "n/a"
+      }
+    },
+    "storageInterface": {
+      "types": [
+        "n/a"
+      ],
+      "filesystem": "n/a",
+      "partitionLayout": "n/a",
+      "notes": "n/a"
+    },
+    "mediaTuner": {
+      "applicable": "n/a",
+      "notes": "n/a"
+    },
+    "diagnostics": {
+      "localWebUI": "n/a",
+      "uart": "n/a",
+      "notes": "n/a"
+    }
+  },
+  "validationStatus": "not-started",
+  "lastValidated": "n/a",
+  "coverageNote": "This profile is defined in the RDK-B Component List 2026 but is not yet covered by the Hardware Compatibility Specification. All metric and peripheral fields are placeholders (n/a) pending a future revision."
+}

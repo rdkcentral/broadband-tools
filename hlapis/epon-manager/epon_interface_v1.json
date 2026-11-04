@@ -1,0 +1,1385 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "EponManager",
+    "moduleName": "eponMgr",
+    "version": "0.1.0-draft",
+    "description": "EPON (Ethernet Passive Optical Network) lower-layer control and configuration middleware for RDK-B, bridging the EPON HAL to other RDK components.",
+    "sourceBranch": "main",
+    "sourceCommit": "07669469f7154f057920c6607e8efa6b8709ff4e",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --source-dir src --name EponManager --module-name eponMgr --description EPON (Ethernet Passive Optical Network) lower-layer control and configuration middleware for RDK-B, bridging the EPON HAL to other RDK components. --output epon_interface.json"
+  },
+  "elements": {
+    "Device.Optical.Interface.1.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler",
+        "setHandler": "base_param_set_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler",
+        "setHandler": "base_param_set_handler"
+      }
+    },
+    "Device.Optical.Interface.1.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.LowerLayers": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.MaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.OpticalSignalLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "optical_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.SFPReferenceList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "optical_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler",
+        "setHandler": "stats_set_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_BER": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_BroadcastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_BroadcastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_FECCorrected": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_FECUncorrectable": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_MACResets": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_MulticastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_MulticastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_RangingResyncs": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_UnicastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Stats.X_RDK_UnicastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.TransmitOpticalLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "optical_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.Upstream": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "base_param_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.CPE.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Optical.Interface.1.X_RDK_EPON.DPOE.CPENumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.CPE.{i}.AgeTime": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.CPE.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.CPE.{i}.Type": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.CPENumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.DynamicCPECount": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.MaxCPECount": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPOE.StaticCPECount": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "cpe_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.DPoESupported": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "epon_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.EncryptionMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "epon_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.FactoryReset()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "handler": "epon_factory_reset_method_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.HardwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "manufacturer_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Optical.Interface.1.X_RDK_EPON.LLIDNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.EncryptionEnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.ForwardingState": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.LLID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.Mode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLID.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.LLIDNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "llid_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.Manufacturer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "manufacturer_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.MaxLLIDSupported": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "epon_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.ModelNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "manufacturer_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.OLT.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "olt_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.OLT.VendorOUI": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "olt_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.OLT.VendorSpecificInfo": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "olt_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.ONUStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "epon_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.OperationalMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "epon_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.Reset()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "handler": "epon_reset_method_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.SerialNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "manufacturer_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.SoftwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "manufacturer_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.StatsPoller.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_poller_get_handler",
+        "setHandler": "stats_poller_set_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.StatsPoller.PollingInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "stats_poller_get_handler",
+        "setHandler": "stats_poller_set_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.VEIP_Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Optical.Interface.1.X_RDK_EPON.VEIP_InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.VEIP_Interface.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "veip_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.VEIP_Interface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "veip_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.VEIP_InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "veip_table_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_EPON.VendorOUI": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "manufacturer_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.BiasCurrent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.LowerOpticalThreshold": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.LowerTransmitPowerThreshold": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.SupplyVoltage": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.Temperature": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.UpperOpticalThreshold": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    },
+    "Device.Optical.Interface.1.X_RDK_Transceiver.UpperTransmitPowerThreshold": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "eponMgr_tr181.c",
+        "table": "g_tr181_params",
+        "getHandler": "transceiver_get_handler"
+      }
+    }
+  }
+}

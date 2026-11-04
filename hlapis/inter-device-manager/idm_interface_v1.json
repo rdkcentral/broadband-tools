@@ -1,0 +1,492 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "InterDeviceManager",
+    "moduleName": "RdkInterDeviceManager",
+    "version": "0.1.0-draft",
+    "description": "Discovers and advertises RDK LAN device capabilities, and manages secure mTLS communication between RDK routers and LAN devices.",
+    "sourceBranch": "main",
+    "sourceCommit": "36b992e789707a74e724eaa7b1f105dfbf0604d9",
+    "generated": "2026-08-24",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --name InterDeviceManager --module-name RdkInterDeviceManager --description Discovers and advertises RDK LAN device capabilities, and manages secure mTLS communication between RDK routers and LAN devices. --output idm_interface.json"
+  },
+  "elements": {
+    "Device.X_RDK_Connection.DetectionWindow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "getHandler": "X_RDK_Connection_GetHandler",
+        "setHandler": "X_RDK_Connection_SetHandler"
+      }
+    },
+    "Device.X_RDK_Connection.HelloIPv4SubnetList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "getHandler": "X_RDK_Connection_GetHandler"
+      }
+    },
+    "Device.X_RDK_Connection.HelloIPv6SubnetList": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "getHandler": "X_RDK_Connection_GetHandler"
+      }
+    },
+    "Device.X_RDK_Connection.HelloInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "getHandler": "X_RDK_Connection_GetHandler",
+        "setHandler": "X_RDK_Connection_SetHandler"
+      }
+    },
+    "Device.X_RDK_Connection.Interface": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "getHandler": "X_RDK_Connection_GetHandler",
+        "setHandler": "X_RDK_Connection_SetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Connection.Port": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "getHandler": "X_RDK_Connection_GetHandler",
+        "setHandler": "X_RDK_Connection_SetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Connection.Restart()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.AddDeviceCapabilities()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.X_RDK_Remote.DeviceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.Capabilities": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.HelloInterval": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.IPv4": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.IPv6": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.MAC": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.ModelNumber": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Device.{i}.Status": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.DeviceChange": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.DeviceNumberOfEntries": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.FileTransferMaxSize()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmConnHcElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.FileTransferStatus()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Invoke()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.Port": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmPublishElements",
+        "getHandler": "X_RDK_Remote_Device_GetHandler",
+        "setHandler": "X_RDK_Remote_Device_SetHandler",
+        "subscribeHandler": "idmDmPublishEventHandler"
+      }
+    },
+    "Device.X_RDK_Remote.RemoveDeviceCapabilities()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.ResetDeviceCapabilities()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.getFile()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    },
+    "Device.X_RDK_Remote.sendFile()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "Idm_rbus.c",
+        "table": "idmRmCapElements",
+        "handler": "X_RDK_Remote_MethodHandler"
+      }
+    }
+  }
+}

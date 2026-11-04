@@ -1,0 +1,244 @@
+{
+  "component": "epon",
+  "repo_dir": "rdkb-halif-epon",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "epon_hal.h",
+      "api_count": 15,
+      "apis": [
+        {
+          "name": "epon_hal_get_version",
+          "return_type": "uint32_t",
+          "params": [],
+          "param_count": 0,
+          "signature": "uint32_t epon_hal_get_version(void);",
+          "brief": "Get EPON HAL API version. This function returns the API version of the HAL implementation. Applications should call this at initialization to verify ABI compatibility.",
+          "params_doc": {},
+          "return_doc": "uint32_t API version in format 0xMMmmpppp (Major.Minor.Patch) Example usage: @code uint32_t version = epon_hal_get_version(); if ((version >> 24) != (EPON_HAL_API_VERSION >> 24)) { // Major version mismatch - incompatible! fprintf(stderr, \"EPON HAL version mismatch!\\n\"); exit(1); } @endcode",
+          "deprecated": false,
+          "line": 456
+        },
+        {
+          "name": "epon_hal_init",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "const epon_hal_config_t *",
+              "name": "config"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_init(const epon_hal_config_t *config);",
+          "brief": "Initialize the EPON HAL module. This function initializes the EPON Hardware Abstraction Layer with the provided configuration. It must be called before any other EPON HAL functions. The function sets up callback handlers, configures DPoE support if enabled, and initializes the interface mapping. Must not be NULL. Caller MUST set config->struct_size = sizeof(epon_hal_config_t). The structure includes: - DPoE support flag - Status change callback - Alarm callback",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS HAL initialized successfully. EPON_HAL_ERROR_INVALID_PARAM config is NULL, struct_size is invalid, or contains invalid values. EPON_HAL_ERROR_WRONG_PON_MODE Hardware is configured for wrong PON mode (e.g., ITU PON instead of EPON). EPON_HAL_ERROR_HW_FAILURE Hardware initialization failed. EPON_HAL_ERROR_CALLBACK_REG Callback registration failed. EPON_HAL_ERROR_TIMEOUT Initialization blocked for more than 3 minutes.",
+          "deprecated": false,
+          "line": 482
+        },
+        {
+          "name": "epon_hal_deinit",
+          "return_type": "epon_hal_return_t",
+          "params": [],
+          "param_count": 0,
+          "signature": "epon_hal_return_t epon_hal_deinit(void);",
+          "brief": "Deinitialize the EPON HAL module. This function deinitializes the EPON Hardware Abstraction Layer and releases all resources allocated during initialization. It should be called when the EPON application tears down. After calling this function, epon_hal_init() must be called again before using any other EPON HAL functions.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS HAL deinitialized successfully. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_HW_FAILURE Hardware deinitialization failed. @note This function will unregister all callbacks, release allocated memory, and perform hardware cleanup. The ONU will be deregistered from the OLT.",
+          "deprecated": false,
+          "line": 500
+        },
+        {
+          "name": "epon_hal_get_link_stats",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_hal_link_stats_t *",
+              "name": "stats"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_link_stats(epon_hal_link_stats_t *stats);",
+          "brief": "Retrieve EPON link statistics. This function retrieves the current EPON link statistics including frames, bytes, FEC errors, and BER measurements. Caller MUST set stats->struct_size = sizeof(epon_hal_link_stats_t) before calling.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Statistics retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM stats is NULL or struct_size is invalid. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. Example usage: @code epon_hal_link_stats_t stats = {0}; stats.struct_size = sizeof(stats); if (epon_hal_get_link_stats(&stats) == EPON_HAL_SUCCESS) { printf(\"Packets sent: %lu\\n\", stats.packets_sent); } @endcode",
+          "deprecated": false,
+          "line": 525
+        },
+        {
+          "name": "epon_hal_get_transceiver_stats",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_hal_transceiver_stats_t *",
+              "name": "stats"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_transceiver_stats(epon_hal_transceiver_stats_t *stats);",
+          "brief": "Retrieve transceiver (optical) statistics. This function retrieves the current transceiver statistics including optical power levels, laser bias current, temperature, and supply voltage. Caller MUST set stats->struct_size = sizeof(epon_hal_transceiver_stats_t) before calling.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Statistics retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM stats is NULL or struct_size is invalid. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_NOT_SUPPORTED Transceiver statistics not available.",
+          "deprecated": false,
+          "line": 542
+        },
+        {
+          "name": "epon_hal_get_llid_info",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_llid_list_t *",
+              "name": "llid_list"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_llid_info(epon_llid_list_t *llid_list);",
+          "brief": "Retrieve LLID list information. This function retrieves the Logical Link Identifier (LLID) list containing information about all configured LLIDs and their states. The HAL implementation will allocate the llid_list->llid_list array based on llid_count. Caller must free this allocated memory when done.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS LLID information retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM llid_list is NULL. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. @note The HAL implementation allocates memory for the llid_list->llid_list array based on the number of active LLIDs (llid_count). Caller must free this memory when done.",
+          "deprecated": false,
+          "line": 563
+        },
+        {
+          "name": "epon_hal_get_manufacturer_info",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_onu_manufacturer_info_t *",
+              "name": "info"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_manufacturer_info(epon_onu_manufacturer_info_t *info);",
+          "brief": "Retrieve ONU manufacturer information. This function retrieves the manufacturer details of the ONU including manufacturer name, model number, hardware/firmware versions, serial number, and vendor OUI as per IEEE 802.3ah specifications. Caller MUST set info->struct_size = sizeof(epon_onu_manufacturer_info_t) before calling.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Manufacturer information retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM info is NULL or struct_size is invalid. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized.",
+          "deprecated": false,
+          "line": 581
+        },
+        {
+          "name": "epon_hal_clear_stats",
+          "return_type": "epon_hal_return_t",
+          "params": [],
+          "param_count": 0,
+          "signature": "epon_hal_return_t epon_hal_clear_stats(void);",
+          "brief": "Clear EPON HAL statistics counters. This function resets all EPON link statistics counters to zero, including frame counts, byte counts, FEC error counters, and MAC reset counters. Optical power measurements are not affected.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Statistics cleared successfully. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_HW_FAILURE Hardware operation failed.",
+          "deprecated": false,
+          "line": 595
+        },
+        {
+          "name": "epon_hal_reset_onu",
+          "return_type": "epon_hal_return_t",
+          "params": [],
+          "param_count": 0,
+          "signature": "epon_hal_return_t epon_hal_reset_onu(void);",
+          "brief": "Reset the ONU and restart registration process. This function resets the ONU and initiates the registration process with the OLT. The ONU will deregister, perform a soft reset, and attempt to re-register following the MPCP discovery and registration procedure.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS ONU reset initiated successfully. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_HW_FAILURE Reset operation failed. @note This operation will cause temporary service disruption.",
+          "deprecated": false,
+          "line": 611
+        },
+        {
+          "name": "epon_hal_factory_reset",
+          "return_type": "epon_hal_return_t",
+          "params": [],
+          "param_count": 0,
+          "signature": "epon_hal_return_t epon_hal_factory_reset(void);",
+          "brief": "Perform factory reset of HAL configuration. This function resets the EPON HAL configuration to factory defaults. This includes clearing all custom settings, statistics, and restoring default operational parameters. The ONU will need to be reconfigured and re-initialized after this operation.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Factory reset completed successfully. EPON_HAL_ERROR_HW_FAILURE Factory reset failed. EPON_HAL_ERROR_CONFIG Unable to restore default configuration. @note This operation will cause service disruption and loss of all configuration. Re-initialization with epon_hal_init() is required after factory reset.",
+          "deprecated": false,
+          "line": 629
+        },
+        {
+          "name": "epon_hal_get_link_info",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_hal_link_info_t *",
+              "name": "info"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_link_info(epon_hal_link_info_t *info);",
+          "brief": "Get current EPON link information. This function retrieves the current EPON link information including operational mode (1G-EPON or 10G-EPON) and encryption mode negotiated with the OLT.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Link information retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM info is NULL. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized.",
+          "deprecated": false,
+          "line": 644
+        },
+        {
+          "name": "epon_hal_get_interface_list",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_interface_list_t *",
+              "name": "if_list"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_interface_list(epon_interface_list_t *if_list);",
+          "brief": "Retrieve interface list information. This function retrieves the list of interfaces (S1/IP interfaces) configured by the OLT. For each interface, it returns both the interface name (e.g., veip0, veip1) and its current operational status (link up/down). Multiple interfaces may be created, each potentially associated with different VLANs or service instances. information. Each entry contains the interface name and link status.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS Interface information retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM if_list is NULL. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. @note The ONU status EPON_ONU_STATUS_REGISTRATION is sent only after all configured interfaces are operational (status = EPON_ONU_INTF_STATUS_LINK_UP).",
+          "deprecated": false,
+          "line": 665
+        },
+        {
+          "name": "epon_hal_get_olt_info",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "epon_olt_info_t *",
+              "name": "olt_info"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_get_olt_info(epon_olt_info_t *olt_info);",
+          "brief": "Retrieve OLT information. This function retrieves information about the OLT (Optical Line Terminal) that the ONU is connected to, including the OLT OAM MAC address. This information is learned during MPCP registration and OAM discovery phases as per IEEE 802.3ah specification. Caller MUST set olt_info->struct_size = sizeof(epon_olt_info_t) before calling.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS OLT information retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM olt_info is NULL or struct_size is invalid. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_NOT_SUPPORTED OLT information not available (ONU not registered). @note This information is only available after successful ONU registration (OAM_REGISTERED or LINK_UP state). Some fields may be vendor-specific and not available on all OLT implementations. Example usage: @code epon_olt_info_t olt_info = {0}; olt_info.struct_size = sizeof(olt_info); if (epon_hal_get_olt_info(&olt_info) == EPON_HAL_SUCCESS) { printf(\"OLT MAC: %02x:%02x:%02x:%02x:%02x:%02x\\n\", olt_info.mac_address[0], olt_info.mac_address[1], olt_info.mac_address[2], olt_info.mac_address[3], olt_info.mac_address[4], olt_info.mac_address[5]); } @endcode",
+          "deprecated": false,
+          "line": 698
+        },
+        {
+          "name": "epon_hal_set_oam_log_mask",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "uint32_t",
+              "name": "oam_log_mask"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t epon_hal_set_oam_log_mask(uint32_t oam_log_mask);",
+          "brief": "Enable or disable logging of specific OAM messages. This function configures which OAM message types should be logged by the HAL. OAM messages matching the enabled bitmask will be logged using the HAL_LOG macro at HAL_LOG_LEVEL_OAM as per IEEE 802.3ah specification. Use epon_oam_log_type_t values combined with bitwise OR. Use EPON_OAM_ALL to enable all OAM message logging. Use 0 to disable all OAM message logging.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS OAM logging configuration updated successfully. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_NOT_SUPPORTED OAM logging not supported by implementation. @note This function only controls which OAM messages are logged, not whether they are processed. All OAM messages are always processed regardless of this logging configuration. @note The actual logging output depends on HAL_LOG_FUNCTION implementation. If HAL_LOG_FUNCTION is not defined, no output will be produced. @note OAM messages are logged using HAL_LOG_LEVEL_OAM. The logging backend can filter this level separately from other log levels. Example usage: @code // Enable logging for OAM Info and Event messages only uint32_t mask = EPON_OAM_INFO | EPON_OAM_EVENT; epon_hal_set_oam_log_mask(mask); // Enable all OAM message logging epon_hal_set_oam_log_mask(EPON_OAM_ALL); // Disable all OAM message logging epon_hal_set_oam_log_mask(0); @endcode",
+          "deprecated": false,
+          "line": 738
+        },
+        {
+          "name": "dpoe_hal_get_cpe_mac_table",
+          "return_type": "epon_hal_return_t",
+          "params": [
+            {
+              "type": "dpoe_cpe_mac_table_t *",
+              "name": "cpe_table"
+            }
+          ],
+          "param_count": 1,
+          "signature": "epon_hal_return_t dpoe_hal_get_cpe_mac_table(dpoe_cpe_mac_table_t *cpe_table);",
+          "brief": "Retrieve CPE MAC address table. This function retrieves the complete CPE MAC address table including both statically configured and dynamically learned CPE MAC addresses. The HAL implementation will allocate the cpe_table->cpe_list array based on static_cpe_count + dynamic_cpe_count. Caller must free this allocated memory when done.",
+          "params_doc": {},
+          "return_doc": "epon_hal_return_t status code. EPON_HAL_SUCCESS CPE MAC table retrieved successfully. EPON_HAL_ERROR_INVALID_PARAM cpe_table is NULL. EPON_HAL_ERROR_NOT_INITIALIZED HAL not initialized. EPON_HAL_ERROR_NOT_SUPPORTED DPoE not supported. @note The HAL implementation allocates memory for the cpe_table->cpe_list array based on the total number of CPE entries (static_cpe_count + dynamic_cpe_count). Caller must free this memory when done.",
+          "deprecated": false,
+          "line": 794
+        }
+      ]
+    }
+  ],
+  "total_api_count": 15
+}

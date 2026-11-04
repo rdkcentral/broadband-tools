@@ -1,0 +1,6788 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "TelcoVoiceManager",
+    "moduleName": "TR104_RdkTelcoVoiceManager",
+    "version": "0.1.0-draft",
+    "description": "TR-104 Voice Service data model and SIP/MGCP/H323 voice line management for RDK-B, including VoIP call statistics and telephony feature configuration.",
+    "sourceBranch": "main",
+    "sourceCommit": "6d3af7b1990f3534fd35f96513bc75890ef5ccfc",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --xml-file RdkTelcoVoiceManager_v1.xml --name TelcoVoiceManager --module-name TR104_RdkTelcoVoiceManager --description TR-104 Voice Service data model and SIP/MGCP/H323 voice line management for RDK-B, including VoIP call statistics and telephony feature configuration. --output telco_interface.json"
+  },
+  "elements": {
+    "Device.Services.VoiceService.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceServiceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.ButtonMap": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.Capabilities.CodecsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.BitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.Codec": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.EntryID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.PacketizationPeriod": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Codecs.{i}.SilenceSuppression": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.CodecsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.DSCPCoupled": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.DigitMap": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.EthernetTaggingCoupled": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.FaxPassThrough": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.FaxT38": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.FileBasedRingGeneration": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.FileBasedToneGeneration": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.H323.FastStart": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.H323.H235AuthenticationMethods": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.MGCP.Extensions": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.MaxLineCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.MaxProfileCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.MaxSessionCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.MaxSessionsPerLine": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.ModemPassThrough": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.NumberingPlan": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.PSTNSoftSwitchOver": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.PatternBasedRingGeneration": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.PatternBasedToneGeneration": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.RTCP": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.RTPRedundancy": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.Regions": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.RingDescriptionsEditable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.RingFileFormats": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.RingGeneration": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.RingPatternEditable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.EventSubscription": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.Extensions": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.ResponseMap": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.Role": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.TLSAuthenticationKeySizes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.TLSAuthenticationProtocols": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.TLSEncryptionKeySizes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.TLSEncryptionProtocols": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.TLSKeyExchangeProtocols": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.Transports": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SIP.URISchemes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SRTP": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SRTPEncryptionKeySizes": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SRTPKeyingMethods": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.SignalingProtocols": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.ToneDescriptionsEditable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.ToneFileFormats": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.ToneGeneration": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.Capabilities.VoicePortTests": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.PhyInterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.Description": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.InterfaceID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.PhyPort": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.Tests.PhoneConnectivity": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.Tests.TestSelector": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.Tests.TestState": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterface.{i}.Tests.X_RDK_TestResult": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.PhyInterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfileNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.ButtonNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.ButtonMessage": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.ButtonName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.FacilityAction": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.FacilityActionArgument": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.QuickDialNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.Button.{i}.UserAccess": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.ButtonNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ButtonMap.NumberOfButtons": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.DTMFMethod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.DTMFMethodG711": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.DigitMap": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.DigitMapEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxPassThrough": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxT38.BitRate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxT38.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxT38.HighSpeedPacketRate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxT38.HighSpeedRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxT38.LowSpeedRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.FaxT38.TCFMethod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.AuthPassword": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.DSCPMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.EthernetPriorityMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.Gatekeeper": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.GatekeeperID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.GatekeeperPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.H235Authentication": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.SendersID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.TimeToLive": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.H323.VLANIDMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.LineNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallState": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.AnonymousCalEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.AnonymousCallBlockEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardOnBusyEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardOnBusyNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardOnNoAnswerEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardOnNoAnswerNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardOnNoAnswerRingCount": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardUnconditionalEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallForwardUnconditionalNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallReturnEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallTransferEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallWaitingEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallWaitingStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallerIDEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallerIDName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.CallerIDNameEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.ConferenceCallingSessionCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.ConferenceCallingStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.DoNotDisturbEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.MWIEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.MaxSessions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.MessageWaiting": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.RepeatDialEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.X_RDK-Central_COM_ConferenceCallingEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.X_RDK-Central_COM_HoldEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.CallingFeatures.X_RDK-Central_COM_PhoneCallerIDEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.ListNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.BitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.Codec": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.EntryID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.PacketizationPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.Priority": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.List.{i}.SilenceSuppression": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.ListNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.ReceiveBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.ReceiveCodec": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.ReceiveSilenceSuppression": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.TransmitBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.TransmitCodec": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.TransmitPacketizationPeriod": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Codec.TransmitSilenceSuppression": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.DirectoryNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.H323.H323ID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.MGCP.LineName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.PhyReferenceList": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.RingMuteStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.RingVolumeStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.DescriptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.EntryID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.RingEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.RingFile": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.RingName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Description.{i}.RingPattern": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.DescriptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Event.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.EventNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Event.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Event.{i}.Function": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Event.{i}.RingID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.EventNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Pattern.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.PatternNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Pattern.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Pattern.{i}.Duration": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Pattern.{i}.EntryID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Pattern.{i}.NextEntryID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.Pattern.{i}.RingerOn": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Ringer.PatternNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.AuthPassword": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.AuthUserName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribe.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribeNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribe.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribe.{i}.AuthPassword": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribe.{i}.AuthUserName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribe.{i}.Event": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.EventSubscribeNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SIP.URI": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Session.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SessionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Session.{i}.FarEndIPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Session.{i}.FarEndUDPPort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Session.{i}.LocalUDPPort": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Session.{i}.SessionDuration": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Session.{i}.SessionStartTime": {
+      "access": [
+        "read"
+      ],
+      "type": "dateTime",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.SessionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.AverageFarEndInterarrivalJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.AverageReceiveInterarrivalJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.AverageRoundTripDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.CallsDropped": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.FarEndInterarrivalJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.FarEndPacketLossRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.IncomingCallsAnswered": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.IncomingCallsConnected": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.IncomingCallsFailed": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.IncomingCallsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.OutgoingCallsAnswered": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.OutgoingCallsAttempted": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.OutgoingCallsConnected": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.OutgoingCallsFailed": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.Overruns": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.PacketsLost": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.ReceiveInterarrivalJitter": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.ReceivePacketLossRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.ResetStatistics": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.RoundTripDelay": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.ServerDownTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.TotalCallTime": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Stats.Underruns": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.VoiceProcessing.EchoCancellationEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.VoiceProcessing.EchoCancellationInUse": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.VoiceProcessing.EchoCancellationTail": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.VoiceProcessing.ReceiveGain": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.VoiceProcessing.TransmitGain": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Line.{i}.X_RDK_OutboundProxyAddresses": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.LineNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.AllowPiggybackEvents": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.CallAgent1": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.CallAgent2": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.CallAgentPort1": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.CallAgentPort2": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.DSCPMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.Domain": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.EthernetPriorityMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.LocalPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.MaxRetranCount": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.RegisterMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.RetranIntervalTimer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.SendRSIPImmediately": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.User": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MGCP.VLANIDMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.MaxSessions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ModemPassThrough": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NonVoiceBandwidthReservedDownstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NonVoiceBandwidthReservedUpstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberOfLines": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.InterDigitTimerOpen": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.InterDigitTimerStd": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.InvalidNumberTone": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.MaximumNumberOfDigits": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.MinimumNumberOfDigits": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfoNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.DialTone": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.FacilityAction": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.FacilityActionArgument": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.NumberOfDigitsToRemove": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.PosOfDigitsToRemove": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.PrefixMaxNumberOfDigits": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.PrefixMinNumberOfDigits": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfo.{i}.PrefixRange": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfoMaxEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.NumberingPlan.PrefixInfoNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.PSTNFailOver": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.DSCPMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.EthernetPriorityMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.LocalPortMax": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.LocalPortMin": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.RTCP.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.RTCP.LocalCName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.RTCP.TxRepeatInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.BlockPayloadType": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.DTMFRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.FaxAndModemRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.MaxSessionsUsingRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.ModemRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.PayloadType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.Redundancy.VoiceRedundancy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.SRTP.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.SRTP.EncryptionKeySizes": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.SRTP.KeyingMethods": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.TelephoneEventPayloadType": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.VLANIDMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.RTP.X_RDK_SKBMark": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Region": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Reset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.DSCPMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EthernetPriorityMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribeNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.Event": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.ExpireTime": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.Notifier": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.NotifierPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribe.{i}.NotifierTransport": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.EventSubscribeNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.InboundAuth": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.InboundAuthPassword": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.InboundAuthUsername": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.InviteExpires": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.Organization": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.OutboundProxy": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.OutboundProxyPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ProxyServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ProxyServerPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ProxyServerTransport": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ReInviteExpires": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegisterExpires": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegisterRetryInterval": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegistersMinExpires": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegistrarServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegistrarServerPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegistrarServerTransport": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.RegistrationPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMap.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMapNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMap.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMap.{i}.SIPResponseNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMap.{i}.TextMessage": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMap.{i}.Tone": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.ResponseMapNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerA": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerB": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerC": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerD": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerE": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerF": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerG": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerH": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerI": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerJ": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerK": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerT1": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerT2": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.TimerT4": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.UseCodecPriorityInSDPResponse": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.UserAgentDomain": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.UserAgentPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.UserAgentTransport": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.VLANIDMark": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.X_RDK-Central_COM_ConferencingURI": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.X_RDK-Central_COM_NetworkDisconnect": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.X_RDK_PRACKRequired": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SIP.X_RDK_SKBMark": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.STUNEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.STUNServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ServiceProviderInfo.ContactPhoneNumber": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ServiceProviderInfo.EmailAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ServiceProviderInfo.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.ServiceProviderInfo.URL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.SignalingProtocol": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.DescriptionNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.EntryID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.ToneEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.ToneFile": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.ToneName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.TonePattern": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.ToneRepetitions": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Description.{i}.ToneText": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.DescriptionNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Event.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.EventNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Event.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Event.{i}.Function": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Event.{i}.ToneID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.EventNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.PatternNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Duration": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.EntryID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Frequency1": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Frequency2": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Frequency3": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Frequency4": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.ModulationFrequency": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.ModulationPower": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.NextEntryID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Power1": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Power2": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Power3": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.Power4": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.Pattern.{i}.ToneOn": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.Tone.PatternNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.X_RDK-Central_COM_DigitMap": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.X_RDK-Central_COM_EmergencyDigitMap": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.X_RDK-Central_COM_SDigitTimer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfile.{i}.X_RDK-Central_COM_ZDigitTimer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.VoiceProfileNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_BoundIfName": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_BoundIpAddr": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Debug.CCTKTraceGroup": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Debug.CCTKTraceLevel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Debug.LogServer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Debug.LogServerPort": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Debug.ModuleLogLevels": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_DisableLoopCurrentUntilRegistered": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_FactoryReset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Firewall_Rule_Data": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_IpAddressFamily": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceService.{i}.X_RDK_Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.VoiceServiceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.X_RDK_Report.Voice.Default.OverrideTTL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.X_RDK_Report.Voice.Default.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.X_RDK_Report.Voice.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.X_RDK_Report.Voice.ReportingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.X_RDK_Report.Voice.Schema": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.Services.X_RDK_Report.Voice.SchemaID": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.X_RDK_TelcoVoice.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    },
+    "Device.X_RDK_TelcoVoice.DatamodelVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkTelcoVoiceManager_v1.xml"
+      }
+    }
+  }
+}

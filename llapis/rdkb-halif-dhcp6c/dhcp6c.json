@@ -1,0 +1,48 @@
+{
+  "component": "dhcp6c",
+  "repo_dir": "rdkb-halif-dhcp6c",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/dhcp6cApi.h",
+      "api_count": 2,
+      "apis": [
+        {
+          "name": "ert_dhcp6c_get_info",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "dhcp6cInfo_t *",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int ert_dhcp6c_get_info(dhcp6cInfo_t *pInfo);",
+          "brief": "Retrieves information about the E-Router (Edge Router) DHCPv6 client. This function fetches the current state and configuration details of the E-Router DHCPv6 client and stores them in the `dhcp6cInfo_t` structure pointed to by `pInfo`. with the E-Router DHCPv6 client information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. STATUS_SUCCESS - The E-Router information was successfully retrieved. STATUS_FAILURE - An error occurred while retrieving the information. @TODO: Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 88
+        },
+        {
+          "name": "ecm_dhcp6c_get_info",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "dhcp6cInfo_t *",
+              "name": "pInfo"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int ecm_dhcp6c_get_info(dhcp6cInfo_t *pInfo);",
+          "brief": "Retrieves information about the ECM (Embedded Cable Modem) DHCPv6 client. This function fetches the current state and configuration details of the ECM DHCPv6 client and stores them in the `dhcp6cInfo_t` structure pointed to by `pInfo`. with the ECM DHCPv6 client information.",
+          "params_doc": {},
+          "return_doc": "The status of the operation. STATUS_SUCCESS - The ECM information was successfully retrieved. STATUS_FAILURE - An error occurred while retrieving the information. @TODO: Refactor return codes to use a more specific and informative enum (see general TODO comment).",
+          "deprecated": false,
+          "line": 107
+        }
+      ]
+    }
+  ],
+  "total_api_count": 2
+}

@@ -1,0 +1,1641 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkGponManager",
+    "moduleName": "TR181_RdkGponManager",
+    "version": "0.1.0-draft",
+    "description": "GPON (Gigabit Passive Optical Network) WAN interface management for RDK-B, providing TR-181 access to optical line status, ONT/ONU configuration, and GPON diagnostics.",
+    "sourceBranch": "main",
+    "sourceCommit": "77aeace3a099cea42876af9d8f87b5cbf4362289",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name RdkGponManager --module-name TR181_RdkGponManager --description GPON (Gigabit Passive Optical Network) WAN interface management for RDK-B, providing TR-181 access to optical line status, ONT/ONU configuration, and GPON diagnostics. --output gpon_interface.json"
+  },
+  "elements": {
+    "Device.X_RDK_ONT.Gem.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_ONT.GemNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.C-VLAN.Dei": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.C-VLAN.Pcp": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.C-VLAN.Vid": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.S-VLAN.Dei": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.S-VLAN.Pcp": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.S-VLAN.Vid": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Egress.Tagged": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.C-VLAN.Dei": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.C-VLAN.Pcp": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.C-VLAN.Vid": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.S-VLAN.Dei": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.S-VLAN.Pcp": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.S-VLAN.Vid": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.EthernetFlow.Ingress.Tagged": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.PortId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.ReceivedFrames": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.TrafficType": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gem.{i}.TransmittedFrames": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.GemNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.CorrectedFecBytes": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.CorrectedFecCodeWords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.FrameHecErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.FramesLost": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.HecErrorCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.PSBdHecErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.TotalFecCodeWords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Gtc.UnCorrectedFecCodeWords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Omci.MicErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Omci.RxBaseLineMessageCountValid": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Omci.RxExtendedMessageCountValid": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_ONT.PhysicalMediaNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.DACT": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.DIS": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.LCDG": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.LOF": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.LOS": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.MEM": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.MIS": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.PEE": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.RDI": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.ROGUE": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.SD": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.SF": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.SUF": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alarm.TF": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Bias.CurrentBias": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Cage": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Connector": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.ModuleFirmwareVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "String(256)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.ModuleName": {
+      "access": [
+        "read"
+      ],
+      "type": "String(256)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.ModuleVendor": {
+      "access": [
+        "read"
+      ],
+      "type": "String(256)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.ModuleVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "String(256)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.NominalBitRateDownstream": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.NominalBitRateUpstream": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.PerformanceThreshold.SignalDegrade": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.PerformanceThreshold.SignalFail": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.PonMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.RedundancyState": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.RxPower.SignalLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.RxPower.SignalLevelLowerThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.RxPower.SignalLevelUpperThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Temperature.CurrentTemp": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.TxPower.SignalLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.TxPower.SignalLevelLowerThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.TxPower.SignalLevelUpperThreshold": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Upstream": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMedia.{i}.Voltage.VoltageLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.PhysicalMediaNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.ActivationCounter": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.MicErrors": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.OnuId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.RegistrationState": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.RegistrationTimers.TO1": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.RegistrationTimers.TO2": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.RxMessageCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.SerialNumber": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.TxMessageCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Ploam.VendorId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.TR69.AssociatedTag": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.TR69.url": {
+      "access": [
+        "read"
+      ],
+      "type": "String(256)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDK_ONT.VeipNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.AdministrativeState": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Egress.Q-VLAN.Dei": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Egress.Q-VLAN.Pcp": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Egress.Q-VLAN.Vid": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Egress.Tagged": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Ingress.Q-VLAN.Dei": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Ingress.Q-VLAN.Pcp": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Ingress.Q-VLAN.Vid": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.EthernetFlow.Ingress.Tagged": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.InterDomainName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.InterfaceName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.MeId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.Veip.{i}.OperationalState": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    },
+    "Device.X_RDK_ONT.VeipNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "RdkGponManager.xml"
+      }
+    }
+  }
+}

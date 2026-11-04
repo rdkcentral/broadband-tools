@@ -1,0 +1,399 @@
+{
+  "component": "ethsw",
+  "repo_dir": "rdkb-halif-ethsw",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/ccsp_hal_ethsw.h",
+      "api_count": 20,
+      "apis": [
+        {
+          "name": "CcspHalEthSwInit",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT CcspHalEthSwInit(void);",
+          "brief": "Initializes the Ethernet Switch (EthSW) HAL. This function sets up the necessary resources and configurations for the EthSW HAL to function.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On successful initialization. RETURN_ERR - On failure (check for specific error details).",
+          "deprecated": false,
+          "line": 302
+        },
+        {
+          "name": "CcspHalEthSwGetPortStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "PCCSP_HAL_ETHSW_LINK_RATE",
+              "name": "pLinkRate"
+            },
+            {
+              "type": "PCCSP_HAL_ETHSW_DUPLEX_MODE",
+              "name": "pDuplexMode"
+            },
+            {
+              "type": "PCCSP_HAL_ETHSW_LINK_STATUS",
+              "name": "pStatus"
+            }
+          ],
+          "param_count": 4,
+          "signature": "INT CcspHalEthSwGetPortStatus(CCSP_HAL_ETHSW_PORT PortId, PCCSP_HAL_ETHSW_LINK_RATE pLinkRate, PCCSP_HAL_ETHSW_DUPLEX_MODE pDuplexMode, PCCSP_HAL_ETHSW_LINK_STATUS pStatus);",
+          "brief": "Retrieves the status information for a specified Ethernet switch port. This function fetches the link rate, duplex mode, and link status of the given port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, retrieval error).",
+          "deprecated": false,
+          "line": 318
+        },
+        {
+          "name": "CcspHalEthSwGetPortCfg",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "PCCSP_HAL_ETHSW_LINK_RATE",
+              "name": "pLinkRate"
+            },
+            {
+              "type": "PCCSP_HAL_ETHSW_DUPLEX_MODE",
+              "name": "pDuplexMode"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT CcspHalEthSwGetPortCfg(CCSP_HAL_ETHSW_PORT PortId, PCCSP_HAL_ETHSW_LINK_RATE pLinkRate, PCCSP_HAL_ETHSW_DUPLEX_MODE pDuplexMode);",
+          "brief": "Retrieves the configuration of a specified Ethernet switch port. This function fetches the configured link rate and duplex mode of the given port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, retrieval error).",
+          "deprecated": false,
+          "line": 338
+        },
+        {
+          "name": "CcspHalEthSwSetPortCfg",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "CCSP_HAL_ETHSW_LINK_RATE",
+              "name": "LinkRate"
+            },
+            {
+              "type": "CCSP_HAL_ETHSW_DUPLEX_MODE",
+              "name": "DuplexMode"
+            }
+          ],
+          "param_count": 3,
+          "signature": "INT CcspHalEthSwSetPortCfg(CCSP_HAL_ETHSW_PORT PortId, CCSP_HAL_ETHSW_LINK_RATE LinkRate, CCSP_HAL_ETHSW_DUPLEX_MODE DuplexMode);",
+          "brief": "Configures the link rate and duplex mode for a specific Ethernet switch port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, invalid configuration values).",
+          "deprecated": false,
+          "line": 355
+        },
+        {
+          "name": "CcspHalEthSwGetPortAdminStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "PCCSP_HAL_ETHSW_ADMIN_STATUS",
+              "name": "pAdminStatus"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT CcspHalEthSwGetPortAdminStatus(CCSP_HAL_ETHSW_PORT PortId, PCCSP_HAL_ETHSW_ADMIN_STATUS pAdminStatus);",
+          "brief": "Retrieves the administrative status of a specified Ethernet switch port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, retrieval error).",
+          "deprecated": false,
+          "line": 371
+        },
+        {
+          "name": "CcspHalEthSwSetPortAdminStatus",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "CCSP_HAL_ETHSW_ADMIN_STATUS",
+              "name": "AdminStatus"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT CcspHalEthSwSetPortAdminStatus(CCSP_HAL_ETHSW_PORT PortId, CCSP_HAL_ETHSW_ADMIN_STATUS AdminStatus);",
+          "brief": "Sets the administrative status of a specific Ethernet switch port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, invalid admin status value).",
+          "deprecated": false,
+          "line": 386
+        },
+        {
+          "name": "CcspHalEthSwSetAgingSpeed",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "INT",
+              "name": "AgingSpeed"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT CcspHalEthSwSetAgingSpeed(CCSP_HAL_ETHSW_PORT PortId, INT AgingSpeed);",
+          "brief": "Sets the aging speed for the specified Ethernet switch port. This function configures the aging speed for a given port on the Ethernet switch. The aging speed determines how long a MAC address entry remains in the switch's forwarding table without receiving traffic.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, invalid aging speed value).",
+          "deprecated": false,
+          "line": 403
+        },
+        {
+          "name": "CcspHalEthSwLocatePortByMacAddress",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "unsigned char *",
+              "name": "mac"
+            },
+            {
+              "type": "INT *",
+              "name": "port"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT CcspHalEthSwLocatePortByMacAddress(unsigned char *mac, INT *port);",
+          "brief": "Locates the port associated with a given MAC address on a MoCA or Ethernet switch. This function searches for a specific MAC address in the MoCA or Ethernet switch's MAC address tables. - 0: MoCA port - 1-4: Ethernet port",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success (MAC address found and port stored in `port`). RETURN_ERR - On failure (e.g., MAC address not found, invalid input parameters).",
+          "deprecated": false,
+          "line": 419
+        },
+        {
+          "name": "CcspHalExtSw_getAssociatedDevice",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "ULONG *",
+              "name": "output_array_size"
+            },
+            {
+              "type": "eth_device_t **",
+              "name": "output_struct"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT CcspHalExtSw_getAssociatedDevice(ULONG *output_array_size, eth_device_t **output_struct);",
+          "brief": "Retrieves information about associated Ethernet devices. This function populates an array with details of connected devices and returns the array size. **Important:** The HAL allocates memory for the device array (`output_struct`). The caller is responsible for freeing this memory.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointers, memory allocation issues, or retrieval errors).",
+          "deprecated": false,
+          "line": 472
+        },
+        {
+          "name": "CcspHalExtSw_ethAssociatedDevice_callback_register",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "CcspHalExtSw_ethAssociatedDevice_callback",
+              "name": "callback_proc"
+            }
+          ],
+          "param_count": 1,
+          "signature": "void CcspHalExtSw_ethAssociatedDevice_callback_register(CcspHalExtSw_ethAssociatedDevice_callback callback_proc);",
+          "brief": "Registers a callback function for Ethernet client association/disassociation events.",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 492
+        },
+        {
+          "name": "CcspHalExtSw_ethPortConfigure",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "ifname"
+            },
+            {
+              "type": "BOOLEAN",
+              "name": "WanMode"
+            }
+          ],
+          "param_count": 2,
+          "signature": "int CcspHalExtSw_ethPortConfigure(char *ifname, BOOLEAN WanMode);",
+          "brief": "Configures an Ethernet port for WAN functionality. This function enables or disables the Ethernet WAN feature on a specific port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid interface name, configuration error).",
+          "deprecated": false,
+          "line": 513
+        },
+        {
+          "name": "CcspHalExtSw_getEthWanEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN *",
+              "name": "pFlag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT CcspHalExtSw_getEthWanEnable(BOOLEAN *pFlag);",
+          "brief": "Retrieves the Ethernet WAN enable status. - true (1): Ethernet WAN is enabled. - false (0): Ethernet WAN is disabled.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer).",
+          "deprecated": false,
+          "line": 531
+        },
+        {
+          "name": "CcspHalExtSw_setEthWanEnable",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "BOOLEAN",
+              "name": "Flag"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT CcspHalExtSw_setEthWanEnable(BOOLEAN Flag);",
+          "brief": "Enables or disables Ethernet WAN functionality. - true (1): Enable Ethernet WAN. - false (0): Disable Ethernet WAN.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure.",
+          "deprecated": false,
+          "line": 544
+        },
+        {
+          "name": "CcspHalExtSw_getCurrentWanHWConf",
+          "return_type": "BOOLEAN",
+          "params": [],
+          "param_count": 0,
+          "signature": "BOOLEAN CcspHalExtSw_getCurrentWanHWConf();",
+          "brief": "Retrieves the current hardware (HW) WAN configuration status.",
+          "params_doc": {},
+          "return_doc": "The current WAN HW configuration status: TRUE - WAN is enabled. FALSE - LAN is enabled.",
+          "deprecated": false,
+          "line": 556
+        },
+        {
+          "name": "CcspHalExtSw_getEthWanPort",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT *",
+              "name": "pPort"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT CcspHalExtSw_getEthWanPort(UINT *pPort);",
+          "brief": "Retrieves the Ethernet WAN port number. This function retrieves the numerical index of the Ethernet port currently configured for WAN functionality.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid pointer, retrieval error).",
+          "deprecated": false,
+          "line": 570
+        },
+        {
+          "name": "CcspHalExtSw_setEthWanPort",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "UINT",
+              "name": "Port"
+            }
+          ],
+          "param_count": 1,
+          "signature": "INT CcspHalExtSw_setEthWanPort(UINT Port);",
+          "brief": "Sets the Ethernet WAN interface/port number. This function configures which Ethernet port will be used for the WAN connection.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port number, configuration error).",
+          "deprecated": false,
+          "line": 583
+        },
+        {
+          "name": "CcspHalEthSwGetEthPortStats",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "CCSP_HAL_ETHSW_PORT",
+              "name": "PortId"
+            },
+            {
+              "type": "PCCSP_HAL_ETH_STATS",
+              "name": "pStats"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT CcspHalEthSwGetEthPortStats(CCSP_HAL_ETHSW_PORT PortId, PCCSP_HAL_ETH_STATS pStats);",
+          "brief": "Retrieves statistics for a specified Ethernet switch port. This function populates the provided structure with various statistics about the specified Ethernet switch port.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., invalid port ID, retrieval error).",
+          "deprecated": false,
+          "line": 597
+        },
+        {
+          "name": "GWP_RegisterEthWan_Callback",
+          "return_type": "void",
+          "params": [
+            {
+              "type": "appCallBack *",
+              "name": "obj"
+            }
+          ],
+          "param_count": 1,
+          "signature": "void GWP_RegisterEthWan_Callback(appCallBack *obj);",
+          "brief": "Registers RDKB callback functions for Ethernet WAN events.",
+          "params_doc": {},
+          "return_doc": "",
+          "deprecated": false,
+          "line": 641
+        },
+        {
+          "name": "GWP_GetEthWanLinkStatus",
+          "return_type": "INT",
+          "params": [],
+          "param_count": 0,
+          "signature": "INT GWP_GetEthWanLinkStatus();",
+          "brief": "Retrieves the current status of the Ethernet WAN (EthWAN) link.",
+          "params_doc": {},
+          "return_doc": "Status of the EthWAN link: 1 - Link is up (active). 0 - Link is down (inactive). < 0 - Error occurred (check errno for details).",
+          "deprecated": false,
+          "line": 651
+        },
+        {
+          "name": "GWP_GetEthWanInterfaceName",
+          "return_type": "INT",
+          "params": [
+            {
+              "type": "unsigned char *",
+              "name": "Interface"
+            },
+            {
+              "type": "ULONG",
+              "name": "maxSize"
+            }
+          ],
+          "param_count": 2,
+          "signature": "INT GWP_GetEthWanInterfaceName(unsigned char *Interface, ULONG maxSize);",
+          "brief": "Retrieves the name of the Ethernet WAN (EthWAN) interface. This function populates the provided buffer with the name of the currently active EthWAN interface.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: RETURN_OK - On success. RETURN_ERR - On failure (e.g., null pointer, insufficient buffer size).",
+          "deprecated": false,
+          "line": 665
+        }
+      ]
+    }
+  ],
+  "total_api_count": 20
+}

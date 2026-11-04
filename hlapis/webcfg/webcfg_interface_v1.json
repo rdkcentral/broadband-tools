@@ -1,0 +1,192 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "webcfg",
+    "moduleName": "webcfg",
+    "version": "0.1.0-draft",
+    "description": "WebPA/WebConfig client implementation for RDK-B, applying configuration blobs (subdocs) received from the cloud.",
+    "sourceBranch": "master",
+    "sourceCommit": "4b54021e8d34cc889acfb7c08815dc4d4b151302",
+    "generated": "2026-08-21",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --source-dir src --name webcfg --module-name webcfg --description WebPA/WebConfig client implementation for RDK-B, applying configuration blobs (subdocs) received from the cloud. --output webcfg_interface.json"
+  },
+  "elements": {
+    "Device.X_RDK_WebConfig.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements1",
+        "getHandler": "webcfgDataGetHandler",
+        "setHandler": "webcfgDataSetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.FetchCachedBlob()": {
+      "access": [
+        "invokeSync"
+      ],
+      "description": "",
+      "input": [],
+      "output": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements1",
+        "handler": "fetchCachedBlobHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.ForceSync": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "if !defined (FEATURE_SUPPORT_MQTTCM)"
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements2",
+        "getHandler": "webcfgFrGetHandler",
+        "setHandler": "webcfgFrSetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.RfcEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements1",
+        "getHandler": "webcfgRfcGetHandler",
+        "setHandler": "webcfgRfcSetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.SupplementaryServiceUrls.Telemetry": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "if !defined (FEATURE_SUPPORT_MQTTCM)"
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements2",
+        "getHandler": "webcfgTelemetryGetHandler",
+        "setHandler": "webcfgTelemetrySetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.SupportedDocs": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements1",
+        "getHandler": "webcfgSupportedDocsGetHandler",
+        "setHandler": "webcfgSupportedDocsSetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.SupportedSchemaVersion": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements1",
+        "getHandler": "webcfgSupportedVersionGetHandler",
+        "setHandler": "webcfgSupportedVersionSetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.URL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "if !defined (FEATURE_SUPPORT_MQTTCM)"
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements2",
+        "getHandler": "webcfgUrlGetHandler",
+        "setHandler": "webcfgUrlSetHandler"
+      }
+    },
+    "Device.X_RDK_WebConfig.webcfgSubdocForceReset": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "webcfg_rbus.c",
+        "table": "dataElements1",
+        "getHandler": "webcfgSubdocForceResetGetHandler",
+        "setHandler": "webcfgSubdocForceResetSetHandler",
+        "subscribeHandler": "resetEventSubHandler"
+      }
+    }
+  }
+}

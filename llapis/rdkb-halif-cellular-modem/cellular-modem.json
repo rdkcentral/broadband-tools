@@ -1,0 +1,55 @@
+{
+  "component": "cellular-modem",
+  "repo_dir": "rdkb-halif-cellular-modem",
+  "generated_at": "2026-08-28T20:20:46Z",
+  "headers": [
+    {
+      "file": "include/cellular_modem_hal_api.h",
+      "api_count": 3,
+      "apis": [
+        {
+          "name": "Modem_FactoryReset",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int Modem_FactoryReset(void);",
+          "brief": "Performs a factory reset on the modem. Resets the modem to its default factory settings, erasing any custom configurations and restoring all settings to their original state. This is typically used to resolve software issues or to clean the configuration before a new setup.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On successful factory reset of the modem. STATUS_FAILED - On failure. Potential failure reasons include: - Failure to access or modify configuration storage - Insufficient permissions to perform the reset - Hardware or firmware issues that prevent resetting - Interruptions during the reset process",
+          "deprecated": false,
+          "line": 72
+        },
+        {
+          "name": "Modem_Reboot",
+          "return_type": "int",
+          "params": [],
+          "param_count": 0,
+          "signature": "int Modem_Reboot(void);",
+          "brief": "Reboots the modem. Initiates a reboot of the modem hardware. This operation attempts to safely shutdown and restart the modem, ensuring that all services are cleanly restarted. This is typically used to apply new settings or recover from an unstable state.",
+          "params_doc": {},
+          "return_doc": "Status of the reboot operation: STATUS_SUCCESS - On successful reboot of the modem. STATUS_FAILED - On failure. Potential failure reasons include: - Inability to secure necessary system resources for reboot - Failure in initial shutdown phase of the modem - Hardware or firmware issues preventing reboot - Security or permission restrictions",
+          "deprecated": false,
+          "line": 90
+        },
+        {
+          "name": "Modem_Firmware_Version",
+          "return_type": "int",
+          "params": [
+            {
+              "type": "char *",
+              "name": "firmware_version"
+            }
+          ],
+          "param_count": 1,
+          "signature": "int Modem_Firmware_Version(char *firmware_version);",
+          "brief": "Retrieves the current firmware version of the modem. This function retrieves the modem's firmware version and stores it in the provided buffer.",
+          "params_doc": {},
+          "return_doc": "Status of the operation: STATUS_SUCCESS - On success. STATUS_FAILED - On failure (e.g., invalid parameter, retrieval error).",
+          "deprecated": false,
+          "line": 103
+        }
+      ]
+    }
+  ],
+  "total_api_count": 3
+}

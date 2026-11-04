@@ -1,0 +1,2919 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "RdkCellularManager",
+    "moduleName": "RdkCellularManager",
+    "version": "0.1.0-draft",
+    "description": "Cellular modem interface management for RDK-B, providing TR-181 access to modem hardware, SIM/UICC management, network registration, and cellular WAN packet data connectivity.",
+    "sourceBranch": "develop",
+    "sourceCommit": "6ca39db8a0e7d638d7301a4871374a4b5c562501",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name RdkCellularManager --module-name RdkCellularManager --description Cellular modem interface management for RDK-B, providing TR-181 access to modem hardware, SIM/UICC management, network registration, and cellular WAN packet data connectivity. --output cellcom_interface.json"
+  },
+  "elements": {
+    "Device.Cellular.AccessPoint.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.AccessPointNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": "Cellular_AccessPoint_AddEntry_rbus",
+        "delFunction": "Cellular_AccessPoint_DeleteEntry_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.Apn": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamBoolValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.Password": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.Username": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.X_RDK_ApnAuthentication": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.X_RDK_DefaultProfile": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamBoolValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.X_RDK_IpAddressFamily": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.X_RDK_PdpInterfaceConfig": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamStringValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.X_RDK_ProfileId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPoint.{i}.X_RDK_Roaming": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetParamBoolValue_rbus",
+        "setHandler": "Cellular_AccessPoint_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.AccessPointNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_AccessPoint_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.CellularConfig": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus",
+        "setHandler": "Cellular_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.Interface.{i}.Alias": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.CurrentAccessTechnology": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamBoolValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.IMEI": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.MaxRegistrationRetries": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.PreferredAccessTechnologies": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.RSRP": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.RSRQ": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.RSSI": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.RegistrationRetries": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.RegistrationRetryTimer": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.Status": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.SupportedAccessTechnologies": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.Upstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "ifndef WAN_MANAGER_UNIFICATION_ENABLED"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamBoolValue_rbus",
+        "setHandler": "Cellular_Interface_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_AreaCode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_BandInfo": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.Interface.{i}.X_RDK_CellInfoNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.GPS": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.GlobalCellId": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.IsServing": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamBoolValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.MCC": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.MNC": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.OperatorName": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.PhysicalCellId": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.RAT": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.RFCN": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.RSRP": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.RSRQ": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.RSSI": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.ScanType": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.SectorId": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.TA": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfo.{i}.TAC": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_CellInfoNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_CellInfo_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.Interface.{i}.X_RDK_ContextProfileNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Apn": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.IpAddressFamily": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv4Adress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv4Gateway": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv4PrimaryDns": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv4SecondaryDns": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv4SubnetMask": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv6Address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv6Gateway": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv6PrimaryDns": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Ipv6SecondaryDns": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.MtuSize": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfile.{i}.Type": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ContextProfileNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "ContextProfile_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_GlobalCellId": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Identification.Iccid": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Identification_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Identification.Imei": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Identification_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_LinkAvailableStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamBoolValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.Interface.{i}.X_RDK_NeighborCellNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.AreaCode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.CellId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.PlmnId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.Rat": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.ReceivedSignal": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetParamIntValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCell.{i}.Rfcn": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_NeighborCellNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NeighborCell_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PhyConnectedStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamBoolValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworks.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworksNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworks.{i}.Allowed": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "AvailableNetworks_GetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworks.{i}.Mcc": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "AvailableNetworks_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworks.{i}.Mnc": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "AvailableNetworks_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworks.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "AvailableNetworks_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.AvailableNetworksNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "AvailableNetworks_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.HomeNetwork.Mcc": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "HomeNetwork_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.HomeNetwork.Mnc": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "HomeNetwork_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.HomeNetwork.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "HomeNetwork_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.NetworkInUse.Mcc": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NetworkInUse_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.NetworkInUse.Mnc": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NetworkInUse_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.NetworkInUse.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "NetworkInUse_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.RoamingEnable": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "PlmnAccess_GetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnAccess.RoamingStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "PlmnAccess_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_PlmnId": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_RAT": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_RFCN": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_RadioEnvConditions": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_RegisteredService": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_SNR": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_ServingCellId": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.DownStreamMaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.GFOUserBytesReceived": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.GFOUserBytesSent": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.PacketsReceivedDrop": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.PacketsSentDrop": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.TotalUserBytesReceived": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.TotalUserBytesSent": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.UpStreamMaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_GetParamUlongValue_rbus"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_Statistics.UserResetCount": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "X_RDK_Statistics_UserResetCount_GetParamUlongValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscriptionHandler"
+      }
+    },
+    "Device.Cellular.Interface.{i}.X_RDK_TRX": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetParamIntValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_Interface_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_ControlInterface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_ControlInterfaceStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_DataInterface": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_DataInterfaceLink": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_DeviceManagement.FactoryReset": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "DeviceManagement_GetParamBoolValue_rbus",
+        "setHandler": "DeviceManagement_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_DeviceManagement.Imei": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "DeviceManagement_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_DeviceManagement.RebootDevice": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "DeviceManagement_GetParamBoolValue_rbus",
+        "setHandler": "DeviceManagement_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Enable": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamBoolValue_rbus",
+        "setHandler": "Cellular_SetParamBoolValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.Application": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "EuiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.EIccid": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "EuiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.FormFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "EuiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.Imei": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "EuiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfile.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.X_RDK_Euicc.MnoProfileNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfile.{i}.Iccid": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "MnoProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfile.{i}.Imsi": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "MnoProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfile.{i}.Msisdn": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "MnoProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfile.{i}.PowerEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "MnoProfile_GetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfile.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "MnoProfile_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.MnoProfileNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "MnoProfile_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.PowerEnable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "EuiccSlot_GetParamBoolValue_rbus",
+        "setHandler": "EuiccSlot_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Euicc.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "EuiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Firmware.CurrentImageVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Firmware_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Firmware.FallbackImageVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Firmware_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_HardwareRevision": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Model": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_SpeedTest.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE",
+        "ifdef RDK_SPEEDTEST_LTE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "SpeedTest_GetParamBoolValue_rbus",
+        "setHandler": "SpeedTest_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Status": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus",
+        "subscribeHandler": "CellularMgrDmlSubscribeEventHandler"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "",
+      "numberOfEntriesElement": "Device.Cellular.X_RDK_UiccNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.Application": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamBoolValue_rbus",
+        "setHandler": "UiccSlot_SetParamBoolValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.FormFactor": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.Iccid": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.MnoName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.Msisdn": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Uicc.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetParamStringValue_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_UiccNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "UiccSlot_GetEntryCount_rbus"
+      }
+    },
+    "Device.Cellular.X_RDK_Vendor": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef RBUS_BUILD_FLAG_ENABLE"
+      ],
+      "source": {
+        "file": "cellularmgr_rbus_dml.c",
+        "table": "dataElements",
+        "getHandler": "Cellular_GetParamStringValue_rbus"
+      }
+    }
+  }
+}

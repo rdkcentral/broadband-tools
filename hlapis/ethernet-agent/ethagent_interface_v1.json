@@ -1,0 +1,1093 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspEthAgent",
+    "moduleName": "CcspEthAgent",
+    "version": "0.1.0-draft",
+    "description": "Ethernet interface management, status monitoring, and WAN-over-Ethernet failover for RDK-B broadband gateways.",
+    "sourceBranch": "develop",
+    "sourceCommit": "cca1062840ba656f3bba396dfd893432f01f58fa",
+    "generated": "2026-08-20",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --name CcspEthAgent --module-name CcspEthAgent --description Ethernet interface management, status monitoring, and WAN-over-Ethernet failover for RDK-B broadband gateways. --output ethagent_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AutowanFeatureSupport": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.Logging.xOpsDMEthLogEnabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_xOpsDeviceMgmt.Logging.xOpsDMEthLogPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Ethernet.InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Alias": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.CurrentBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.DuplexMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.LastChange": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.MaxBitRate": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.BroadcastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.BroadcastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.BytesReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.BytesSent": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.DiscardPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.DiscardPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.ErrorsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.ErrorsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.MulticastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.MulticastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.PacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.PacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.UnicastPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.UnicastPacketsSent": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Stats.UnknownProtoPacketsReceived": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.Upstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.X_CISCO_COM_AssociatedDevice": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.X_RDKCENTRAL-COM_AssociatedDevice.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "256",
+      "numberOfEntriesElement": "Device.Ethernet.Interface.{i}.X_RDKCENTRAL-COM_AssociatedDeviceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Ethernet.Interface.{i}.X_RDKCENTRAL-COM_AssociatedDevice.{i}.MACAddress": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.Interface.{i}.X_RDKCENTRAL-COM_AssociatedDeviceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_EthHost_Sync": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_Interface.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Ethernet.X_RDKCENTRAL-COM_InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_Interface.{i}.X_RDKCENTRAL-COM_Name": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_Interface.{i}.X_RDKCENTRAL-COM_Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_Interface.{i}.X_RDKCENTRAL-COM_Upstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_Interface.{i}.X_RDKCENTRAL-COM_WanStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_Interface.{i}.X_RDKCENTRAL-COM_WanValidated": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_AGENT"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_WAN.Enabled": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDKCENTRAL-COM_WAN.Port": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.": {
+      "access": [
+        "read",
+        "addInstance",
+        "removeInstance"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.Ethernet.X_RDK_InterfaceNumberOfEntries",
+      "description": "",
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml",
+        "addFunction": "EthRdkInterface_AddEntry",
+        "delFunction": "EthRdkInterface_DelEntry"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.AddToLanBridge": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.LowerLayers": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.Name": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.PortCapability": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER",
+        "ifdef FEATURE_RDKB_AUTO_PORT_SWITCH"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.Status": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.Upstream": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.WanConfigPort": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.WanStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_Interface.{i}.WanValidated": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.Ethernet.X_RDK_InterfaceNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.ConfigureWan": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef AUTOWAN_ENABLE"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.CurrentOperationalMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef AUTOWAN_ENABLE"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.LastKnownOperationalMode": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef AUTOWAN_ENABLE"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.LinkDown": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "ethAgentRbusDataElements"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.LinkDownTimeout": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "ethAgentRbusDataElements"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.LinkStatus": {
+      "access": [
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "ethAgentRbusDataElements",
+        "subscribeHandler": "eventSubHandler"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.PostCfgWanFinalize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef AUTOWAN_ENABLE"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.RequestPhyStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef AUTOWAN_ENABLE"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_EthernetWAN.SelectedOperationalMode": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef AUTOWAN_ENABLE"
+      ],
+      "source": {
+        "file": "TR181-EthAgent.xml"
+      }
+    }
+  }
+}

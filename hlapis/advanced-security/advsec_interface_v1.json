@@ -1,0 +1,751 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspAdvSecurity",
+    "moduleName": "RDKCENTRAL_AdvSecurity",
+    "version": "0.1.0-draft",
+    "description": "TR-181 parameter management for RDK-B advanced security features: device fingerprinting, safe browsing, network flow monitoring (softflowd), and advanced parental controls.",
+    "sourceBranch": "develop",
+    "sourceCommit": "d4fc653a36e4529e7d16460dbe40da06e4edf113",
+    "generated": "2026-08-26",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config --name CcspAdvSecurity --module-name RDKCENTRAL_AdvSecurity --description TR-181 parameter management for RDK-B advanced security features: device fingerprinting, safe browsing, network flow monitoring (softflowd), and advanced parental controls. --output advsec_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedParentalControl.Activate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Blockpage": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Cachettl": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Cacheurl": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Endpoint": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.LookupTimeout": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.LookupTimeoutExceededCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.OtmDedupFqdn": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Threshold": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Timeout": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Ttl": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.Warnpage": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.SafeBrowsing.WhitelistMaxEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_AdvancedSecurity.Softflowd.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_DeviceFingerPrint.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_DeviceFingerPrint.EndpointURL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_DeviceFingerPrint.LogLevel": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_DeviceFingerPrint.LoggingPeriod": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_PrivacyProtection.Activate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecAgent.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecAgentRaptr.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecCujoTelemetryWiFiFP.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecDNSECHBlocking.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecDoHBlocking.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecSafeBrowsing.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecSentryAtTheEdge.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvSecTCPTrackerFilterDevices.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvanceSecurityCujoTelemetry.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvanceSecurityCujoTracer.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvanceSecurityUserSpace.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvancedParentalControl.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.AdvancedSecurityOTM.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.DeviceFingerPrintICMPv6.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.Levl.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.NetworkIntelligence.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.NetworkIntelligence.MemoryLimit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.PrivacyProtection.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.RabidFramework.DNSCacheSize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.RabidFramework.MacCacheSize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.RabidFramework.MemoryLimit": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WS-Discovery_Analysis.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_RFC.Feature.WifiDataCollection.Enable": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-AdvSecurity.xml"
+      }
+    }
+  }
+}

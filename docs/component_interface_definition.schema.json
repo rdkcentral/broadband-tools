@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rdkcentral.org/schemas/component-interface-definition.schema.json",
+  "title": "RDKB Component Interface Definition",
+  "description": "Machine-readable Component Interface Definition per RDKB High Level API Spec (Charles Moreman, RDKM, v0.1 draft, 2026-08-14), Section 6. Flat dotted-path key structure (as used by the WANMANAGER_*.json / eRT_*.json reference files) rather than the spec's illustrative nested object/element tree -- trivially convertible to that tree for dashboard tooling, but far easier to author, diff, and keep in sync with source. Adds an explicit 'access' operation list (Section 4: GET/SET/ADD INSTANCE/REMOVE INSTANCE/SUBSCRIBE ON CHANGE/SUBSCRIBE ON INTERVAL/NOTIFY/INVOKE SYNCHRONOUS/INVOKE ASYNCHRONOUS), first-class table objects with addInstance/removeInstance derived from func_AddEntry/func_DelEntry, and a 'source' block for auditability back to the repo.",
+  "type": "object",
+  "required": ["componentInterfaceDefinition", "elements"],
+  "additionalProperties": false,
+  "properties": {
+
+    "componentInterfaceDefinition": {
+      "type": "object",
+      "description": "Document-level metadata. Maps to Section 6's componentInterfaceDefinition header.",
+      "required": ["name", "version", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Component name that implements this interface, e.g. 'RdkWanManager'."
+        },
+        "moduleName": {
+          "type": "string",
+          "description": "CCSP moduleName as declared in the component's XML dataModelInfo, e.g. 'TR181_RdkWanManager'. Omit if not applicable (e.g. pure-rbus components with no CCSP XML)."
+        },
+        "version": {
+          "type": "string",
+          "description": "Document version in major.minor.revision format, per Section 6.",
+          "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?(-[A-Za-z0-9.]+)?$"
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-readable summary of what this component does."
+        },
+        "generated": {
+          "type": "string",
+          "format": "date",
+          "description": "Date this document was generated or last reviewed."
+        },
+        "generatedBy": {
+          "type": "string",
+          "description": "Tool invocation used to produce the derivable fields, for reproducibility, e.g. 'extract_all_dml.py --repo-root . --enable-flag RBUS_BUILD_FLAG_ENABLE --enable-flag WAN_MANAGER_UNIFICATION_ENABLED'. Omit for hand-authored documents."
+        },
+        "buildFlagsEvaluated": {
+          "type": "array",
+          "description": "Build flags treated as enabled (defined) when this document's 'flags' fields and element inclusion were evaluated. An element whose flags are not satisfied by this set may still be documented elsewhere (a different variant document) but is not part of THIS document's active scope.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "elements": {
+      "type": "object",
+      "description": "Map of complete data-model path (Section 5 naming convention: dot-separated, {i} for multi-instance, [Alias] addressing is a runtime concern and not enumerated here) to its definition. One entry per property, table, event, or method -- including the table objects themselves, not just their leaf children.",
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "#/$defs/propertyElement" },
+          { "$ref": "#/$defs/tableElement" },
+          { "$ref": "#/$defs/eventElement" },
+          { "$ref": "#/$defs/methodElement" }
+        ]
+      },
+      "propertyNames": {
+        "pattern": "^Device\\.",
+        "description": "Every key must be a full data-model path starting with 'Device.', per Section 5."
+      }
+    }
+  },
+
+  "$defs": {
+
+    "accessOperation": {
+      "type": "string",
+      "description": "One of the 9 High-Level API Operations defined in Section 4, spelled per that section's operation names (lower camelCase for JSON use).",
+      "enum": [
+        "read",
+        "write",
+        "addInstance",
+        "removeInstance",
+        "subscribeOnChange",
+        "subscribeOnInterval",
+        "notify",
+        "invokeSync",
+        "invokeAsync"
+      ]
+    },
+
+    "flagsArray": {
+      "type": "array",
+      "description": "Build-time feature-flag conditions gating this element, as literal preprocessor/PI conditions (e.g. 'ifdef RBUS_BUILD_FLAG_ENABLE', 'ifndef FEATURE_RDKB_DHCP_MANAGER'). Preserve the exact condition text rather than pre-evaluating it, so downstream tooling can filter per build variant. Use [\"\"] or [] if unconditional.",
+      "items": { "type": "string" }
+    },
+
+    "sourceRef": {
+      "type": "object",
+      "description": "Provenance back to the repository, for auditability. Fields vary by element type; unused fields should be omitted rather than set to null.",
+      "additionalProperties": false,
+      "properties": {
+        "file": { "type": "string", "description": "XML or .c/.h filename this element was declared or registered in." },
+        "table": { "type": "string", "description": "For rbus-registered elements: the rbusDataElement_t[] array variable name." },
+        "getHandler": { "type": "string" },
+        "setHandler": { "type": "string" },
+        "subscribeHandler": { "type": "string" },
+        "addFunction": { "type": ["string", "null"], "description": "For table elements: the XML func_AddEntry value, or null if the table does not support ADD INSTANCE." },
+        "delFunction": { "type": ["string", "null"], "description": "For table elements: the XML func_DelEntry value, or null if the table does not support REMOVE INSTANCE." },
+        "handler": { "type": "string", "description": "For method elements: the rbus method handler function name." }
+      }
+    },
+
+    "propertyElement": {
+      "type": "object",
+      "description": "A GET/SET-style leaf value. Corresponds to Section 3's 'Parameter' element kind.",
+      "required": ["elementType", "type", "access", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "elementType": { "const": "property" },
+        "type": {
+          "type": "string",
+          "description": "Data type. TR-181 primitives (boolean, string, unsignedInt, int, dateTime, base64, hexBinary) preferred; 'string(mapped)' indicates an XML type attribute with a colon-delimited enumeration mapping.",
+          "examples": ["boolean", "string", "unsignedInt", "int", "string(mapped)"]
+        },
+        "access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["read", "write", "subscribeOnChange", "subscribeOnInterval"]
+          },
+          "minItems": 1,
+          "description": "Must include 'read' at minimum. Include 'write' if a setHandler/writable XML flag is present. Include 'subscribeOnChange' if a non-null subscribe/event handler is registered -- do not assume false; check the source. addInstance/removeInstance/notify/invokeSync/invokeAsync are not valid for a property -- see tableElement/eventElement/methodElement."
+        },
+        "description": {
+          "type": "string",
+          "description": "Human-authored. What this value means and how it's used. Always manual -- not derivable from source."
+        },
+        "persistence": {
+          "type": "string",
+          "enum": ["yes", "no", ""],
+          "description": "Does this value survive a normal (non-factory) reboot? Always manual -- requires cross-referencing PSM/backup registration, not derivable from the rbus/XML declaration alone."
+        },
+        "defaultValue": {
+          "type": "string",
+          "description": "Factory-default value. Empty string if not applicable or not yet documented."
+        },
+        "expectedValues": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Enumeration of valid values for string/enum types (e.g. [\"true\",\"false\"] for boolean-as-string, or real state names like [\"Not Selected\",\"Validating\",\"Selected\"]). Empty array if free-form or not yet documented. Verify for accidental duplicates before publishing."
+        },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    },
+
+    "tableElement": {
+      "type": "object",
+      "description": "A multi-instance object (Section 5: 'Device.WiFi.Radio.{i}.'-style). First-class entry, not folded into its leaf children, so ADD/REMOVE INSTANCE support is documented once per table rather than omitted.",
+      "required": ["elementType", "access", "numberOfEntriesElement", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "elementType": { "const": "table" },
+        "access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["read", "addInstance", "removeInstance"]
+          },
+          "minItems": 1,
+          "description": "Always includes 'read'. Include 'addInstance'/'removeInstance' only if the underlying func_AddEntry/func_DelEntry (XML) or table add/remove callback (rbus) is actually present -- this varies per table (e.g. WanManager's Marking table supports it; Interface/CPEInterface/VirtualInterface do not) and must not be assumed uniform across a component. 'write'/'subscribeOnChange'/etc. are not valid on a table itself -- document those on its child elements."
+        },
+        "maxInstance": {
+          "type": "string",
+          "description": "Maximum instance count from XML's <maxInstance>, if declared. Empty string if unbounded or undeclared."
+        },
+        "numberOfEntriesElement": {
+          "type": "string",
+          "description": "Full path of the *NumberOfEntries element documenting the live instance count for this table, located directly above it per Section 5.",
+          "pattern": "^Device\\..*NumberOfEntries$"
+        },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    },
+
+    "eventElement": {
+      "type": "object",
+      "description": "A SUBSCRIBE/NOTIFY-only element with no GET/SET, per Section 5's optional '!' suffix convention (the '!' is a display/addressing convention, not part of the JSON key here).",
+      "required": ["elementType", "access", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "elementType": { "const": "event" },
+        "access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["subscribeOnChange", "subscribeOnInterval", "notify"]
+          },
+          "minItems": 1,
+          "description": "Typically [\"subscribeOnChange\", \"notify\"]. Must not include 'read', 'write', 'addInstance', 'removeInstance', 'invokeSync', or 'invokeAsync' -- an event has no GET/SET/method surface."
+        },
+        "description": { "type": "string" },
+        "eventProperties": {
+          "type": "array",
+          "description": "Payload fields delivered with the notification, per Section 5's MemUtilization example. Empty array if undocumented.",
+          "items": {
+            "type": "object",
+            "required": ["name", "type"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "type": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    },
+
+    "methodElement": {
+      "type": "object",
+      "description": "A command/RPC element, path ends in '()'. Corresponds to Section 4.8/4.9 INVOKE operations.",
+      "required": ["elementType", "access", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "elementType": { "const": "method" },
+        "access": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["invokeSync", "invokeAsync"]
+          },
+          "minItems": 1,
+          "description": "['invokeSync'], ['invokeAsync'], or both if the handler signature supports either calling convention (e.g. an rbus method registered with an asyncHandle parameter can typically be invoked either way -- confirm the intended usage in 'description' rather than assuming both are appropriate for every caller). No other access value is valid on a method."
+        },
+        "description": {
+          "type": "string",
+          "description": "What this method does and when to use it. Always manual."
+        },
+        "input": {
+          "type": "array",
+          "description": "Input parameters. Empty array if none or not yet documented -- do not omit the field.",
+          "items": { "$ref": "#/$defs/methodParam" }
+        },
+        "output": {
+          "type": "array",
+          "description": "Output parameters. Empty array if none or not yet documented.",
+          "items": { "$ref": "#/$defs/methodParam" }
+        },
+        "flags": { "$ref": "#/$defs/flagsArray" },
+        "source": { "$ref": "#/$defs/sourceRef" }
+      }
+    },
+
+    "methodParam": {
+      "type": "object",
+      "required": ["name", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    }
+  }
+}

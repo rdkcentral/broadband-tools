@@ -1,0 +1,77 @@
+{
+  "$schema": "https://cpokuru.github.io/CoreRDK-Broadband-Platform/schemas/hw-compat.schema.json",
+  "specVersion": "1.0",
+  "profileId": "ethwan-wifi-router",
+  "profileName": "EthWAN WiFi Router",
+  "cpu": {
+    "architecture": "arm64",
+    "family": "Cortex-A73/A53",
+    "minClockGHz": 1.8,
+    "minCores": 4,
+    "coreTopology": "dual-cluster"
+  },
+  "memory": {
+    "minRamMB": 1024
+  },
+  "storage": {
+    "minFlashMB": 512,
+    "type": "eMMC",
+    "partitionLayout": "A/B",
+    "filesystem": "UBI/UBIFS"
+  },
+  "referenceDevice": {
+    "name": "BPI-R4",
+    "soc": "MediaTek MT7988 (Filogic)",
+    "buildBranch": "rdkb-2025q4-kirkstone"
+  },
+  "peripherals": {
+    "connectivity": {
+      "wan": {
+        "required": true,
+        "interfaces": ["EthernetWAN"],
+        "minPorts": 1,
+        "notes": "1x GbE minimum. Primary WAN + WAN profile orchestration mandatory. Secondary/backup WAN, PPPoE, GRE, and IPv6 transition mechanisms (MAP-E/T, NAT64, DS-Lite, 464XLAT) are optional."
+      },
+      "lan": {
+        "required": "optional",
+        "interfaces": ["Ethernet"],
+        "notes": "Port management, link up/down detection, and link speed management are marked Optional in the RDK-B Component List; include if the SKU offers LAN ports."
+      },
+      "wifi": {
+        "required": true,
+        "requiredStandards": ["802.11n", "802.11ac (Wi-Fi 5)"],
+        "optionalStandards": ["802.11ax (Wi-Fi 6/6E)", "802.11be (Wi-Fi 7)"],
+        "requiredSecurity": ["WPA2"],
+        "notes": "NL80211 vendor HAL interface required."
+      },
+      "easyMesh": {
+        "required": false,
+        "role": "none",
+        "transport": "IEEE 1905 (optional)",
+        "notes": "EasyMesh is not mandatory for this profile; router can run standalone AP mode."
+      },
+      "bluetoothIot": {
+        "required": "optional",
+        "protocols": ["Matter", "Zigbee", "Thread"],
+        "notes": "Required only if Matter/Zigbee/Thread IoT support is enabled; BLE used for Matter commissioning."
+      }
+    },
+    "storageInterface": {
+      "types": ["eMMC", "SPI-NAND"],
+      "filesystem": "UBI/UBIFS",
+      "partitionLayout": "A/B",
+      "notes": "A/B partition layout recommended to support OTA firmware upgrade HAL."
+    },
+    "mediaTuner": {
+      "applicable": false,
+      "notes": "DOCSIS, xDSL, GPON/EPON, cellular, and MTA/voice hardware are all marked not applicable for this profile."
+    },
+    "diagnostics": {
+      "localWebUI": "optional",
+      "uart": "recommended",
+      "notes": "Residential HTML/HTTPS portal typically included; UART/debug console recommended for bring-up."
+    }
+  },
+  "validationStatus": "partial",
+  "lastValidated": "2026-08-25"
+}

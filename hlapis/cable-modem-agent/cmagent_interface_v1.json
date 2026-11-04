@@ -1,0 +1,2457 @@
+{
+  "componentInterfaceDefinition": {
+    "name": "CcspCMAgent",
+    "moduleName": "CcspCMAgent",
+    "version": "0.1.0-draft",
+    "description": "Cable modem management and TR-181 data model implementation for DOCSIS-based RDK-B gateway devices.",
+    "sourceBranch": "develop",
+    "sourceCommit": "9e9534374e4df0404dbf339c34f964c38189a831",
+    "generated": "2026-09-01",
+    "generatedBy": "tools/emit_spec_json.py --repo-root . --config-dir config-arm --name CcspCMAgent --module-name CcspCMAgent --description Cable modem management and TR-181 data model implementation for DOCSIS-based RDK-B gateway devices. --output cmagent_interface.json"
+  },
+  "elements": {
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_CableRfSignalStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadNow": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadProtocol": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareDownloadURL": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.DeviceInfo.X_RDKCENTRAL-COM_FirmwareToDownload": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.QOS.X_RDK_LldMarkingRules.Data": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.QOS.X_RDK_LldMarkingRules.Enable": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (ENABLE_LLD_SUPPORT)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "cmAgentLldRbusDataElements",
+        "getHandler": "getLLDBoolHandler",
+        "setHandler": "setLLDEnableBoolHandler",
+        "subscribeHandler": "lldEventSubHandler"
+      },
+      "type": "string"
+    },
+    "Device.X_CISCO_COM_CableModem.BPIState": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.BootFileName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMErrorCodewords.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_CableModem.CMErrorCodewordsNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMErrorCodewords.{i}.CorrectableCodewords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMErrorCodewords.{i}.UncorrectableCodewords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMErrorCodewords.{i}.UnerroredCodewords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMErrorCodewordsNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CMStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.ConfigureWan": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CoreVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.CustomWanConfigUpdate": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISConfigFileName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISDHCPAttempts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISDHCPStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISDataRegComplete": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISDownstreamDataRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISDownstreamRanging": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISDownstreamScanning": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISTftpAttempts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISTftpStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISUpstreamDataRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISUpstreamRanging": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISUpstreamScanning": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DOCSISVersion": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisLog.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_CableModem.DocsisLogNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisLog.{i}.Description": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisLog.{i}.EventID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisLog.{i}.EventLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisLog.{i}.Time": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisLogNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DocsisResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_CableModem.DownstreamChannelNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.ChannelID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.Correcteds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.Frequency": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.LockStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.Modulation": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.Octets": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.PowerLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.SNRLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannel.{i}.Uncorrectables": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamChannelNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.DownstreamServiceFlowParams": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.EnableLog": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.ErouterResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.Gateway": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6Address": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6BootFileName": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6Prefix": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6RebindTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6RenewTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6Router": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6TFTPServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.IPv6TimeServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.LeaseTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.LocalResetCount": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.LockedUpstreamChID": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.LoopDiagnosticsDetails": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.LoopDiagnosticsStart": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.MACAddress": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.MDDIPOverride": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.Market": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.MaxCpeAllowed": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.NetworkAccess": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.PostCfgWanFinalize": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.ProvIpType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.RebindTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.RenewTimeRemaining": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.RequestOperationalStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.RequestPhyStatus": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef FEATURE_RDKB_WAN_MANAGER"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.StartDSFrequency": {
+      "access": [
+        "read",
+        "write"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.SubnetMask": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.TFTPServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.TelephonyDHCPStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.TelephonyRegistrationStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.TelephonyTftpStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.TimeOffset": {
+      "access": [
+        "read"
+      ],
+      "type": "int",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.TimeServer": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.ToDStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpgradeServerIP": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_CISCO_COM_CableModem.UpstreamChannelNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.ChannelID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.ChannelType": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.Frequency": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.LockStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.Modulation": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.PowerLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannel.{i}.SymbolRate": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamChannelNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_CISCO_COM_CableModem.UpstreamServiceFlowParams": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.CableRfSignalStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "cmAgentRbusDataElements",
+        "getHandler": "getBoolHandler",
+        "subscribeHandler": "eventSubHandler"
+      },
+      "type": "string"
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChanNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.ChanIndicator": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.ChannelID": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.CyclicPrefix": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.FirstActiveSubcarrierNum": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.LastActiveSubcarrierNum": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.NcpFieldCrcFailures": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.NcpTotalFields": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.NumActiveSubcarriers": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.NumPilots": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.PlcFreq": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.PlcTotalCodewords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.PlcUnreliableCodewords": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.PowerLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.RollOffPeriod": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.SNRLevel": {
+      "access": [
+        "read"
+      ],
+      "type": "string",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.SubcarrierSpacing": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.SubcarrierZeroFreq": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChan.{i}.TimeInterleaverDepth": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.DsOfdmChanNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.LLD_Active": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdmaNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.ChannelId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.IsMuted": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.RangingAborteds": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.RangingStatus": {
+      "access": [
+        "read"
+      ],
+      "type": "string(mapped)",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.T3Exceededs": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.T3Timeouts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdma.{i}.T4Timeouts": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.StatusOfdmaNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.": {
+      "access": [
+        "read"
+      ],
+      "maxInstance": "128",
+      "numberOfEntriesElement": "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChanNumberOfEntries",
+      "description": "",
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML",
+        "addFunction": null,
+        "delFunction": null
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.ChannelId": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.ConfigChangeCt": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.CyclicPrefix": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.FirstActiveSubcarrierNum": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.LastActiveSubcarrierNum": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.NumActiveSubcarriers": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.NumSymbolsPerFrame": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.PreEqEnabled": {
+      "access": [
+        "read"
+      ],
+      "type": "boolean",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.RollOffPeriod": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.SubcarrierSpacing": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.SubcarrierZeroFreq": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChan.{i}.TxPower": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDKCENTRAL-COM_CableModem.UsOfdmaChanNumberOfEntries": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        ""
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDK_CableModem.DownstreamDiplexerSetting": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef _CM_HIGHSPLIT_SUPPORTED_"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDK_CableModem.UpstreamDiplexerSetting": {
+      "access": [
+        "read"
+      ],
+      "type": "unsignedInt",
+      "description": "",
+      "persistence": "",
+      "defaultValue": "",
+      "enumeration": [],
+      "flags": [
+        "ifdef _CM_HIGHSPLIT_SUPPORTED_"
+      ],
+      "source": {
+        "file": "TR181-CM.XML"
+      }
+    },
+    "Device.X_RDK_DOCSIS.LinkDown": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "cmAgentRbusDataElements",
+        "getHandler": "getBoolHandler",
+        "setHandler": "SetBoolHandler"
+      },
+      "type": "string"
+    },
+    "Device.X_RDK_DOCSIS.LinkDownTimeout": {
+      "access": [
+        "read",
+        "write",
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "cmAgentRbusDataElements",
+        "getHandler": "getuintHandler",
+        "setHandler": "SetUintHandler"
+      },
+      "type": "string"
+    },
+    "Device.X_RDK_DOCSIS.LinkStatus": {
+      "access": [
+        "read",
+        "subscribeOnChange"
+      ],
+      "description": "",
+      "output": [],
+      "flags": [
+        "if defined (WAN_FAILOVER_SUPPORTED)"
+      ],
+      "source": {
+        "file": "cosa_rbus_handler_apis.c",
+        "table": "cmAgentRbusDataElements",
+        "getHandler": "getBoolHandler",
+        "subscribeHandler": "eventSubHandler"
+      },
+      "type": "string"
+    }
+  }
+}

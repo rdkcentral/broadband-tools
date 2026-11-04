@@ -1,0 +1,77 @@
+{
+  "$schema": "https://cpokuru.github.io/CoreRDK-Broadband-Platform/schemas/hw-compat.schema.json",
+  "specVersion": "1.0",
+  "profileId": "ext-easymesh",
+  "profileName": "EXT EasyMesh",
+  "cpu": {
+    "architecture": "arm64",
+    "family": "Cortex-A73/A53",
+    "minClockGHz": 1.4,
+    "minCores": 4,
+    "coreTopology": "single-cluster"
+  },
+  "memory": {
+    "minRamMB": 512
+  },
+  "storage": {
+    "minFlashMB": 256,
+    "type": "eMMC",
+    "partitionLayout": "A/B",
+    "filesystem": "UBI/UBIFS"
+  },
+  "referenceDevice": {
+    "name": "BPI-R4",
+    "soc": "MediaTek MT7988 (Filogic)",
+    "buildBranch": "rdkb-2025q4-kirkstone"
+  },
+  "peripherals": {
+    "connectivity": {
+      "wan": {
+        "required": false,
+        "interfaces": [],
+        "minPorts": 0,
+        "notes": "Not applicable - no WAN interface in this profile."
+      },
+      "lan": {
+        "required": "optional",
+        "interfaces": ["Ethernet"],
+        "notes": "Wi-Fi and Ethernet backhaul both supported; at least one Ethernet port recommended for wired backhaul option."
+      },
+      "wifi": {
+        "required": true,
+        "requiredStandards": ["802.11n", "802.11ac (Wi-Fi 5)"],
+        "optionalStandards": ["802.11ax (Wi-Fi 6/6E)", "802.11be (Wi-Fi 7)"],
+        "requiredSecurity": ["WPA2"],
+        "notes": "Wi-Fi AP fronthaul mandatory for extender role."
+      },
+      "easyMesh": {
+        "required": true,
+        "role": "agent-only",
+        "transport": "IEEE 1905",
+        "notes": "EasyMesh R6 Agent-Only role and IEEE 1905 transport are both mandatory for this profile."
+      },
+      "bluetoothIot": {
+        "required": "optional",
+        "protocols": ["Matter", "Zigbee", "Thread"],
+        "notes": "Same IoT feature set as EthWAN WiFi Router applies if enabled on the extender."
+      }
+    },
+    "storageInterface": {
+      "types": ["eMMC", "SPI-NAND"],
+      "filesystem": "UBI/UBIFS",
+      "partitionLayout": "A/B",
+      "notes": "A/B partition layout recommended for OTA."
+    },
+    "mediaTuner": {
+      "applicable": false,
+      "notes": "Not applicable - no WAN, voice, or tuner hardware in scope for the extender role."
+    },
+    "diagnostics": {
+      "localWebUI": "optional",
+      "uart": "recommended",
+      "notes": "Typically not needed on an EasyMesh extender per component notes; UART/debug console recommended for bring-up."
+    }
+  },
+  "validationStatus": "partial",
+  "lastValidated": "2026-08-25"
+}
